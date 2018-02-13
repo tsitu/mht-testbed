@@ -6,9 +6,19 @@
   const bookmarkletList = [
     "ayy"
   ];
+  // const bookmarkletList = [
+  //   "analyzer",
+  //   "loader",
+  //   "cre",
+  //   "crown",
+  //   "map",
+  //   "setup"
+  // ];
 
   fetchTimestamps(
-    "https://github.com/tsitu/test-timestamp/tree/master/data"
+    "https://github.com/tsitu/test-timestamp/tree/master/borkerino"
+    // "https://github.com/tsitu/MH-Tools/tree/master/src/" //borked, folder issue?
+    // "https://github.com/tsitu/RubioChat/tree/master"
   ).then(res => {
     const bookmarkletJson = {};
     for (let i = 0; i < bookmarkletList.length; i++) {
