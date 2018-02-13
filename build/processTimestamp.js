@@ -17,7 +17,7 @@
 
   fetchTimestamps(
     "https://github.com/tsitu/test-timestamp/tree/master/borkerino"
-    // "https://github.com/tsitu/MH-Tools/tree/master/src/" //borked, folder issue?
+    // "https://github.com/tsitu/MH-Tools/tree/master/src/" //borked, un-opened folder issue?
     // "https://github.com/tsitu/RubioChat/tree/master"
   ).then(res => {
     const bookmarkletJson = {};
