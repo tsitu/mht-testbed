@@ -4,11 +4,11 @@
 
   const fileUtils = require("./modules/fileUtils");
   const bookmarkletList = [
-    "test"
+    "ayy"
   ];
 
   fetchTimestamps(
-    "https://github.com/tsitu/test-timestamp"
+    "https://github.com/tsitu/test-timestamp/tree/master/data"
   ).then(res => {
     const bookmarkletJson = {};
     for (let i = 0; i < bookmarkletList.length; i++) {
