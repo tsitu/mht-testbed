@@ -1,0 +1,25 @@
+{
+  "name": "test-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "processTimestamp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build/processTimestamp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsitu/test-timestamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsitu/test-timestamp/issues"
+  },
+  "homepage": "https://github.com/tsitu/test-timestamp#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "mkdirp": "^0.5.1",
+    "request": "^2.83.0"
+  }
+}
