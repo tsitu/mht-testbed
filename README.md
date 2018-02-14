@@ -8,25 +8,25 @@ Feel free to post your questions, comments, or concerns there (or [here](https:/
 
 ## :book: Table of Contents
 
-- [Instructions](#Instructions)
-  - [General Tips](#General-Tips)
-  - [Bookmarklets](#Bookmarklets)
+- [Instructions](#instructions)
+  - [General Tips](#thought_balloon-general-tips)
+  - [Bookmarklets](#bookmark-bookmarklets)
     - [Browser Installation Tips](#Browser-Tips)
     - [Chrome](#Chrome)
     - [Firefox](#Firefox)
     - [Edge](#Edge)
     - [Safari](#Safari)
-  - [Catch Rate Estimator](#Catch-Rate-Estimator)
-  - [Map Solver and Mouse Finder](#Map-Solver-and-Mouse-Finder)
-  - [Best Setup](#Best-Setup)
-  - [Marketplace Analyzer](#Marketplace-Analyzer)
-  - [Crown Solver](#Crown-Solver)
-  - [CRE Tabbed Demo](#CRE-Tabbed-Demo)
-- [Developers](#Developers)
-  - [Build](#Build)
-  - [Coding Style](#Coding-Style)
-- [Useful Links](#Useful-Links)
-- [Thanks](#Thanks-to...)
+  - [Catch Rate Estimator](#straight_ruler-catch-rate-estimator--link)
+  - [Map Solver and Mouse Finder](#earth_americas-map-solver-and-mouse-finder--link)
+  - [Best Setup](#trophy-best-setup--link)
+  - [Marketplace Analyzer](#chart_with_upwards_trend-marketplace-analyzer--link)
+  - [Crown Solver](#crown-crown-solver-link)
+  - [CRE Tabbed Demo](#bookmark_tabs-cre-tabbed-demo--link)
+- [Developers](#developers)
+  - [Build](#construction_worker-build)
+  - [Coding Style](#barber-coding-style)
+- [Useful Links](#arrow_down-useful-links)
+- [Thanks](#heart_decoration-thanks-to)
 
 ## Instructions
 ### :thought_balloon: General Tips
@@ -57,8 +57,8 @@ Loader | Creates a pop-up that enables you to use the latest versions of each bo
 
 <p align="center">
   <b id="Browser-Tips">Browser Installation Tips</b><br><br>
-  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/chrome_12-48/chrome_12-48_32x32.png" alt="Chrome"><br>
-  <i id="Chrome">Chrome</i><br>
+  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/chrome_12-48/chrome_12-48_32x32.png" alt="Chrome" id="Chrome"><br>
+  <i>Chrome</i><br>
 </p>
 
 1. Drag to bookmarks bar
@@ -66,8 +66,8 @@ Loader | Creates a pop-up that enables you to use the latest versions of each bo
 1. On mobile...
 
 <p align="center">
-  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/firefox_23-56/firefox_23-56_32x32.png" alt="Firefox"><br>
-  <i id="Firefox">Firefox</i><br>
+  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/firefox_23-56/firefox_23-56_32x32.png" alt="Firefox" id="Firefox"><br>
+  <i>Firefox</i><br>
 </p>
 
 1. Drag to bookmarks bar
@@ -75,8 +75,8 @@ Loader | Creates a pop-up that enables you to use the latest versions of each bo
 1. On mobile...
 
 <p align="center">
-  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/edge/edge_32x32.png" alt="Edge"><br>
-  <i id="Edge">Edge</i><br>
+  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/edge/edge_32x32.png" alt="Edge" id="Edge"><br>
+  <i>Edge</i><br>
 </p>
 
 1. Drag to bookmarks bar
@@ -84,8 +84,8 @@ Loader | Creates a pop-up that enables you to use the latest versions of each bo
 1. On mobile...
 
 <p align="center">
-  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/safari_1-7/safari_1-7_32x32.png" alt="Safari"><br>
-  <i id="Safari">Safari</i><br>
+  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/safari_1-7/safari_1-7_32x32.png" alt="Safari" id="Safari"><br>
+  <i>Safari</i><br>
 </p>
 
 1. Drag to bookmarks bar
