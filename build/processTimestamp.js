@@ -3,9 +3,7 @@
   const cheerio = require("cheerio");
 
   const fileUtils = require("./modules/fileUtils");
-  const bookmarkletList = [
-    "ayy"
-  ];
+  const bookmarkletList = ["ayy"];
   // const bookmarkletList = [
   //   "analyzer",
   //   "loader",
@@ -16,9 +14,9 @@
   // ];
 
   fetchTimestamps(
-    "https://github.com/tsitu/test-timestamp/tree/master/borkerino"
+    // "https://github.com/tsitu/test-timestamp/tree/master/borkerino"
     // "https://github.com/tsitu/MH-Tools/tree/master/src/" //borked, un-opened folder issue?
-    // "https://github.com/tsitu/RubioChat/tree/master"
+    "https://github.com/tsitu/RubioChat/tree/master/js"
   ).then(res => {
     const bookmarkletJson = {};
     for (let i = 0; i < bookmarkletList.length; i++) {
@@ -36,9 +34,19 @@
       const options = {
         url: htmlUrl,
         gzip: true,
-        method: 'GET',
+        method: "GET",
         headers: {
-          "User-Agent": "Mozilla/5.0 (Windows NT x.y; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0"
+          Connection: "keep-alive",
+          "Cache-Control": "max-age=0",
+          "Upgrade-Insecure-Requests": 1,
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36",
+          Accept:
+            "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "en-US,en;q=0.9",
+          Cookie:
+            "_octo=GH1.1.1321651787.1464386925; logged_in=yes; dotcom_user=tsitu; user_session=usBVfoUZraCxgDFC2Jt8lNyrI-gAU_okAMhqxc3LsNNNrX-5; __Host-user_session_same_site=usBVfoUZraCxgDFC2Jt8lNyrI-gAU_okAMhqxc3LsNNNrX-5; _ga=GA1.2.660846068.1464386926; tz=America%2FLos_Angeles; _gat=1; _gh_sess=eyJzZXNzaW9uX2lkIjoiNTQ2YmIyMWY4MDc1ZjZlMTczYmY5ZDI2OWExNzMzMDEiLCJsYXN0X3JlYWRfZnJvbV9yZXBsaWNhcyI6MTUxODYwMDM2NDE2MSwic3B5X3JlcG8iOiJ0c2l0dS9SdWJpb0NoYXQiLCJzcHlfcmVwb19hdCI6MTUxODYwMDM2NCwiY29udGV4dCI6Ii8iLCJsYXN0X3dyaXRlIjoxNTE4NTg5MTU1NzIwfQ%3D%3D--ab8ed35979be07323c9076afd2eae52015bb7053"
         }
       };
       request(options, (error, response, body) => {
