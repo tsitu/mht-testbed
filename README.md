@@ -4,7 +4,7 @@ Suite of JavaScript tools for the browser game [MouseHunt](https://www.mousehunt
 
 Ongoing forum discussion thread [here](https://www.mousehuntgame.com/forum/showthread.php?132397-MouseHunt-Tools-by-tsitu&goto=newpost).
 
-Feel free to post your questions, comments, or concerns there (or [here](https://github.com/tsitu/MH-Tools/issues) on GitHub Issues).
+Feel free to post your questions, comments, or concerns there (or [here](https://github.com/tsitu/MH-Tools/issues) on GitHub).
 
 ## :book: Table of Contents
 
@@ -14,7 +14,7 @@ Feel free to post your questions, comments, or concerns there (or [here](https:/
     - [Browser Installation Tips](#Browser-Tips)
     - [Chrome](#Chrome)
     - [Firefox](#Firefox)
-    - [Edge](#Edge)
+    - [Edge / IE](#Edge)
     - [Safari](#Safari)
   - [Catch Rate Estimator](#straight_ruler-catch-rate-estimator)
   - [Map Solver and Mouse Finder](#earth_americas-map-solver-and-mouse-finder)
@@ -32,7 +32,7 @@ Feel free to post your questions, comments, or concerns there (or [here](https:/
 ## Instructions
 ### :thought_balloon: General Tips
 
-Several of the tools make use of mottie's tablesorter plugin, which has several keyboard shortcuts and additional features which may be useful, like multi-column sorting with SHIFT and special characters for filtering.
+Several tools make use of mottie's jQuery tablesorter 2.0, which includes additional features and keyboard shortcuts which may be useful, like multi-column sorting with <kbd>Shift</kbd> or special characters for filtering.
 
 ### :bookmark: Bookmarklets
 
@@ -101,16 +101,19 @@ Loader | Creates a pop-up that enables you to use the latest versions of each bo
 
 ### :straight_ruler: [Catch Rate Estimator](https://tsitu.github.io/MH-Tools/cre.html)
 
-> Calculates catch rate estimates along with points, gold, rank advancement and more.
+> Calculates catch rate estimates along with points, gold, minimum luck and more.
 
-? | Sum or Average
--- | --
-AR | Attraction rate for individual mice
-CR | Summed attraction rate for a specific location & phase & cheese & charm
-Catches | Same as Total AR, with baseline cheese attraction factored in
-Gold | gold
-Points | ptz
-etc | etc
+Column | Description | Sums / Averages
+-- | -- | --
+Attraction Rate | Per mouse | Summed for this setup
+Catch Rate | Per mouse | Average for this setup
+Catches per 100 hunts| Per mouse (AR * CR) | Summed per 100 hunts
+Gold | Per catch | Average per hunt, factoring in AR and CR
+Points | Per catch | Average per hunt
+Tourney Points | Per catch | Average per hunt
+Min Luck | Per mouse | Highest for this particular setup
+Rank | Per catch | Per hunt
+*Loot (!)* | Per catch | Per hunt
 
 <div align="right"><a href="#book-table-of-contents">Top</a></div>
 
@@ -121,13 +124,13 @@ etc | etc
 
 <p>Based on Chad's and <a href="http://olf.github.io/mhmapsolver/" target="_blank" rel="noopener">Olaf's</a> solvers.</p>
 
-<p>Copy and paste mice from maps, or type names leaving a line break between each. Press <b>Enter</b> to autocomplete and <b>Tab</b> to cycle through autocomplete suggestions.</p>
+<p>Copy and paste mice from maps, or type names leaving a line break between each. Press <kbd>Enter</kbd> to autocomplete and <kbd>Tab</kbd> to cycle through autocomplete suggestions.</p>
 
-Type of AR | Description
+Type of Attraction Rate | Description
 -- | --
-Raw | Attraction rate for individual mice
-Total | Summed attraction rate for a specific location & phase & cheese & charm
-Weighted | Same as Total AR, with baseline cheese attraction factored in
+Raw | Shown for individual mice
+Total | Summed over a specific location, sublocation, cheese, and charm
+Weighted | Same as Total AR, but with baseline cheese attraction factored in
 
 <div align="right"><a href="#book-table-of-contents">Top</a></div>
 
@@ -137,7 +140,7 @@ Weighted | Same as Total AR, with baseline cheese attraction factored in
 
 > Calculates the best weapon and base setup to use for a particular location, sublocation, and cheese.
 
-This tool will be receiving optimizations in the near future to reduce its lengthy loading times and store owned items more efficiently.
+*Note:* This tool will be receiving optimizations in the near future to reduce lengthy loading times and store owned items more efficiently.
 
 <div align="right"><a href="#book-table-of-contents">Top</a></div>
 
@@ -145,13 +148,15 @@ This tool will be receiving optimizations in the near future to reduce its lengt
 
 ### :chart_with_upwards_trend: [Marketplace Analyzer](https://tsitu.github.io/MH-Tools/analyzer.html)
 
-> Provides overview of each marketplace transaction as well as a summary table with useful aggregate data.
+> Provides a record of every marketplace transaction as well as summary tables with useful aggregations.
 
 Type | Description
 -- | --
-Unit | aaaa
-Transaction | a
-Tariff | 10% (not rounded so there's decimals)
+Transaction | Gold spent or received in a single trade
+Price | Amount ÷ Quantity
+Unit Price | How much you paid for a single unit in a transaction
+Amount | Total spent or received for a single item and action, including tariffs
+Tariffs | 10% calculated on total amount (Amount ÷ 1.1) instead of on every transaction
 
 <div align="right"><a href="#book-table-of-contents">Top</a></div>
 
@@ -163,6 +168,12 @@ Tariff | 10% (not rounded so there's decimals)
 
 This spin-off of the Map Solver factors in the difference between 100 and the number of catches you currently have for a breed (e.g. all else being equal, a mouse at 99 catches is weighted more heavily than one at 80 catches).
 
+Type of Crown Progress | Description
+-- | --
+Raw | Shown for individual mice, factors in attraction rate and catches remaining until 100
+Total | Summed over a specific location, sublocation, cheese, and charm
+Weighted | Same as Total CP, but with baseline cheese attraction factored in
+
 <div align="right"><a href="#book-table-of-contents">Top</a></div>
 
 ---
@@ -173,10 +184,10 @@ This spin-off of the Map Solver factors in the difference between 100 and the nu
 
 Keyboard Shortcut | Description
 -- | --
-Ctrl + C, ⌘C | Copy setup link in one tab
-Ctrl + V, ⌘V | Paste setup link to tab
-← → | Navigate between tabs (when one is highlighted)
-Tab | etc
+<kbd>Ctrl + C</kbd> <kbd>⌘C</kbd> | Copy setup link in one tab
+<kbd>Ctrl + V</kbd> <kbd>⌘V</kbd> | Paste setup link to tab
+<kbd>←</kbd> <kbd>→</kbd> | Navigate between tabs (when one is highlighted)
+<kbd>Tab</kbd> | etc
 
 <div align="right"><a href="#book-table-of-contents">Top</a></div>
 
@@ -184,7 +195,7 @@ Tab | etc
 
 ### :construction_worker: Build
 
-Some files (e.g. wisdom values & populations) are generated by Travis CI when the master branch is pushed.
+Certain files (like wisdom values and populations) are generated by Travis CI when the master branch is pushed.
 
 To build these files locally, run `npm install` then `npm run build`.
 
