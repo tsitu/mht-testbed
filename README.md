@@ -16,12 +16,12 @@ Feel free to post your questions, comments, or concerns there (or [here](https:/
     - [Firefox](#Firefox)
     - [Edge](#Edge)
     - [Safari](#Safari)
-  - [Catch Rate Estimator](#straight_ruler-catch-rate-estimator--link)
-  - [Map Solver and Mouse Finder](#earth_americas-map-solver-and-mouse-finder--link)
-  - [Best Setup](#trophy-best-setup--link)
-  - [Marketplace Analyzer](#chart_with_upwards_trend-marketplace-analyzer--link)
-  - [Crown Solver](#crown-crown-solver-link)
-  - [CRE Tabbed Demo](#bookmark_tabs-cre-tabbed-demo--link)
+  - [Catch Rate Estimator](#straight_ruler-catch-rate-estimator)
+  - [Map Solver and Mouse Finder](#earth_americas-map-solver-and-mouse-finder)
+  - [Best Setup](#trophy-best-setup)
+  - [Marketplace Analyzer](#chart_with_upwards_trend-marketplace-analyzer)
+  - [Crown Solver](#crown-crown-solver)
+  - [CRE Tabbed Demo](#bookmark_tabs-cre-tabbed-demo)
 - [Developers](#developers)
   - [Build](#construction_worker-build)
   - [Coding Style](#barber-coding-style)
@@ -99,7 +99,7 @@ Loader | Creates a pop-up that enables you to use the latest versions of each bo
 
 ---
 
-### :straight_ruler: Catch Rate Estimator  ([Link](https://tsitu.github.io/MH-Tools/cre.html))
+### :straight_ruler: [Catch Rate Estimator](https://tsitu.github.io/MH-Tools/cre.html)
 
 > Calculates catch rate estimates along with points, gold, rank advancement and more.
 
@@ -133,7 +133,7 @@ Weighted | Same as Total AR, with baseline cheese attraction factored in
 
 ---
 
-### :trophy: Best Setup  ([Link](https://tsitu.github.io/MH-Tools/setup.html))
+### :trophy: [Best Setup](https://tsitu.github.io/MH-Tools/setup.html)
 
 > Calculates the best weapon and base setup to use for a particular location, sublocation, and cheese.
 
@@ -143,7 +143,7 @@ This tool will be receiving optimizations in the near future to reduce its lengt
 
 ---
 
-### :chart_with_upwards_trend: Marketplace Analyzer  ([Link](https://tsitu.github.io/MH-Tools/analyzer.html))
+### :chart_with_upwards_trend: [Marketplace Analyzer](https://tsitu.github.io/MH-Tools/analyzer.html)
 
 > Provides overview of each marketplace transaction as well as a summary table with useful aggregate data.
 
@@ -157,7 +157,7 @@ Tariff | 10% (not rounded so there's decimals)
 
 ---
 
-### :crown: Crown Solver ([Link](https://tsitu.github.io/MH-Tools/crown.html))
+### :crown: [Crown Solver](https://tsitu.github.io/MH-Tools/crown.html)
 
 > Calculates the best locations to hunt to progress towards achieving 100 catches of mouse breeds.
 
@@ -167,7 +167,7 @@ This spin-off of the Map Solver factors in the difference between 100 and the nu
 
 ---
 
-### :bookmark_tabs: CRE Tabbed Demo  ([Link](https://tsitu.github.io/MH-Tools/tabs.html))
+### :bookmark_tabs: [CRE Tabbed Demo](https://tsitu.github.io/MH-Tools/tabs.html)
 
 > Provides a convenient location to spin up multiple independent instances of the CRE tool. Each instance is located in its own `<iframe>` and setups can be easily copy-pasted between tabs. Great way quickly to compare multiple setups that are mostly identical.
 
