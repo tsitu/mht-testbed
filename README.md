@@ -34,8 +34,6 @@ Feel free to post your questions, comments, or concerns there (or [here](https:/
 
 Several of the tools make use of mottie's tablesorter plugin, which has several keyboard shortcuts and additional features which may be useful, like multi-column sorting with SHIFT and special characters for filtering.
 
----
-
 ### :bookmark: Bookmarklets
 
 Bookmarklets are pieces of JavaScript code that are saved as a bookmark in the user's browser, enabling them to interact with webpages on the fly. We provide 6 different bookmarklets (CRE, Setup, Map, Analyzer, Crown, and the all-in-one Loader), each located underneath the title of its corresponding tool's page.
@@ -58,11 +56,11 @@ Map | Fills in the `textarea` with all of the remaining uncaught mice on your 'A
 Crown | Fills in the `textarea` with the 30 Bronze mice on your 'King's Crowns' page that are closest to reaching Silver status (100 catches). The rest of the Bronze mice should be copied to your clipboard for pasting if desired.
 Loader | Creates a pop-up that enables you to use the latest versions of each bookmarklet
 
+<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+
 <p align="center">
-  <br><b id="Browser-Tips" style="font-size: 20px">Browser Installation Tips</b><br>
-  Drag the blue bookmarklet link to your browser's bookmarks bar.<br>
-  If that doesn't work, try the following manual instructions.<br>
-  These concepts apply to other browsers, including mobile, but processes may vary.<br><br>
+  <br><b id="Browser-Tips">Browser Installation Tips</b><br>
+  Drag the blue bookmarklet link to your browser's bookmarks bar. If that doesn't work, try the following manual instructions. These concepts apply to other browsers (including mobile), but processes may vary.<br><br>
   <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/chrome_12-48/chrome_12-48_32x32.png" alt="Chrome" id="Chrome"><br>
   <i>Chrome</i><br>
 </p>
@@ -84,7 +82,7 @@ Loader | Creates a pop-up that enables you to use the latest versions of each bo
   <i>Edge / IE</i><br>
 </p>
 
-1. At least on my machine, there does not seem to be native support in Edge for saving a bookmark directly from a link, or for editing a bookmark's URL. The 'Reading List' feature doesn't seem to work either. However, there is a third-party application for Edge called [EdgeManage](http://www.emmet-gray.com/Articles/EdgeManage.html) that purports to add a lot of missing features for managing your favorites - use at your own discretion.
+1. There does not seem to be native support in Edge for saving a bookmark directly from a link or for editing a bookmark's URL (at least on my machine). Also, the 'Reading List' feature doesn't seem to work for this purpose. However, there is a third-party application for Edge called [EdgeManage](http://www.emmet-gray.com/Articles/EdgeManage.html) that purports to add a lot of missing features for managing your favorites - use it at your own discretion.
 
 1. Internet Explorer 11 allows you to drag bookmarklets directly to your favorites bar as well as right-click and `Add to favorites...`, but does not support certain JavaScript features that power ours (?).
 
@@ -96,6 +94,8 @@ Loader | Creates a pop-up that enables you to use the latest versions of each bo
 1. Bookmark an arbitrary page and name it accordingly.
 1. Right-click on the bookmarklet link and select `Copy Link`
 1. Right-click on the newly created bookmark, select `Edit Address`, paste into the text box, then hit `Done`
+
+<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
 
 ---
 
@@ -112,9 +112,12 @@ Gold | gold
 Points | ptz
 etc | etc
 
+<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+
 ---
 
-### :earth_americas: Map Solver and Mouse Finder  ([Link](https://tsitu.github.io/MH-Tools/map.html))
+<!-- ### :earth_americas: Map Solver and Mouse Finder  ([Link](https://tsitu.github.io/MH-Tools/map.html)) -->
+### :earth_americas: [Map Solver and Mouse Finder](https://tsitu.github.io/MH-Tools/map.html)
 
 <p>Based on Chad's and <a href="http://olf.github.io/mhmapsolver/" target="_blank" rel="noopener">Olaf's</a> solvers.</p>
 
@@ -126,13 +129,17 @@ Raw | Attraction rate for individual mice
 Total | Summed attraction rate for a specific location & phase & cheese & charm
 Weighted | Same as Total AR, with baseline cheese attraction factored in
 
+<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+
 ---
 
 ### :trophy: Best Setup  ([Link](https://tsitu.github.io/MH-Tools/setup.html))
 
 > Calculates the best weapon and base setup to use for a particular location, sublocation, and cheese.
 
-*This tool will be receiving optimizations in the near future to reduce its lengthy loading times, as well as to store owned items more efficiently.*
+This tool will be receiving optimizations in the near future to reduce its lengthy loading times and store owned items more efficiently.
+
+<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
 
 ---
 
@@ -146,13 +153,17 @@ Unit | aaaa
 Transaction | a
 Tariff | 10% (not rounded so there's decimals)
 
+<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+
 ---
 
 ### :crown: Crown Solver ([Link](https://tsitu.github.io/MH-Tools/crown.html))
 
-> This spin-off of the Map Solver by vsong calculates the best locations to hunt to progress towards achieving 100 catches of mouse breeds.
+> Calculates the best locations to hunt to progress towards achieving 100 catches of mouse breeds.
 
-This tool factors in the difference between 100 and the number of catches you currently have for a breed (e.g. all else being equal, a mouse at 99 catches is weighted more heavily than one at 80 catches).
+This spin-off of the Map Solver factors in the difference between 100 and the number of catches you currently have for a breed (e.g. all else being equal, a mouse at 99 catches is weighted more heavily than one at 80 catches).
+
+<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
 
 ---
 
@@ -167,6 +178,8 @@ Ctrl + V, ⌘V | Paste setup link to tab
 ← → | Navigate between tabs (when one is highlighted)
 Tab | etc
 
+<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+
 ## Developers
 
 ### :construction_worker: Build
@@ -175,13 +188,13 @@ Some files (e.g. wisdom values & populations) are generated by Travis CI when th
 
 To build these files locally, run `npm install` then `npm run build`.
 
----
-
 ### :barber: Coding Style
 
 We use ESLint ([`config-airbnb-base`](https://www.npmjs.com/package/eslint-config-airbnb-base)) configured with Prettier ([`prettier/recommended`](https://prettier.io/docs/en/eslint.html#why-not-both)) to enforce consistent coding conventions.
 
 *This is still a work in progress, along with converting the codebase to align with modern ES2015+ JavaScript best practices.*
+
+<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
 
 ## Miscellaneous
 
@@ -193,10 +206,10 @@ We use ESLint ([`config-airbnb-base`](https://www.npmjs.com/package/eslint-confi
 1. Mouse Wisdom Values ([spreadsheet](https://docs.google.com/spreadsheets/d/1nzD6iiHauMMwD2eHBuAyRziYJtCVnNwSYzCKbBnrRgc/edit?usp=sharing))
 1. BWRift/MoPi Mouse Powers + Effectiveness ([spreadsheet](https://docs.google.com/spreadsheets/d/1pnS4UVFMUndjX2H2s6hfyf5flMcppZyhZrn8EUH23S8/edit?usp=sharing))
 
----
-
 ### :heart_decoration: Thanks to...
 
 - Our contributors :thumbsup:
 - haoala for the [original tools](https://dl.dropboxusercontent.com/u/14589881/index.html) (no longer maintained or hosted)
 - [Start Bootstrap](https://github.com/davidtmiller) for the index.html theme
+
+<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
