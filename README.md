@@ -56,7 +56,7 @@ Map | Fills in the `textarea` with all of the remaining uncaught mice on your 'A
 Crown | Fills in the `textarea` with the 30 Bronze mice on your 'King's Crowns' page that are closest to reaching Silver status (100 catches). The rest of the Bronze mice should be copied to your clipboard for pasting if desired.
 Loader | Creates a pop-up that enables you to use the latest versions of each bookmarklet
 
-<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+<div align="right"><a href="#book-table-of-contents">Top</a></div>
 
 <p align="center">
   <br><b id="Browser-Tips">Browser Installation Tips</b><br>
@@ -95,7 +95,7 @@ Loader | Creates a pop-up that enables you to use the latest versions of each bo
 1. Right-click on the bookmarklet link and select `Copy Link`
 1. Right-click on the newly created bookmark, select `Edit Address`, paste into the text box, then hit `Done`
 
-<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+<div align="right"><a href="#book-table-of-contents">Top</a></div>
 
 ---
 
@@ -112,7 +112,7 @@ Gold | gold
 Points | ptz
 etc | etc
 
-<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+<div align="right"><a href="#book-table-of-contents">Top</a></div>
 
 ---
 
@@ -129,7 +129,7 @@ Raw | Attraction rate for individual mice
 Total | Summed attraction rate for a specific location & phase & cheese & charm
 Weighted | Same as Total AR, with baseline cheese attraction factored in
 
-<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+<div align="right"><a href="#book-table-of-contents">Top</a></div>
 
 ---
 
@@ -139,7 +139,7 @@ Weighted | Same as Total AR, with baseline cheese attraction factored in
 
 This tool will be receiving optimizations in the near future to reduce its lengthy loading times and store owned items more efficiently.
 
-<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+<div align="right"><a href="#book-table-of-contents">Top</a></div>
 
 ---
 
@@ -153,7 +153,7 @@ Unit | aaaa
 Transaction | a
 Tariff | 10% (not rounded so there's decimals)
 
-<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+<div align="right"><a href="#book-table-of-contents">Top</a></div>
 
 ---
 
@@ -163,7 +163,7 @@ Tariff | 10% (not rounded so there's decimals)
 
 This spin-off of the Map Solver factors in the difference between 100 and the number of catches you currently have for a breed (e.g. all else being equal, a mouse at 99 catches is weighted more heavily than one at 80 catches).
 
-<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+<div align="right"><a href="#book-table-of-contents">Top</a></div>
 
 ---
 
@@ -178,7 +178,7 @@ Ctrl + V, ⌘V | Paste setup link to tab
 ← → | Navigate between tabs (when one is highlighted)
 Tab | etc
 
-<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+<div align="right"><a href="#book-table-of-contents">Top</a></div>
 
 ## Developers
 
@@ -194,7 +194,7 @@ We use ESLint ([`config-airbnb-base`](https://www.npmjs.com/package/eslint-confi
 
 *This is still a work in progress, along with converting the codebase to align with modern ES2015+ JavaScript best practices.*
 
-<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+<div align="right"><a href="#book-table-of-contents">Top</a></div>
 
 ## Miscellaneous
 
@@ -212,4 +212,4 @@ We use ESLint ([`config-airbnb-base`](https://www.npmjs.com/package/eslint-confi
 - haoala for the [original tools](https://dl.dropboxusercontent.com/u/14589881/index.html) (no longer maintained or hosted)
 - [Start Bootstrap](https://github.com/davidtmiller) for the index.html theme
 
-<div style="text-align: right"><a href="#book-table-of-contents">Top</a></div>
+<div align="right"><a href="#book-table-of-contents">Top</a></div>
