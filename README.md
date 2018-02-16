@@ -25,13 +25,16 @@ Feel free to post your questions, comments, or concerns there (or [here](https:/
 - [Developers](#developers)
   - [Build](#construction_worker-build)
   - [Coding Style](#barber-coding-style)
-- [Useful Links](#arrow_down-useful-links)
-- [Thanks](#heart_decoration-thanks-to)
+- [Miscellaneous](#miscellaneous)
+  - [Useful Links](#arrow_down-useful-links)
+  - [Thanks](#heart_decoration-thanks-to)
 
 ## Instructions
 ### :thought_balloon: General Tips
 
-Several of the tools make use of mottie's tablesorter plugin, which has several keyboard shortcuts and additional features which may be useful, like multi-column sorting and filter characters.
+Several of the tools make use of mottie's tablesorter plugin, which has several keyboard shortcuts and additional features which may be useful, like multi-column sorting with SHIFT and special characters for filtering.
+
+---
 
 ### :bookmark: Bookmarklets
 
@@ -56,42 +59,45 @@ Crown | Fills in the `textarea` with the 30 Bronze mice on your 'King's Crowns' 
 Loader | Creates a pop-up that enables you to use the latest versions of each bookmarklet
 
 <p align="center">
-  <b id="Browser-Tips">Browser Installation Tips</b><br><br>
+  <br><b id="Browser-Tips" style="font-size: 20px">Browser Installation Tips</b><br>
+  Drag the blue bookmarklet link to your browser's bookmarks bar.<br>
+  If that doesn't work, try the following manual instructions.<br>
+  These concepts apply to other browsers, including mobile, but processes may vary.<br><br>
   <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/chrome_12-48/chrome_12-48_32x32.png" alt="Chrome" id="Chrome"><br>
   <i>Chrome</i><br>
 </p>
 
-1. Drag to bookmarks bar
-1. Bookmark current page, and edit
-1. On mobile...
+1. Bookmark an arbitrary page and name it something memorable, like 'CRE' or 'Auto-Loader'.
+1. Copy the bookmarklet code by right-clicking the link and selecting `Copy link address`
+1. Right-click on your newly created bookmark and select `Edit...`
+1. Paste the bookmarklet code into the `URL` field and hit `Save`
 
 <p align="center">
-  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/firefox_23-56/firefox_23-56_32x32.png" alt="Firefox" id="Firefox"><br>
+  <br><img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/firefox_23-56/firefox_23-56_32x32.png" alt="Firefox" id="Firefox"><br>
   <i>Firefox</i><br>
 </p>
 
-1. Drag to bookmarks bar
-1. Bookmark current page, and edit
-1. On mobile...
+1. Right-click on the bookmarklet link, select `Bookmark This Link`, and name it accordingly.
 
 <p align="center">
-  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/edge/edge_32x32.png" alt="Edge" id="Edge"><br>
-  <i>Edge</i><br>
+  <br><img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/edge/edge_32x32.png" alt="Edge" id="Edge"> <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/internet-explorer_9-11/internet-explorer_9-11_32x32.png" alt="Edge" id="Edge"><br>
+  <i>Edge / IE</i><br>
 </p>
 
-1. Drag to bookmarks bar
-1. Bookmark current page, and edit
-1. On mobile...
+1. At least on my machine, there does not seem to be native support in Edge for saving a bookmark directly from a link, or for editing a bookmark's URL. The 'Reading List' feature doesn't seem to work either. However, there is a third-party application for Edge called [EdgeManage](http://www.emmet-gray.com/Articles/EdgeManage.html) that purports to add a lot of missing features for managing your favorites - use at your own discretion.
+
+1. Internet Explorer 11 allows you to drag bookmarklets directly to your favorites bar as well as right-click and `Add to favorites...`, but does not support certain JavaScript features that power ours (?).
 
 <p align="center">
-  <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/safari_1-7/safari_1-7_32x32.png" alt="Safari" id="Safari"><br>
+  <br><img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/45.3.0/archive/safari_1-7/safari_1-7_32x32.png" alt="Safari" id="Safari"><br>
   <i>Safari</i><br>
 </p>
 
-1. Drag to bookmarks bar
-    - a
-1. Bookmark current page, and edit
-1. On mobile...
+1. Bookmark an arbitrary page and name it accordingly.
+1. Right-click on the bookmarklet link and select `Copy Link`
+1. Right-click on the newly created bookmark, select `Edit Address`, paste into the text box, then hit `Done`
+
+---
 
 ### :straight_ruler: Catch Rate Estimator  ([Link](https://tsitu.github.io/MH-Tools/cre.html))
 
@@ -106,6 +112,8 @@ Gold | gold
 Points | ptz
 etc | etc
 
+---
+
 ### :earth_americas: Map Solver and Mouse Finder  ([Link](https://tsitu.github.io/MH-Tools/map.html))
 
 <p>Based on Chad's and <a href="http://olf.github.io/mhmapsolver/" target="_blank" rel="noopener">Olaf's</a> solvers.</p>
@@ -118,27 +126,35 @@ Raw | Attraction rate for individual mice
 Total | Summed attraction rate for a specific location & phase & cheese & charm
 Weighted | Same as Total AR, with baseline cheese attraction factored in
 
+---
+
 ### :trophy: Best Setup  ([Link](https://tsitu.github.io/MH-Tools/setup.html))
 
 > Calculates the best weapon and base setup to use for a particular location, sublocation, and cheese.
 
 *This tool will be receiving optimizations in the near future to reduce its lengthy loading times, as well as to store owned items more efficiently.*
 
+---
+
 ### :chart_with_upwards_trend: Marketplace Analyzer  ([Link](https://tsitu.github.io/MH-Tools/analyzer.html))
 
 > Provides overview of each marketplace transaction as well as a summary table with useful aggregate data.
 
 Type | Description
-- | -
+-- | --
 Unit | aaaa
 Transaction | a
 Tariff | 10% (not rounded so there's decimals)
+
+---
 
 ### :crown: Crown Solver ([Link](https://tsitu.github.io/MH-Tools/crown.html))
 
 > This spin-off of the Map Solver by vsong calculates the best locations to hunt to progress towards achieving 100 catches of mouse breeds.
 
 This tool factors in the difference between 100 and the number of catches you currently have for a breed (e.g. all else being equal, a mouse at 99 catches is weighted more heavily than one at 80 catches).
+
+---
 
 ### :bookmark_tabs: CRE Tabbed Demo  ([Link](https://tsitu.github.io/MH-Tools/tabs.html))
 
@@ -148,7 +164,7 @@ Keyboard Shortcut | Description
 -- | --
 Ctrl + C, ⌘C | Copy setup link in one tab
 Ctrl + V, ⌘V | Paste setup link to tab
-<- -> Arrows | Navigate between tabs (when one is highlighted)
+← → | Navigate between tabs (when one is highlighted)
 Tab | etc
 
 ## Developers
@@ -159,23 +175,25 @@ Some files (e.g. wisdom values & populations) are generated by Travis CI when th
 
 To build these files locally, run `npm install` then `npm run build`.
 
+---
+
 ### :barber: Coding Style
 
 We use ESLint ([`config-airbnb-base`](https://www.npmjs.com/package/eslint-config-airbnb-base)) configured with Prettier ([`prettier/recommended`](https://prettier.io/docs/en/eslint.html#why-not-both)) to enforce consistent coding conventions.
 
 *This is still a work in progress, along with converting the codebase to align with modern ES2015+ JavaScript best practices.*
 
+## Miscellaneous
+
 ### :arrow_down: Useful Links
 
-1. Catch Rate Estimator ([source code](https://github.com/tsitu/MH-Tools/blob/master/src/main/cre.js) | [bookmarklet](https://github.com/tsitu/MH-Tools/blob/master/src/bookmarklet/crebookmarklet.js))
-1. Best Setup Tool ([source code](https://github.com/tsitu/MH-Tools/blob/master/src/main/setup.js) | [bookmarklet](https://github.com/tsitu/MH-Tools/blob/master/src/bookmarklet/setupbookmarklet.js))
-1. Map Solver and Mouse Finder ([source code](https://github.com/tsitu/MH-Tools/blob/master/src/main/map.js) | [bookmarklet](https://github.com/tsitu/MH-Tools/blob/master/src/bookmarklet/mapbookmarklet.js))
-1. Marketplace Analyzer ([source code](https://github.com/tsitu/MH-Tools/blob/master/src/main/analyzer.js) | [bookmarklet](https://github.com/tsitu/MH-Tools/blob/master/src/bookmarklet/analyzerbookmarklet.js))
-1. Population data file ([CSV](https://github.com/tsitu/MH-Tools/blob/master/data/populations.csv) | [source](https://docs.google.com/spreadsheets/d/1Y_urUwbp7XpbL9vRV4w4uoexkIM_DbuAc5Fb1JL_u20/edit?usp=sharing))
-1. Changelog ([deprecated](https://github.com/tsitu/MH-Tools/blob/master/CHANGELOG.md))
 1. Marketplace Analyzer ([forum thread](https://www.mousehuntgame.com/forum/showthread.php?126255-Marketplace-Analyzer&goto=newpost))
+1. Population data file ([CSV](https://github.com/tsitu/MH-Tools/blob/master/data/populations.csv) | [source](https://docs.google.com/spreadsheets/d/1Y_urUwbp7XpbL9vRV4w4uoexkIM_DbuAc5Fb1JL_u20/edit?usp=sharing))
 1. Mouse Power Values ([spreadsheet](https://docs.google.com/spreadsheets/d/1cGu0eG0Fgwf-OWFAfed_tVJC0GQh-j6utxiSDdWRFZE/))
 1. Mouse Wisdom Values ([spreadsheet](https://docs.google.com/spreadsheets/d/1nzD6iiHauMMwD2eHBuAyRziYJtCVnNwSYzCKbBnrRgc/edit?usp=sharing))
+1. BWRift/MoPi Mouse Powers + Effectiveness ([spreadsheet](https://docs.google.com/spreadsheets/d/1pnS4UVFMUndjX2H2s6hfyf5flMcppZyhZrn8EUH23S8/edit?usp=sharing))
+
+---
 
 ### :heart_decoration: Thanks to...
 
