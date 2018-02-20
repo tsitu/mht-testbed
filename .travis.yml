@@ -17,7 +17,6 @@ script:
 
 before_install:
  - chmod +x build/deploy.sh
-#  - google-chrome-beta --headless --disable-gpu
 
 after_success:
  - ./build/deploy.sh
