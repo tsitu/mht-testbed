@@ -1,10 +1,23 @@
+os:
+ - linux
+
+dist: trusty
+
+env:
+ - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+
+addons:
+  chrome: beta
+
 language: node_js
 
 script:
+ - npm run puppeteer
  - npm run build
 
 before_install:
  - chmod +x build/deploy.sh
+#  - google-chrome-beta --headless --disable-gpu
 
 after_success:
  - ./build/deploy.sh

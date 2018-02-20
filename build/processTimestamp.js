@@ -17,7 +17,10 @@
    * @param {string} htmlUrl
    */
   async function fetchTimestamps(htmlUrl) {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      executablePath: "google-chrome-beta"
+    });
 
     const page = await browser.newPage();
     await page.goto(htmlUrl);
