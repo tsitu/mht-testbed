@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build/processTimestamp.js",
     "puppeteer": "npm i -S puppeteer",
-    "sample": "node build/processSampleSize.js"
+    "sample": "node sample/processSampleSize.js"
   },
   "repository": {
     "type": "git",
