@@ -16,7 +16,7 @@ node_js:
 
 script:
  - npm run puppeteer
- - npm run build
+ - npm run population
  - npm run sample
 
 before_install:

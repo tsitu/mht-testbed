@@ -5,7 +5,8 @@
   "main": "processTimestamp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build/processTimestamp.js",
+    "timestamp": "node build/processTimestamp.js",
+    "population": "node build/processPopulation.js",
     "puppeteer": "npm i -S puppeteer",
     "sample": "node sample/processSampleSize.js"
   },
@@ -21,6 +22,8 @@
   "homepage": "https://github.com/tsitu/test-timestamp#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "combined-stream": "^1.0.6",
+    "csvtojson": "^1.1.7",
     "mkdirp": "^0.5.1",
     "request": "^2.83.0"
   }
