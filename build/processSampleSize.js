@@ -1,4 +1,5 @@
 const fs = require("fs");
+const fileUtils = require("./modules/fileUtils");
 
 /**
  * Returns ideal sample size for 10% relative uncertainty at 95% level
@@ -130,6 +131,11 @@ function scoreLabel(score) {
   return rating;
 }
 
+// Global scope objects for summary data
+const detailedObj = {};
+const conciseObj = {};
+const overallObj = {};
+
 /**
  * Parse the full population JSON file
  */
@@ -144,23 +150,25 @@ function parseJSON() {
        * > As of Jack's July 3rd 2018 nightly dump <
        * 1089 total LPCC combinations (839 have sample sizes and 250 don't)
        * Total sample size: 24459604
+       *
        * Min/max/average/median score for each location as well as in totality
-       * Average score factors in 0's and caps scores at 100
-       *  - Prevent outliers, especially from LPCC with one mouse attracted
+       * Average score factors in 0's and caps scores at 100 to prevent outliers
+       * (e.g. from LPCC with one mouse attracted)
+       *
        * Output a concise overall summary and then separate detailed breakdown by LPCC
        *
-       * > Phase 1: Location minimum 0, average >= 15 <
+       * Tentative phases for sample size data requirements
+       * ~ Phase 1: Location minimum 0, average >= 15 ~
        * Phase 2: Location minimum 15, average >= 25
        * Phase 3: Location minimum 25, average >= 40
        */
 
-      const detailedOutput = [];
+      detailedObj[location] = {};
       for (let phase in obj[location]) {
         for (let cheese in obj[location][phase]) {
           for (let charm in obj[location][phase][cheese]) {
             const point = obj[location][phase][cheese][charm];
             const sampleSize = point["SampleSize"];
-            const outObj = {};
             let rawScore = 0;
             let score = 0;
             if (sampleSize) {
@@ -170,70 +178,113 @@ function parseJSON() {
                 calculateACScore(point, sampleSize)
               ).toFixed(2);
               if (rawScore > 100) {
-                score = 100; // Cap at 100 to prevent outlier skew
+                score = 100; // Capped at 100 to prevent outlier skew
               } else {
                 score = rawScore;
               }
             }
-            outObj["rawScore"] = +rawScore;
-            outObj["cappedScore"] = +score;
-            outObj["rating"] = scoreLabel(score);
-            outObj["lpcc"] = `${phase}, ${cheese}, ${charm}`;
-            outObj["sampleSize"] = +sampleSize;
-            outObj["miceCount"] = +Object.keys(point).length;
-            detailedOutput.push(outObj);
+
+            const pcc = `${phase}, ${cheese}, ${charm}`;
+            detailedObj[location][pcc] = {};
+            detailedObj[location][pcc]["cappedScore"] = +score;
+            detailedObj[location][pcc]["sampleSize"] = sampleSize
+              ? +sampleSize
+              : 0;
+            detailedObj[location][pcc]["miceCount"] = +Object.keys(point)
+              .length;
           }
         }
       }
 
-      detailedOutput.sort((a, b) => {
-        return a["score"] - b["score"];
-      });
-
-      // if (location === "Fort Rox") {
       let conciseAvgScore = 0;
       let conciseAvgSize = 0;
       let conciseAvgMice = 0;
-      for (let obj in detailedOutput) {
-        conciseAvgScore += detailedOutput[obj]["cappedScore"];
-        conciseAvgSize += detailedOutput[obj]["sampleSize"];
-        conciseAvgMice += detailedOutput[obj]["miceCount"];
+      for (let el in detailedObj[location]) {
+        conciseAvgScore += detailedObj[location][el]["cappedScore"];
+        conciseAvgSize += detailedObj[location][el]["sampleSize"];
+        conciseAvgMice += detailedObj[location][el]["miceCount"];
       }
 
-      const locLen = Object.keys(detailedOutput).length;
-      const conciseOutput = {};
-      conciseOutput["Location"] = location;
-      conciseOutput["Average Score"] = (conciseAvgScore / locLen).toFixed(2);
-      conciseOutput["Location Rating"] = scoreLabel(conciseAvgScore / locLen);
-      conciseOutput["Average Sample Size"] = (conciseAvgSize / locLen).toFixed(
-        2
+      const locLen = Object.keys(detailedObj[location]).length;
+      conciseObj[location] = {};
+      conciseObj[location]["Average Score"] = (
+        conciseAvgScore / locLen
+      ).toFixed(2);
+      conciseObj[location]["Location Rating"] = scoreLabel(
+        conciseAvgScore / locLen
       );
-      conciseOutput["Average Mice Count"] = (conciseAvgMice / locLen).toFixed(
-        2
-      );
+      conciseObj[location]["Average Sample Size"] = (
+        conciseAvgSize / locLen
+      ).toFixed(2);
+      conciseObj[location]["Average Mice Count"] = (
+        conciseAvgMice / locLen
+      ).toFixed(2);
 
-      // console.log(detailedOutput);
-      // console.log(conciseOutput);
       if (conciseAvgScore) overallSummaryScore += conciseAvgScore / locLen;
     }
 
     const overallSummaryAvg = (
       overallSummaryScore / Object.keys(obj).length
     ).toFixed(2);
-    console.log(
-      `Overall Average Score: ${overallSummaryAvg}\nOverall Rating: ${scoreLabel(
-        overallSummaryAvg
-      )}`
-    );
-    // }
+
+    overallObj["score"] = overallSummaryAvg;
+
+    // Next function calls
+    // outputJSON();
+    calculateDiffs();
   });
+}
+
+/**
+ * Calculates differences between current and incoming for detailed, concise, and overall summary JSON
+ */
+function calculateDiffs() {
+  fs.readFile("data/sample-summary-overall.json", "utf8", function(err, data) {
+    if (err) throw err;
+    const obj = JSON.parse(data);
+
+    // Process overall summary
+    const currentOverallSS = +obj["score"];
+    const incomingOverallSS = +overallObj["score"];
+
+    console.log(
+      `Overall Average Score: ${currentOverallSS} (${scoreLabel(
+        currentOverallSS
+      )}) -> ${incomingOverallSS} (${scoreLabel(incomingOverallSS)})`
+    );
+  });
+
+  fs.readFile("data/sample-summary-concise.json", "utf8", function(err, data) {
+    if (err) throw err;
+    const obj = JSON.parse(data);
+
+    // Process concise summary
+    console.log(obj["Moussu Picchu"]);
+    console.log(conciseObj["Moussu Picchu"]);
+  });
+
+  fs.readFile("data/sample-summary-detailed.json", "utf8", function(err, data) {
+    if (err) throw err;
+    const obj = JSON.parse(data);
+
+    // Process detailed summary
+    console.log(obj["Queso River"]);
+    console.log(detailedObj["Queso River"]);
+  });
+}
+
+/**
+ * Write detailed, concise, and overallObj to respective JSON files
+ */
+function outputJSON() {
+  fileUtils.saveJsonFile("data/sample-summary-detailed.json", detailedObj);
+  fileUtils.saveJsonFile("data/sample-summary-concise.json", conciseObj, 4);
+  fileUtils.saveJsonFile("data/sample-summary-overall.json", overallObj);
 }
 
 /**
  * Main IIFE
  */
 (() => {
-  // console.log(AgrestiCoull(0.05));
-  // console.log(RelativeError(0.2095, 420));
   parseJSON();
 })();
