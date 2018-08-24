@@ -230,7 +230,7 @@ function parseJSON() {
     overallObj["score"] = overallSummaryAvg;
 
     // Next function calls
-    // outputJSON();
+    outputJSON();
     calculateDiffs();
   });
 }
