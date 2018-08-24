@@ -8,7 +8,7 @@
     "timestamp": "node build/processTimestamp.js",
     "population": "node build/processPopulation.js",
     "puppeteer": "npm i -S puppeteer",
-    "sample": "node sample/processSampleSize.js"
+    "sample": "node build/processSampleSize.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "cheerio": "^1.0.0-rc.2",
     "combined-stream": "^1.0.6",
     "csvtojson": "^1.1.7",
+    "delayed-stream": "^1.0.0",
     "mkdirp": "^0.5.1",
     "request": "^2.83.0"
   }
