@@ -7,4 +7,5 @@ testing/
 .eslintrc.json
 src/**/*.min.js
 data/**/*.json
+!data/**/sample-summary*.json
 .vscode/

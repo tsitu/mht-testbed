@@ -1,3 +1,18 @@
+/**
+ * > As of Jack's July 3rd 2018 nightly dump <
+ * 1089 total LPCC combinations (839 have sample sizes and 250 don't)
+ * Total sample size: 24459604
+ *
+ * Min/max/average/median score for each location as well as in totality
+ * Average score factors in 0's and caps scores at 100 to prevent outliers
+ *  (e.g. from LPCC with one mouse attracted)
+ *
+ * Sample size score requirement phases
+ * Phase 1 (current): Location minimum 0, average >= 15
+ * Phase 2: Location minimum 15, average >= 25
+ * Phase 3: Location minimum 25, average >= 40
+ */
+
 const fs = require("fs");
 const fileUtils = require("./modules/fileUtils");
 
@@ -146,24 +161,8 @@ function parseJSON() {
 
     let overallSummaryScore = 0;
     for (let location in obj) {
-      /**
-       * > As of Jack's July 3rd 2018 nightly dump <
-       * 1089 total LPCC combinations (839 have sample sizes and 250 don't)
-       * Total sample size: 24459604
-       *
-       * Min/max/average/median score for each location as well as in totality
-       * Average score factors in 0's and caps scores at 100 to prevent outliers
-       * (e.g. from LPCC with one mouse attracted)
-       *
-       * Output a concise overall summary and then separate detailed breakdown by LPCC
-       *
-       * Tentative phases for sample size data requirements
-       * ~ Phase 1: Location minimum 0, average >= 15 ~
-       * Phase 2: Location minimum 15, average >= 25
-       * Phase 3: Location minimum 25, average >= 40
-       */
-
       detailedObj[location] = {};
+
       for (let phase in obj[location]) {
         for (let cheese in obj[location][phase]) {
           for (let charm in obj[location][phase][cheese]) {
@@ -186,12 +185,9 @@ function parseJSON() {
 
             const pcc = `${phase}, ${cheese}, ${charm}`;
             detailedObj[location][pcc] = {};
-            detailedObj[location][pcc]["cappedScore"] = +score;
-            detailedObj[location][pcc]["sampleSize"] = sampleSize
-              ? +sampleSize
-              : 0;
-            detailedObj[location][pcc]["miceCount"] = +Object.keys(point)
-              .length;
+            detailedObj[location][pcc]["score"] = +score;
+            detailedObj[location][pcc]["sample"] = sampleSize ? +sampleSize : 0;
+            detailedObj[location][pcc]["count"] = +Object.keys(point).length;
           }
         }
       }
@@ -199,10 +195,11 @@ function parseJSON() {
       let conciseAvgScore = 0;
       let conciseAvgSize = 0;
       let conciseAvgMice = 0;
+
       for (let el in detailedObj[location]) {
-        conciseAvgScore += detailedObj[location][el]["cappedScore"];
-        conciseAvgSize += detailedObj[location][el]["sampleSize"];
-        conciseAvgMice += detailedObj[location][el]["miceCount"];
+        conciseAvgScore += detailedObj[location][el]["score"];
+        conciseAvgSize += detailedObj[location][el]["sample"];
+        conciseAvgMice += detailedObj[location][el]["count"];
       }
 
       const locLen = Object.keys(detailedObj[location]).length;
@@ -229,48 +226,157 @@ function parseJSON() {
 
     overallObj["score"] = overallSummaryAvg;
 
-    // Next function calls
-    outputJSON();
+    // Next function called to calculate diffs from current data
     calculateDiffs();
   });
 }
 
+function processOverall() {
+  return new Promise((resolve, reject) => {
+    fs.readFile("data/sample-summary-overall.json", "utf8", function(
+      err,
+      data
+    ) {
+      if (err) throw err;
+      const obj = JSON.parse(data);
+
+      // Compare overall summary scores
+      const currentOverallSS = +obj["score"];
+      const incomingOverallSS = +overallObj["score"];
+
+      console.log("----------------------------------------\n");
+      console.log(
+        `[ Overall Score Change ]\n\n ${currentOverallSS} (${scoreLabel(
+          currentOverallSS
+        )}) -> ${incomingOverallSS} (${scoreLabel(incomingOverallSS)})\n`
+      );
+      console.log("----------------------------------------\n");
+
+      resolve();
+    });
+  });
+}
+
+function processLocation() {
+  return new Promise((resolve, reject) => {
+    fs.readFile("data/sample-summary-concise.json", "utf8", function(
+      err,
+      data
+    ) {
+      if (err) throw err;
+      const obj = JSON.parse(data);
+      console.log("[ Changes By Location ]\n");
+
+      // Compare concise summaries
+      for (let el in conciseObj) {
+        if (!obj[el]) {
+          console.log(
+            `${el} (New Location)\n  Average Score: ${
+              conciseObj[el]["Average Score"]
+            }\n  Location Rating: ${
+              conciseObj[el]["Location Rating"]
+            }\n  Average Sample Size: ${
+              conciseObj[el]["Average Sample Size"]
+            }\n  Average Mice Count: ${conciseObj[el]["Average Mice Count"]}\n`
+          );
+        } else if (
+          conciseObj[el]["Average Score"] != obj[el]["Average Score"] ||
+          conciseObj[el]["Location Rating"] != obj[el]["Location Rating"] ||
+          conciseObj[el]["Average Sample Size"] !=
+            obj[el]["Average Sample Size"] ||
+          conciseObj[el]["Average Mice Count"] != obj[el]["Average Mice Count"]
+        ) {
+          console.log(
+            `${el}\n  Average Score: ${obj[el]["Average Score"]} -> ${
+              conciseObj[el]["Average Score"]
+            }\n  Location Rating: ${obj[el]["Location Rating"]} -> ${
+              conciseObj[el]["Location Rating"]
+            }\n  Average Sample Size: ${obj[el]["Average Sample Size"]} -> ${
+              conciseObj[el]["Average Sample Size"]
+            }\n  Average Mice Count: ${obj[el]["Average Mice Count"]} -> ${
+              conciseObj[el]["Average Mice Count"]
+            }\n`
+          );
+        }
+      }
+      console.log("----------------------------------------\n");
+
+      resolve();
+    });
+  });
+}
+
+function processDetailed() {
+  return new Promise((resolve, reject) => {
+    fs.readFile("data/sample-summary-detailed.json", "utf8", function(
+      err,
+      data
+    ) {
+      if (err) throw err;
+      const obj = JSON.parse(data);
+      console.log("[ Changes By Phase/Cheese/Charm ]\n");
+
+      // Compare detailed summaries
+      for (let loc in detailedObj) {
+        if (!obj[loc]) {
+          console.log(`${loc} (New Location)`);
+          for (let sub in detailedObj[loc]) {
+            console.log(
+              `${sub}\n  Score: ${
+                detailedObj[loc][sub]["score"]
+              }\n  Sample Size: ${
+                detailedObj[loc][sub]["sample"]
+              }\n  Mouse Count: ${detailedObj[loc][sub]["count"]}`
+            );
+          }
+          console.log("");
+        } else {
+          for (let sub in detailedObj[loc]) {
+            if (!obj[loc][sub]) {
+              // Log location every time?
+              console.log(
+                `${loc}, ${sub} (New PCC)\n  Score: ${
+                  detailedObj[loc][sub]["score"]
+                }\n  Sample Size: ${
+                  detailedObj[loc][sub]["sample"]
+                }\n  Mouse Count: ${detailedObj[loc][sub]["count"]}\n`
+              );
+            } else if (
+              detailedObj[loc][sub]["score"] != obj[loc][sub]["score"] ||
+              detailedObj[loc][sub]["sample"] != obj[loc][sub]["sample"] ||
+              detailedObj[loc][sub]["count"] != obj[loc][sub]["count"]
+            ) {
+              console.log(
+                `${loc}, ${sub}\n  Score: ${obj[loc][sub]["score"]} -> ${
+                  detailedObj[loc][sub]["score"]
+                }\n  Sample Size: ${obj[loc][sub]["sample"]} -> ${
+                  detailedObj[loc][sub]["sample"]
+                }\n  Mouse Count: ${obj[loc][sub]["count"]} -> ${
+                  detailedObj[loc][sub]["count"]
+                }\n`
+              );
+            }
+          }
+        }
+      }
+      console.log("----------------------------------------");
+
+      resolve();
+    });
+  });
+}
+
 /**
- * Calculates differences between current and incoming for detailed, concise, and overall summary JSON
+ * Handles differences between current and incoming for detailed, concise, and overall summary JSON
+ * Consistent console.log ordering by using separate functions and chaining
  */
-function calculateDiffs() {
-  fs.readFile("data/sample-summary-overall.json", "utf8", function(err, data) {
-    if (err) throw err;
-    const obj = JSON.parse(data);
+async function calculateDiffs() {
+  await processOverall();
+  await processLocation();
+  await processDetailed();
 
-    // Process overall summary
-    const currentOverallSS = +obj["score"];
-    const incomingOverallSS = +overallObj["score"];
-
-    console.log(
-      `Overall Average Score: ${currentOverallSS} (${scoreLabel(
-        currentOverallSS
-      )}) -> ${incomingOverallSS} (${scoreLabel(incomingOverallSS)})`
-    );
-  });
-
-  fs.readFile("data/sample-summary-concise.json", "utf8", function(err, data) {
-    if (err) throw err;
-    const obj = JSON.parse(data);
-
-    // Process concise summary
-    console.log(obj["Moussu Picchu"]);
-    console.log(conciseObj["Moussu Picchu"]);
-  });
-
-  fs.readFile("data/sample-summary-detailed.json", "utf8", function(err, data) {
-    if (err) throw err;
-    const obj = JSON.parse(data);
-
-    // Process detailed summary
-    console.log(obj["Queso River"]);
-    console.log(detailedObj["Queso River"]);
-  });
+  // Finally, output JSON to overwrite the 3 initial files
+  // outputJSON();
 }
 
 /**
