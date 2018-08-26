@@ -378,6 +378,7 @@ async function calculateDiffs() {
 
   // Finally, output JSON to overwrite the 3 initial files
   outputJSON();
+  // test comment pls ignore
 }
 
 /**
