@@ -379,10 +379,12 @@ async function calculateDiffs() {
     // executablePath:
     //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
   });
-  const page = await browser.newPage();
-  await page.goto(overallURL);
-  await page.goto(conciseURL);
-  await page.goto(detailedURL);
+  const overallPage = await browser.newPage();
+  const concisePage = await browser.newPage();
+  const detailedPage = await browser.newPage();
+  await overallPage.goto(overallURL);
+  await concisePage.goto(conciseURL);
+  await detailedPage.goto(detailedURL);
 
   await processOverall();
   await processLocation();
