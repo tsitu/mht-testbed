@@ -1,4 +1,23 @@
 Location,Phase,Cheese,Charm,Attraction Rate,Mouse,Sample Size
+Shadow Realm,-,Runic,-,19.31%,Golem,
+Shadow Realm,-,Runic,-,18.22%,Gorgon,
+Shadow Realm,-,Runic,-,18.08%,Spectre,
+Shadow Realm,-,Runic,-,16.35%,Sorcerer,
+Shadow Realm,-,Runic,-,8.28%,Acolyte,
+Shadow Realm,-,Runic,-,8.22%,Wight,
+Shadow Realm,-,Runic,-,8.20%,Lich,8000
+Shadow Realm,-,Runic,-,1.92%,Chrono,
+Shadow Realm,-,Runic,-,1.42%,Gate Guardian,
+Shadow Realm,-,Ancient,-,27.48%,Golem,
+Shadow Realm,-,Ancient,-,24.69%,Spectre,420
+Shadow Realm,-,Ancient,-,21.88%,Gorgon,
+Shadow Realm,-,Ancient,-,16.69%,Sorcerer,
+Shadow Realm,-,Ancient,-,9.26%,Gate Guardian,
+Narnia,-,Ancient,-,27.48%,Golem,
+Narnia,-,Ancient,-,24.69%,Spectre,420
+Narnia,-,Ancient,-,21.88%,Gorgon,
+Narnia,-,Ancient,-,16.69%,Sorcerer,
+Narnia,-,Ancient,-,9.26%,Gate Guardian,
 Acolyte Realm,-,Runic,-,19.31%,Golem,
 Acolyte Realm,-,Runic,-,18.22%,Gorgon,
 Acolyte Realm,-,Runic,-,18.08%,Spectre,
