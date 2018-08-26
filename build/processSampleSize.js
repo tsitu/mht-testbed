@@ -385,6 +385,7 @@ async function calculateDiffs() {
   await overallPage.goto(overallURL);
   await concisePage.goto(conciseURL);
   await detailedPage.goto(detailedURL);
+  await browser.close();
 
   await processOverall();
   await processLocation();
