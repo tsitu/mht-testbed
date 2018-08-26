@@ -16,6 +16,15 @@
 const fs = require("fs");
 const fileUtils = require("./modules/fileUtils");
 const request = require("request");
+const puppeteer = require("puppeteer");
+
+// GitHub-served raw JSON file URLs from gh-pages branch
+const overallURL =
+  "https://raw.githubusercontent.com/tsitu/mht-testbed/gh-pages/sample-summary-overall.json";
+const conciseURL =
+  "https://raw.githubusercontent.com/tsitu/mht-testbed/gh-pages/sample-summary-concise.json";
+const detailedURL =
+  "https://raw.githubusercontent.com/tsitu/mht-testbed/gh-pages/sample-summary-detailed.json";
 
 /**
  * Returns ideal sample size for 10% relative uncertainty at 95% level
@@ -234,9 +243,6 @@ function parseJSON() {
 
 function processOverall() {
   return new Promise((resolve, reject) => {
-    const overallURL =
-      "https://raw.githubusercontent.com/tsitu/mht-testbed/gh-pages/sample-summary-overall.json";
-
     request(overallURL, (error, response, body) => {
       if (error) throw error;
       const obj = JSON.parse(body);
@@ -260,9 +266,6 @@ function processOverall() {
 
 function processLocation() {
   return new Promise((resolve, reject) => {
-    const conciseURL =
-      "https://raw.githubusercontent.com/tsitu/mht-testbed/gh-pages/sample-summary-concise.json";
-
     request(conciseURL, (error, response, body) => {
       if (error) throw error;
       const obj = JSON.parse(body);
@@ -309,9 +312,6 @@ function processLocation() {
 
 function processDetailed() {
   return new Promise((resolve, reject) => {
-    const detailedURL =
-      "https://raw.githubusercontent.com/tsitu/mht-testbed/gh-pages/sample-summary-detailed.json";
-
     request(detailedURL, (error, response, body) => {
       if (error) throw error;
       const obj = JSON.parse(body);
@@ -372,6 +372,21 @@ function processDetailed() {
  * Consistent console.log ordering by using separate functions and chaining
  */
 async function calculateDiffs() {
+  // Force update raw JSON files on GitHub using Puppeteer
+  const browser = await puppeteer.launch({
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    executablePath: "google-chrome-beta"
+    // executablePath:
+    //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+  });
+  const overallPage = await browser.newPage();
+  const concisePage = await browser.newPage();
+  const detailedPage = await browser.newPage();
+  await overallPage.goto(overallURL);
+  await concisePage.goto(conciseURL);
+  await detailedPage.goto(detailedURL);
+  await browser.close();
+
   await processOverall();
   await processLocation();
   await processDetailed();
