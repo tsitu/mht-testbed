@@ -372,12 +372,12 @@ function processDetailed() {
  * Consistent console.log ordering by using separate functions and chaining
  */
 async function calculateDiffs() {
-  await processOverall();
-  await processLocation();
-  await processDetailed();
+  // await processOverall();
+  // await processLocation();
+  // await processDetailed();
 
   // Finally, output JSON to overwrite the 3 initial files
-  // outputJSON();
+  outputJSON();
 }
 
 /**
