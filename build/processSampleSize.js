@@ -15,6 +15,7 @@
 
 const fs = require("fs");
 const fileUtils = require("./modules/fileUtils");
+const request = require("request");
 
 /**
  * Returns ideal sample size for 10% relative uncertainty at 95% level
@@ -233,12 +234,12 @@ function parseJSON() {
 
 function processOverall() {
   return new Promise((resolve, reject) => {
-    fs.readFile("data/sample-summary-overall.json", "utf8", function(
-      err,
-      data
-    ) {
-      if (err) throw err;
-      const obj = JSON.parse(data);
+    const overallURL =
+      "https://raw.githubusercontent.com/tsitu/mht-testbed/gh-pages/sample-summary-overall.json";
+
+    request(overallURL, (error, response, body) => {
+      if (error) throw error;
+      const obj = JSON.parse(body);
 
       // Compare overall summary scores
       const currentOverallSS = +obj["score"];
@@ -259,12 +260,12 @@ function processOverall() {
 
 function processLocation() {
   return new Promise((resolve, reject) => {
-    fs.readFile("data/sample-summary-concise.json", "utf8", function(
-      err,
-      data
-    ) {
-      if (err) throw err;
-      const obj = JSON.parse(data);
+    const conciseURL =
+      "https://raw.githubusercontent.com/tsitu/mht-testbed/gh-pages/sample-summary-concise.json";
+
+    request(conciseURL, (error, response, body) => {
+      if (error) throw error;
+      const obj = JSON.parse(body);
       console.log("[ Changes By Location ]\n");
 
       // Compare concise summaries
@@ -308,12 +309,12 @@ function processLocation() {
 
 function processDetailed() {
   return new Promise((resolve, reject) => {
-    fs.readFile("data/sample-summary-detailed.json", "utf8", function(
-      err,
-      data
-    ) {
-      if (err) throw err;
-      const obj = JSON.parse(data);
+    const detailedURL =
+      "https://raw.githubusercontent.com/tsitu/mht-testbed/gh-pages/sample-summary-detailed.json";
+
+    request(detailedURL, (error, response, body) => {
+      if (error) throw error;
+      const obj = JSON.parse(body);
       console.log("[ Changes By Phase/Cheese/Charm ]\n");
 
       // Compare detailed summaries
