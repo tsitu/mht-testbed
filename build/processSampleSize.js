@@ -3,8 +3,7 @@
  * 1089 total LPCC combinations (839 have sample sizes and 250 don't)
  * Total sample size: 24459604
  *
- * Min/max/average/median score for each location as well as in totality
- * Average score factors in 0's and caps scores at 100 to prevent outliers
+ * Average scores factor in 0's and cap at 100 to prevent outliers
  *  (e.g. from LPCC with one mouse attracted)
  *
  * Sample size score requirement phases
@@ -376,8 +375,6 @@ async function calculateDiffs() {
   const browser = await puppeteer.launch({
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     executablePath: "google-chrome-beta"
-    // executablePath:
-    //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
   });
   const overallPage = await browser.newPage();
   const concisePage = await browser.newPage();
@@ -393,7 +390,6 @@ async function calculateDiffs() {
 
   // Finally, output JSON to overwrite the 3 initial files
   outputJSON();
-  // test comment pt 2
 }
 
 /**
