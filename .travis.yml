@@ -17,6 +17,7 @@ node_js:
 script:
  - npm run puppeteer
  - npm run population
+ - npm run timestamp
  - npm run sample
 
 before_install:

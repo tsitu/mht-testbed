@@ -6,10 +6,13 @@
   const bookmarkletList = [
     "analyzer",
     "loader",
+    "crafting",
     "cre",
     "crown",
     "map",
-    "setup"
+    "powers",
+    "setup",
+    "setupfields"
   ];
 
   /**
@@ -38,8 +41,8 @@
   }
 
   fetchTimestamps(
-    // "https://github.com/tsitu/MH-Tools/tree/master/src/"
-    "https://github.com/tsitu/test-timestamp/tree/master/data"
+    "https://github.com/tsitu/MH-Tools/tree/master/src/bookmarklet"
+    // "https://github.com/tsitu/mht-testbed/tree/master/data"
   ).then(res => {
     const format = res.map(el => {
       const spl = el.split(", ");
