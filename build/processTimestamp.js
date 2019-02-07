@@ -3,17 +3,7 @@
   const puppeteer = require("puppeteer");
 
   const fileUtils = require("./modules/fileUtils");
-  const bookmarkletList = [
-    "analyzer",
-    "loader",
-    "crafting",
-    "cre",
-    "crown",
-    "map",
-    "powers",
-    "setup",
-    "setupfields"
-  ];
+  const bookmarkletList = ["modules", "deploy", "pop", "sample", "timestamp"];
 
   /**
    * Parses datetime data from master/src/bookmarklet HTML
@@ -41,7 +31,10 @@
   }
 
   fetchTimestamps(
-    "https://github.com/tsitu/MH-Tools/tree/master/src/bookmarklet"
+    // Potentially doesn't fail because it's on 'static-y' page?
+    // Whereas on main, page might have to be visited more than once to work???
+    // "https://github.com/tsitu/MH-Tools/tree/master/src/bookmarklet"
+    "https://github.com/tsitu/mht-testbed/tree/master/build"
   ).then(res => {
     const format = res.map(el => {
       const spl = el.split(", ");
