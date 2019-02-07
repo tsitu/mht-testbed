@@ -45,8 +45,11 @@
       bookmarkletJson[bookmarkletList[i]] = format[i];
     }
     if (Object.keys(bookmarkletJson).length === 0) {
-      console.error("Error: bookmarkletJson is empty");
+      console.log("Error: bookmarkletJson is empty");
+    } else {
+      console.log("bookmarkletJson is not empty");
     }
+    console.log(bookmarkletJson);
     fileUtils.saveJsonFile("data/bookmarklet-timestamps.json", bookmarkletJson);
   });
 })();
