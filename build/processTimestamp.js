@@ -42,7 +42,6 @@
 
   fetchTimestamps(
     "https://github.com/tsitu/MH-Tools/tree/master/src/bookmarklet"
-    // "https://github.com/tsitu/mht-testbed/tree/master/data"
   ).then(res => {
     const format = res.map(el => {
       const spl = el.split(", ");
@@ -52,6 +51,9 @@
     for (let i = 0; i < bookmarkletList.length; i++) {
       bookmarkletJson[bookmarkletList[i]] = format[i];
     }
-    fileUtils.saveJsonFile("data/test.json", bookmarkletJson);
+    if (Object.keys(bookmarkletJson).length === 0) {
+      console.error("Error: bookmarkletJson is empty");
+    }
+    fileUtils.saveJsonFile("data/bookmarklet-timestamps.json", bookmarkletJson);
   });
 })();
