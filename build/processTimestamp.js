@@ -17,6 +17,7 @@
       //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
     });
 
+    // Initial throwaway page: "Failed to load latest commit information"
     const initPage = await browser.newPage();
     await initPage.goto(htmlUrl);
     const initBody = await initPage.content();
@@ -26,20 +27,18 @@
     await page.goto(htmlUrl);
     const body = await page.content();
     await page.close();
-
     await browser.close();
-    const $ = cheerio.load(body);
-    console.log(body);
 
+    const $ = cheerio.load(body);
     const result = $("time-ago")
       .map((i, el) => $(el).attr("title"))
       .get();
+
     return result;
   }
 
   fetchTimestamps(
-    // Potentially doesn't fail because it's on 'static-y' page?
-    // Whereas on main, page might have to be visited more than once to work???
+    // Page might have to be visited more than once to work...
     // "https://github.com/tsitu/MH-Tools/tree/master/src/bookmarklet"
     "https://github.com/tsitu/mht-testbed/tree/master/build"
   ).then(res => {
@@ -50,11 +49,6 @@
     const bookmarkletJson = {};
     for (let i = 0; i < bookmarkletList.length; i++) {
       bookmarkletJson[bookmarkletList[i]] = format[i];
-    }
-    if (Object.keys(bookmarkletJson).length === 0) {
-      console.log("Error: bookmarkletJson is empty");
-    } else {
-      console.log("bookmarkletJson is not empty");
     }
     console.log(bookmarkletJson);
     fileUtils.saveJsonFile("data/bookmarklet-timestamps.json", bookmarkletJson);
