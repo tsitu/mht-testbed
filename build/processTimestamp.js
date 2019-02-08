@@ -24,7 +24,10 @@
     await browser.close();
 
     const $ = cheerio.load(body);
-    console.log($("time-ago"));
+
+    // result is empty array
+    console.log(body);
+
     const result = $("time-ago")
       .map((i, el) => $(el).attr("title"))
       .get();
@@ -41,8 +44,6 @@
       const spl = el.split(", ");
       return `${spl[0]}, ${spl[1]}`;
     });
-    console.log(res);
-    console.log(format);
     const bookmarkletJson = {};
     for (let i = 0; i < bookmarkletList.length; i++) {
       bookmarkletJson[bookmarkletList[i]] = format[i];
