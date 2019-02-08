@@ -17,15 +17,18 @@
       //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
     });
 
+    const initPage = await browser.newPage();
+    await initPage.goto(htmlUrl);
+    const initBody = await initPage.content();
+    await initPage.close();
+
     const page = await browser.newPage();
     await page.goto(htmlUrl);
-
     const body = await page.content();
+    await page.close();
+
     await browser.close();
-
     const $ = cheerio.load(body);
-
-    // result is empty array
     console.log(body);
 
     const result = $("time-ago")
