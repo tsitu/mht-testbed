@@ -237,7 +237,10 @@ function parseJSON() {
     overallObj["score"] = overallSummaryAvg;
 
     // Next function called to calculate diffs from current data
-    calculateDiffs();
+    // calculateDiffs();
+
+    // Call below and comment out above if build has failed and JSONs need to be rebuilt
+    outputJSON();
   });
 }
 
