@@ -1,0 +1,3909 @@
+.mousehuntTooltip
+{
+  display: none;
+  position: absolute;
+  border: 2px solid #000;
+  font-size: 10px;
+  padding: 10px;
+  text-align: left;
+  background: #fff;
+  color: #000;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 3px 4px #666;
+  -moz-box-shadow: 2px 3px 4px #666;
+  box-shadow: 2px 3px 4px #666;
+  z-index: 10;
+}
+
+.mousehuntTooltipParent:hover .mousehuntTooltip
+{
+  display: block;
+}
+
+.mousehuntTooltip.noEvents
+{
+  pointer-events: none;
+}
+
+.mousehuntTooltip.tight
+{
+  padding: 5px;
+}
+
+.mousehuntTooltip.hasBuffer.top:before
+{
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  height: 15px;
+  right: 0;
+  left: 0;
+}
+
+.mousehuntTooltip.hasBuffer.left:before
+{
+  content: '';
+  position: absolute;
+  left: -15px;
+  width: 15px;
+  top: 0;
+  bottom: 0;
+}
+
+.mousehuntTooltip.hasBuffer.right:before
+{
+  content: '';
+  position: absolute;
+  right: -15px;
+  width: 15px;
+  top: 0;
+  bottom: 0;
+}
+
+.mousehuntTooltip.hasBuffer.bottom:before
+{
+  content: '';
+  position: absolute;
+  top: -15px;
+  height: 15px;
+  right: 0;
+  left: 0;
+}
+
+.mousehuntTooltip-arrow
+{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 15px;
+  border-style: solid;
+  z-index: 30;
+}
+
+.mousehuntTooltip-arrow:after
+{
+  content: ' ';
+  position: absolute;
+  border-width: 11px;
+  border-style: solid;
+}
+
+.mousehuntTooltip.top .mousehuntTooltip-arrow
+{
+  margin-left: -15px;
+  bottom: -30px;
+  left: 50%;
+  border-color: #000 transparent transparent transparent;
+}
+
+.mousehuntTooltip.top .mousehuntTooltip-arrow:after
+{
+  border-color: #fff transparent transparent transparent;
+  top: -15px;
+  left: -11px;
+}
+
+.mousehuntTooltip.top:after
+{
+  left: 0;
+  right: 0;
+  bottom: -15px;
+  height: 15px;
+}
+
+.mousehuntTooltip.bottom .mousehuntTooltip-arrow
+{
+  margin-left: -15px;
+  top: -30px;
+  left: 50%;
+  border-color: transparent transparent #000 transparent;
+}
+
+.mousehuntTooltip.bottom .mousehuntTooltip-arrow:after
+{
+  border-color: transparent transparent #fff transparent;
+  bottom: -15px;
+  left: -11px;
+}
+
+.mousehuntTooltip.bottom:after
+{
+  left: 0;
+  right: 0;
+  top: -15px;
+  height: 15px;
+}
+
+.mousehuntTooltip.left .mousehuntTooltip-arrow
+{
+  margin-top: -15px;
+  right: -30px;
+  top: 50%;
+  border-color: transparent transparent transparent #000;
+}
+
+.mousehuntTooltip.left .mousehuntTooltip-arrow:after
+{
+  bottom: -11px;
+  right: -7px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.mousehuntTooltip.left:after
+{
+  bottom: 0;
+  top: 0;
+  right: -15px;
+  width: 15px;
+}
+
+.mousehuntTooltip.right .mousehuntTooltip-arrow
+{
+  margin-top: -15px;
+  left: -30px;
+  top: 50%;
+  border-color: transparent #000 transparent transparent;
+}
+
+.mousehuntTooltip.right .mousehuntTooltip-arrow:after
+{
+  bottom: -11px;
+  left: -7px;
+  border-color: transparent #fff transparent transparent;
+}
+
+.mousehuntTooltip.right:after
+{
+  bottom: 0;
+  top: 0;
+  left: -15px;
+  width: 15px;
+}
+
+.valourRiftHUD
+{
+  height: 258px;
+  position: relative;
+}
+
+.valourRiftHUD.farming
+{
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/farming.png) 65px 9px no-repeat;
+}
+
+.valourRiftHUD-state
+{
+  display: none;
+}
+
+.valourRiftHUD.farming .valourRiftHUD-state.farming
+{
+  display: block;
+}
+
+.valourRiftHUD.tower .valourRiftHUD-state.tower
+{
+  display: block;
+}
+
+.valourRiftHUD-retreatButton
+{
+  position: absolute;
+  left: 168px;
+  top: 15px;
+  width: 38px;
+  height: 53px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/retreat_button.png?) 0 0 no-repeat;
+}
+
+.valourRiftHUD.farming .valourRiftHUD-retreatButton
+{
+  background-position: 0 -106px;
+  pointer-events: none;
+}
+
+.valourRiftHUD-retreatButton:hover
+{
+  background-position: 0 -53px;
+}
+
+.valourRiftHUD-retreatButton .mousehuntTooltip
+{
+  left: 120%;
+  top: 10px;
+  width: 200px;
+  font-size: 9px;
+}
+
+.valourRiftHUD-door
+{
+  position: absolute;
+  left: 185px;
+  top: 70px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/tower_door.png?) 0 0 no-repeat;
+  width: 384px;
+  height: 156px;
+}
+
+.valourRiftHUD-door.open
+{
+  background-position: 0 100%;
+}
+
+.valourRiftHUD-enterTowerButton
+{
+  position: absolute;
+  left: 273px;
+  top: 92px;
+  width: 208px;
+  height: 103px;
+  z-index: 5;
+}
+
+.valourRiftHUD-enterTowerButton:hover
+{
+  background-position-y: 100%;
+}
+
+.valourRiftHUD.tower .valourRiftHUD-enterTowerButton,.valourRiftHUD.farming.canClaim .valourRiftHUD-enterTowerButton
+{
+  display: none;
+}
+
+.valourRiftHUD-gauntletBait
+{
+  position: absolute;
+  left: 23px;
+  top: 58px;
+  width: 154px;
+  height: 88px;
+  position: relative;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/gauntlet_cheese.png) 0 0 no-repeat;
+}
+
+.valourRiftHUD-gauntletBait.active
+{
+  background-position-y: -88px;
+}
+
+.valourRiftHUD-gauntletBait.disabled
+{
+  background-position-y: -264px;
+}
+
+.valourRiftHUD-gauntletBait-image
+{
+  position: absolute;
+  left: 16px;
+  top: 40px;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+
+.valourRiftHUD-gauntletBait-image.busy:after
+{
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  border: 2px solid #999;
+  background-color: #fff;
+  background-image: url(https://www.mousehuntgame.com/images/ui/loaders/drip_spinner.gif);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: 90%;
+  -moz-background-size: 90%;
+  background-size: 90%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.valourRiftHUD-crafting
+{
+  position: absolute;
+  left: 64px;
+  top: 131px;
+  width: 81px;
+  height: 32px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/crafting_item.png) 0 0 no-repeat;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.valourRiftHUD-crafting-image
+{
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 26px;
+  height: 26px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+
+.valourRiftHUD-gauntletBait-quantity
+{
+  position: absolute;
+  left: 66px;
+  top: 46px;
+  text-align: right;
+  width: 72px;
+}
+
+.valourRiftHUD-crafting-quantity
+{
+  position: absolute;
+  left: 32px;
+  top: 8px;
+  width: 43px;
+  text-align: right;
+}
+
+.valourRiftHUD-gauntletBait-craftButton
+{
+  position: absolute;
+  left: 81px;
+  top: 2px;
+  width: 28px;
+  height: 28px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/plus_button.png) 0 0 no-repeat;
+}
+
+.valourRiftHUD-gauntletBait-craftButton:hover
+{
+  background-position-y: -27px;
+}
+
+.valourRiftHUD-gauntletBait-craftButton.disabled
+{
+  filter: grayscale(1);
+}
+
+.valourRiftHUD-gauntletBait .mousehuntTooltip
+{
+  bottom: 66%;
+  right: -15px;
+  font-size: 9px;
+  padding-right: 50px!important;
+}
+
+.valourRiftHUD-gauntletBait .mousehuntTooltip-arrow
+{
+  left: 18%!important;
+  pointer-events: none;
+}
+
+.valourRiftHUD-gauntletBait-tooltipActions
+{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.valourRiftHUD-gauntletBait-tooltipActions .mousehuntActionButton
+{
+  display: block!important;
+  margin-bottom: 3px!important;
+}
+
+.valourRiftHUD-baitContainer
+{
+  position: absolute;
+  left: 34px;
+  top: 177px;
+}
+
+.valourRiftHUD-bait
+{
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/baits.png) 0 0 no-repeat;
+  width: 130px;
+  height: 41px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.valourRiftHUD-bait-image
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 34px;
+  height: 34px;
+  margin-top: 4px;
+  margin-left: 3px;
+  margin-right: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  position: relative;
+}
+
+.valourRiftHUD-bait-image.busy:after
+{
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  border: 2px solid #999;
+  background-color: #fff;
+  background-image: url(https://www.mousehuntgame.com/images/ui/loaders/drip_spinner.gif);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: 90%;
+  -moz-background-size: 90%;
+  background-size: 90%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.valourRiftHUD-bait-quantity
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 62px;
+  text-align: right;
+  line-height: 18px;
+  margin-top: 12px;
+}
+
+.valourRiftHUD-baitContainer:hover .valourRiftHUD-bait
+{
+  background-position: 0 -41px;
+}
+
+.valourRiftHUD-bait.disabled
+{
+  background-position: 0 -164px;
+}
+
+.valourRiftHUD-bait.active
+{
+  background-position: 0 -82px;
+}
+
+.valourRiftHUD-baitButton
+{
+  position: absolute;
+  left: 105px;
+  top: 9px;
+  width: 25px;
+  height: 24px;
+}
+
+.valourRiftHUD-prestige
+{
+  position: absolute;
+  left: 240px;
+  top: 90px;
+}
+
+.valourRiftHUD.tower .valourRiftHUD-prestige,.valourRiftHUD.farming.canClaim .valourRiftHUD-prestige
+{
+  display: none;
+}
+
+.valourRiftHUD-fuelContainer
+{
+  position: absolute;
+  left: 623px;
+  top: 15px;
+  width: 115px;
+  height: 43px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/fuel_container.png) 0 0 no-repeat;
+}
+
+.valourRiftHUD-fuelContainer.active
+{
+  background-position-y: -169px;
+}
+
+.valourRiftHUD-fuelContainer.disabled
+{
+  background-position-y: 0;
+}
+
+.valourRiftHUD-fuelContainer:after
+{
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: -14px;
+  width: 60px;
+  height: 60px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/fuel.png) 0 0% no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  pointer-events: none;
+}
+
+.valourRiftHUD-fuelContainer.active:after
+{
+  background-position-y: 100%;
+}
+
+.valourRiftHUD-fuelContainer:hover:after
+{
+  filter: grayscale(0);
+}
+
+.valourRiftHUD-fuelContainer-quantity
+{
+  position: absolute;
+  right: 24px;
+  top: 3px;
+  color: #fff;
+}
+
+.valourRiftHUD-fuelContainer-armButton
+{
+  position: absolute;
+  left: 47px;
+  top: 21px;
+  width: 67px;
+  line-height: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 10px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.valourRiftHUD-fuelContainer .valourRiftHUD-fuelContainer-armButton:after,.valourRiftHUD-fuelContainer.disabled .valourRiftHUD-fuelContainer-armButton:after
+{
+  content: "Ignite";
+}
+
+.valourRiftHUD-fuelContainer.active .valourRiftHUD-fuelContainer-armButton:after
+{
+  content: "Burning";
+}
+
+.valourRiftHUD-fuelContainer-armButton.busy:before
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #0d5b00 url(https://www.mousehuntgame.com/images/ui/loaders/round_bar_green.gif) 50% 50% no-repeat;
+  -webkit-background-size: 60px;
+  -moz-background-size: 60px;
+  background-size: 60px;
+  -webkit-box-shadow: 0 2px 5px #fff inset;
+  -moz-box-shadow: 0 2px 5px #fff inset;
+  box-shadow: 0 2px 5px #fff inset;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.valourRiftHUD-fuelContainer-buyButton
+{
+  position: absolute;
+  left: 95px;
+  top: -2px;
+  width: 22px;
+  height: 22px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/plus_button.png) 0 0 no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+
+.valourRiftHUD-fuelContainer-buyButton:hover
+{
+  background-position-y: -21px;
+}
+
+.valourRiftHUD-fuelContainer .mousehuntTooltip
+{
+  right: 100%;
+  top: -8px;
+  width: 200px;
+  padding-right: 50px!important;
+  font-size: 9px;
+}
+
+.valourRiftHUD-fuelContainer .mousehuntTooltip .mousehuntActionButton
+{
+  position: absolute;
+  right: 7px;
+  top: 12px;
+}
+
+.valourRiftHUD-towerLootContainer
+{
+  position: absolute;
+  left: 284px;
+  top: 208px;
+  z-index: 2;
+}
+
+.valourRiftHUD-towerLoot
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  position: relative;
+  margin-right: 3px;
+  width: 72px;
+  height: 33px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/tower_loot.png) 0 0 no-repeat;
+}
+
+.valourRiftHUD-towerLoot-thumb
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  background-position: 50% 50%;
+  -webkit-background-size: 110%;
+  -moz-background-size: 110%;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  margin-left: 1px;
+  margin-top: 3px;
+}
+
+.valourRiftHUD-towerLoot-quantity
+{
+  position: absolute;
+  right: 5px;
+  top: 12px;
+  text-align: right;
+}
+
+.valourRiftHUD-claimContainer
+{
+  position: absolute;
+  left: 267px;
+  top: 90px;
+  z-index: 5;
+  background: -webkit-linear-gradient(#8e726d,#40291b);
+  background: -moz-linear-gradient(#8e726d,#40291b);
+  background: -ms-linear-gradient(#8e726d,#40291b);
+  background: -o-linear-gradient(#8e726d,#40291b);
+  background: linear-gradient(#8e726d,#40291b);
+  border: 2px solid #deb187;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 5px #4a3a30,0 2px 2px #333 inset;
+  -moz-box-shadow: 3px 3px 5px #4a3a30,0 2px 2px #333 inset;
+  box-shadow: 3px 3px 5px #4a3a30,0 2px 2px #333 inset;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  display: none;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.valourRiftHUD.canClaim .valourRiftHUD-claimContainer
+{
+  display: block;
+}
+
+.valourRiftHUD.canClaim .valourRiftHUD-claimContainer.reveal
+{
+  -webkit-animation: valourRiftClaimReveal .8s cubic-bezier(.175,.885,.32,1.275) both;
+  -moz-animation: valourRiftClaimReveal .8s cubic-bezier(.175,.885,.32,1.275) both;
+  -ms-animation: valourRiftClaimReveal .8s cubic-bezier(.175,.885,.32,1.275) both;
+  animation: valourRiftClaimReveal .8s cubic-bezier(.175,.885,.32,1.275) both;
+}
+
+.valourRiftHUD-claimContainer .mousehuntActionButton
+{
+  margin-top: 10px;
+}
+
+.valourRiftHUD-powerUpIcon
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+}
+
+.valourRiftHUD-powerUpIcon.long_stride
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/power_up_long_stride.png);
+}
+
+.valourRiftHUD-powerUpIcon.boss_extension
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/power_up_siphon.png);
+}
+
+.valourRiftHUD-powerUpIcon.hunt_limit
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/power_up_stamina.png);
+}
+
+.valourRiftHUD-powerUpContainer
+{
+  position: absolute;
+  left: 581px;
+  top: 82px;
+  width: 160px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.valourRiftHUD-powerUp
+{
+  height: 50px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/powerup.png) 0 0 no-repeat;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 50px;
+  padding-top: 10px;
+  display: block;
+  position: relative;
+  cursor: default;
+}
+
+.valourRiftHUD-powerUp.level_0
+{
+  background-position: 0 -53px;
+}
+
+.valourRiftHUD-powerUp:hover
+{
+  background-position: 0 -107px;
+}
+
+.valourRiftHUD-powerUp.canUpgrade
+{
+  background-position: 0 -162px;
+  cursor: pointer;
+}
+
+.valourRiftHUD-powerUp.canUpgrade:after
+{
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: -6px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/upgrade_arrow.png) 0 0 no-repeat;
+  width: 29px;
+  height: 33px;
+}
+
+.valourRiftHUD-powerUp .valourRiftHUD-powerUpIcon
+{
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  width: 36px;
+  height: 36px;
+}
+
+.valourRiftHUD-powerUp-title
+{
+  font-weight: 700;
+}
+
+.valourRiftHUD-powerUp-currentLevel
+{
+  position: absolute;
+  right: 11px;
+  top: 9px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(#07041d,#4d3bac);
+  background: -moz-linear-gradient(#07041d,#4d3bac);
+  background: -ms-linear-gradient(#07041d,#4d3bac);
+  background: -o-linear-gradient(#07041d,#4d3bac);
+  background: linear-gradient(#07041d,#4d3bac);
+  border: 1px solid #6d86de;
+  border-radius: 5px 15px 15px 5px;
+  text-align: center;
+  width: 22px;
+  line-height: 30px;
+  color: #ccc;
+  font-weight: 700;
+}
+
+.valourRiftHUD-powerUp:hover .valourRiftHUD-powerUp-currentLevel
+{
+  color: #fff;
+}
+
+.valourRiftHUD-powerUp-levelProgress
+{
+  position: absolute;
+  left: 49px;
+  top: 25px;
+  width: 74px;
+}
+
+.valourRiftHUD-powerUp-level
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  padding: 0 1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.valourRiftHUD-powerUp-level span
+{
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  height: 12px;
+  display: block;
+  background-color: #7975c1;
+}
+
+.valourRiftHUD-powerUp-level.active span
+{
+  background: -webkit-linear-gradient(#57c529 31%,#2f5221 81%,#57c529 100%);
+  background: -moz-linear-gradient(#57c529 31%,#2f5221 81%,#57c529 100%);
+  background: -ms-linear-gradient(#57c529 31%,#2f5221 81%,#57c529 100%);
+  background: -o-linear-gradient(#57c529 31%,#2f5221 81%,#57c529 100%);
+  background: linear-gradient(#57c529 31%,#2f5221 81%,#57c529 100%);
+}
+
+.valourRiftHUD-powerUp-level.canUpgrade span
+{
+  background: -webkit-linear-gradient(#fff930 22%,#ff833a 72%,#fcff3a 100%);
+  background: -moz-linear-gradient(#fff930 22%,#ff833a 72%,#fcff3a 100%);
+  background: -ms-linear-gradient(#fff930 22%,#ff833a 72%,#fcff3a 100%);
+  background: -o-linear-gradient(#fff930 22%,#ff833a 72%,#fcff3a 100%);
+  background: linear-gradient(#fff930 22%,#ff833a 72%,#fcff3a 100%);
+}
+
+.valourRiftHUD-powerUp-level:nth-last-child(5),.valourRiftHUD-powerUp-level:nth-last-child(5)~.valourRiftHUD-powerUp-level
+{
+  width: 20%;
+}
+
+.valourRiftHUD-powerUp-level:nth-last-child(6),.valourRiftHUD-powerUp-level:nth-last-child(6)~.valourRiftHUD-powerUp-level
+{
+  width: 15.6%;
+}
+
+.valourRiftHUD-powerUp-level:nth-last-child(7),.valourRiftHUD-powerUp-level:nth-last-child(7)~.valourRiftHUD-powerUp-level
+{
+  width: 14.2%;
+}
+
+.valourRiftHUD-powerUp-level:nth-last-child(8),.valourRiftHUD-powerUp-level:nth-last-child(8)~.valourRiftHUD-powerUp-level
+{
+  width: 12.5%;
+}
+
+.valourRiftHUD-powerUp-level:nth-last-child(9),.valourRiftHUD-powerUp-level:nth-last-child(9)~.valourRiftHUD-powerUp-level
+{
+  width: 11.1%;
+}
+
+.valourRiftHUD-powerUp-level:nth-last-child(10),.valourRiftHUD-powerUp-level:nth-last-child(10)~.valourRiftHUD-powerUp-level
+{
+  width: 10%;
+}
+
+.valourRiftHUD-powerUp.busy:before
+{
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  background-image: url(https://www.mousehuntgame.com/images/ui/loaders/drip_spinner.gif);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: 90%;
+  -moz-background-size: 90%;
+  background-size: 90%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.valourRiftHUD-powerUp .mousehuntTooltip
+{
+  right: 110%;
+  top: -5px;
+  width: 120px;
+  font-size: 9px;
+}
+
+.valourRiftHUD-frame
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/frame.png?) 0 0;
+  background-repeat: no-repeat;
+  height: 258px;
+  pointer-events: none;
+}
+
+.valourRiftHUD.tower.eclipse .valourRiftHUD-frame
+{
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/frame_red.png) 149px 0 no-repeat,url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/frame.png) 0 0;
+}
+
+.valourRiftHUD.farming .valourRiftHUD-frame
+{
+  background-position: 0 -258px;
+}
+
+.valourRiftHUD-frame:before
+{
+  content: '';
+  position: absolute;
+  left: 257px;
+  top: 21px;
+  height: 44px;
+  width: 249px;
+  height: 44px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floor_title_frame.png) 0 0 no-repeat;
+}
+
+.valourRiftHUD.tower.eclipse .valourRiftHUD-frame:before
+{
+  background-position: 0 100%;
+}
+
+.valourRiftHUD-frame:after
+{
+  content: '';
+  position: absolute;
+  left: 335px;
+  top: 26px;
+  width: 101px;
+  height: 23px;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  display: none;
+}
+
+.valourRiftHUD-currentFloor
+{
+  position: absolute;
+  left: 310px;
+  top: 27px;
+  width: 142px;
+  line-height: 23px;
+  color: #c0eeff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.valourRiftHUD-floorProgress
+{
+  position: absolute;
+  left: 296px;
+  top: 42px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floor_progress_container.png) 0 0 no-repeat;
+  width: 172px;
+  height: 25px;
+}
+
+.valourRiftHUD.farming .valourRiftHUD-floorProgress
+{
+  display: none;
+}
+
+.valourRiftHUD-floorProgress-barContainer
+{
+  margin-left: 1px;
+  margin-top: 9px;
+  width: 147px;
+  height: 11px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.valourRiftHUD .valourRiftHUD-floorProgress-barContainer:before
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  content: '';
+  height: 11px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floor_progress_bar.png) 0 0 repeat-x;
+}
+
+.valourRiftHUD.eclipse .valourRiftHUD-floorProgress-barContainer:before
+{
+  background-position-y: 100%;
+}
+
+.valourRiftHUD-floorProgress-barContainer:after
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 147px;
+  height: 11px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floor_progress_separators.png) 0 0 no-repeat;
+}
+
+.valourRiftHUD-floorProgress-activeFloor
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 18px;
+  height: 11px;
+  position: relative;
+}
+
+.valourRiftHUD-floorProgress-bar
+{
+  height: 11px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floor_progress_bar.png) 0 0 repeat-x;
+}
+
+.valourRiftHUD.floor_2 .valourRiftHUD-floorProgress-barContainer:before
+{
+  padding-left: 18px;
+}
+
+.valourRiftHUD.floor_3 .valourRiftHUD-floorProgress-barContainer:before
+{
+  padding-left: 36px;
+}
+
+.valourRiftHUD.floor_4 .valourRiftHUD-floorProgress-barContainer:before
+{
+  padding-left: 54px;
+}
+
+.valourRiftHUD.floor_5 .valourRiftHUD-floorProgress-barContainer:before
+{
+  padding-left: 73px;
+}
+
+.valourRiftHUD.floor_6 .valourRiftHUD-floorProgress-barContainer:before
+{
+  padding-left: 91px;
+}
+
+.valourRiftHUD.floor_7 .valourRiftHUD-floorProgress-barContainer:before
+{
+  padding-left: 109px;
+}
+
+.valourRiftHUD.floor_8 .valourRiftHUD-floorProgress-barContainer:before
+{
+  padding-left: 146px;
+}
+
+.valourRiftHUD.tower.eclipse .valourRiftHUD-floorProgress,.valourRiftHUD.tower.eclipse .valourRiftHUD-floorProgress-barContainer:after,.valourRiftHUD.tower.eclipse .valourRiftHUD-floorProgress-bar
+{
+  background-position: 0 100%;
+}
+
+.valourRiftHUD-floorProgress-boss
+{
+  position: absolute;
+  left: 148px;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/boss.jpg) 0 0 no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+.valourRiftHUD-floorProgress-boss.total
+{
+  filter: invert(1);
+}
+
+.valourRiftHUD-floorProgress .mousehuntTooltip
+{
+  bottom: 110%;
+  left: -10px;
+  right: -10px;
+  font-size: 9px;
+  text-align: center;
+}
+
+.valourRiftHUD.floor_1 .valourRiftHUD-floorProgress .mousehuntTooltip-arrow
+{
+  left: 10%!important;
+}
+
+.valourRiftHUD.floor_2 .valourRiftHUD-floorProgress .mousehuntTooltip-arrow
+{
+  left: 19%!important;
+}
+
+.valourRiftHUD.floor_3 .valourRiftHUD-floorProgress .mousehuntTooltip-arrow
+{
+  left: 29%!important;
+}
+
+.valourRiftHUD.floor_4 .valourRiftHUD-floorProgress .mousehuntTooltip-arrow
+{
+  left: 39%!important;
+}
+
+.valourRiftHUD.floor_5 .valourRiftHUD-floorProgress .mousehuntTooltip-arrow
+{
+  left: 48%!important;
+}
+
+.valourRiftHUD.floor_6 .valourRiftHUD-floorProgress .mousehuntTooltip-arrow
+{
+  left: 58%!important;
+}
+
+.valourRiftHUD.floor_7 .valourRiftHUD-floorProgress .mousehuntTooltip-arrow
+{
+  left: 68%!important;
+}
+
+.valourRiftHUD.floor_8 .valourRiftHUD-floorProgress .mousehuntTooltip-arrow
+{
+  left: 78%!important;
+}
+
+.valourRiftHUD-currentFloor-title,.valourRiftHUD-number
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 16px;
+  height: 20px;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-transition: background-position .5s ease-out;
+  -moz-transition: background-position .5s ease-out;
+  -ms-transition: background-position .5s ease-out;
+  -o-transition: background-position .5s ease-out;
+  transition: background-position .5s ease-out;
+}
+
+.valourRiftHUD-number
+{
+  margin-left: -5px;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/titles/numbers.png);
+}
+
+.valourRiftHUD-currentFloor-title
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/titles/floor.png);
+  width: 60px;
+  margin-right: 3px;
+  padding-top: 2px;
+}
+
+.valourRiftHUD-number.number_
+{
+  display: none;
+}
+
+.valourRiftHUD-number.number_0
+{
+  background-position-y: 0;
+}
+
+.valourRiftHUD-number.number_1
+{
+  background-position-y: 11.1%;
+}
+
+.valourRiftHUD-number.number_2
+{
+  background-position-y: 22.2%;
+}
+
+.valourRiftHUD-number.number_3
+{
+  background-position-y: 33.3%;
+}
+
+.valourRiftHUD-number.number_4
+{
+  background-position-y: 44.4%;
+}
+
+.valourRiftHUD-number.number_5
+{
+  background-position-y: 55.5%;
+}
+
+.valourRiftHUD-number.number_6
+{
+  background-position-y: 66.6%;
+}
+
+.valourRiftHUD-number.number_7
+{
+  background-position-y: 77.7%;
+}
+
+.valourRiftHUD-number.number_8
+{
+  background-position-y: 88.8%;
+}
+
+.valourRiftHUD-number.number_9
+{
+  background-position-y: 100%;
+}
+
+.valourRiftHUD-huntsRemaining
+{
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/hunts_remaining.png) 0 0 no-repeat;
+  width: 133px;
+  height: 48px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 8px;
+  padding-top: 11px;
+  text-align: right;
+  color: #ccc;
+}
+
+.valourRiftHUD-huntsRemaining span
+{
+  margin-right: 3px;
+  color: #fff;
+}
+
+.valourRiftHUD.hasHuntWarning .valourRiftHUD-huntsRemaining
+{
+  background-position-y: -48px;
+}
+
+.valourRiftHUD.hasHuntWarning .valourRiftHUD-huntsRemaining span
+{
+  color: #ff0;
+}
+
+.valourRiftHUD-huntsRemaining .mousehuntTooltip,.valourRiftHUD-stepsTaken .mousehuntTooltip
+{
+  left: 110%;
+  top: -16px;
+  width: 150px;
+  font-size: 9px;
+  line-height: normal;
+}
+
+.valourRiftHUD-huntsRemaining .mousehuntTooltip
+{
+  top: -10px;
+}
+
+.valourRiftHUD-stepsTaken
+{
+  position: absolute;
+  left: 50px;
+  top: 38px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/steps_taken.png) 0 0 no-repeat;
+  width: 91px;
+  height: 17px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 22px;
+  line-height: 17px;
+  text-align: right;
+  color: #eee;
+}
+
+.valourRiftHUD-stepsTaken span
+{
+  color: #fff;
+}
+
+.valourRiftHUD-warningContainer
+{
+  position: absolute;
+  top: 11px;
+  left: 218px;
+  width: 320px;
+  border: 1px solid red;
+  background: #eee;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 3px #333,0 0 5px red;
+  -moz-box-shadow: 1px 1px 3px #333,0 0 5px red;
+  box-shadow: 1px 1px 3px #333,0 0 5px red;
+  color: #000!important;
+  font-size: 10px;
+  z-index: 5;
+  padding: 5px;
+  display: none;
+}
+
+.valourRiftHUD-warningContainer.active
+{
+  display: block;
+}
+
+.valourRiftHUD-powerTypeWarning,.valourRiftHUD-baitWarning
+{
+  display: none;
+  color: #000!important;
+  border: 1px solid transparent;
+}
+
+.valourRiftHUD-baitWarning.active,.valourRiftHUD-powerTypeWarning.active
+{
+  display: block;
+}
+
+.valourRiftHUD-baitWarning:hover,.valourRiftHUD-powerTypeWarning:hover
+{
+  background-color: #fff;
+  border-color: #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.valourRiftHUD-baitWarning:before,.valourRiftHUD-powerTypeWarning:before
+{
+  content: '';
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  margin-right: 3px;
+  width: 20px;
+  height: 20px;
+  line-height: 10px;
+}
+
+.valourRiftHUD-baitWarning:before
+{
+  background: url(https://www.mousehuntgame.com/images/ui/hud/tournament_exclamation_mark.png) -1px -23px no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+
+.valourRiftHUD-powerTypeWarning:before
+{
+  background: url(https://www.mousehuntgame.com/images/powertypes/rift.png) 50% 50% no-repeat;
+}
+
+.valourRiftHUD-overlay
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/iceberg_dark_overlay.png) 0 0 repeat;
+  -webkit-box-shadow: 0 0 50px #1c1a3e inset;
+  -moz-box-shadow: 0 0 50px #1c1a3e inset;
+  box-shadow: 0 0 50px #1c1a3e inset;
+  display: none;
+}
+
+.valourRiftHUD.showConfirm .valourRiftHUD-overlay
+{
+  display: block;
+}
+
+.valourRiftHUD-dialog-state
+{
+  padding: 10px;
+  display: none;
+}
+
+.valourRiftHUD.retreat .valourRiftHUD-dialog-state.retreat,.valourRiftHUD.basicBaits .valourRiftHUD-dialog-state.basicBaits,.valourRiftHUD.upgradeTower .valourRiftHUD-dialog-state.upgradeTower,.valourRiftHUD.gauntletBait .valourRiftHUD-dialog-state.gauntletBait
+{
+  display: block;
+}
+
+.valourRiftHUD-dialog-state.upgradeTower,.valourRiftHUD-dialog-state.gauntletBait
+{
+  padding: 0;
+}
+
+.valourRiftHUD-dialogContainer
+{
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 20px;
+  right: 20px;
+  color: #000;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
+  text-align: center;
+  background: #9fbdff;
+  padding: 5px;
+  -webkit-box-shadow: 1px 1px 2px #ccc inset,0 0 20px #002673 inset,0 0 2px #000;
+  -moz-box-shadow: 1px 1px 2px #ccc inset,0 0 20px #002673 inset,0 0 2px #000;
+  box-shadow: 1px 1px 2px #ccc inset,0 0 20px #002673 inset,0 0 2px #000;
+}
+
+.valourRiftHUD-dialog-padding
+{
+  background: #ccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 20px #909090 inset;
+  -moz-box-shadow: 3px 3px 20px #909090 inset;
+  box-shadow: 3px 3px 20px #909090 inset;
+  position: relative;
+}
+
+.valourRiftHUD-dialog-title
+{
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.valourRiftHUD-dialog-closeButton
+{
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-left-radius: 5px;
+  font-variant: small-caps;
+  font-weight: 700;
+  border-left: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 2px 5px;
+  color: #000!important;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  background: #ccc;
+}
+
+.valourRiftHUD-dialog-closeButton:hover
+{
+  background-color: #fff;
+}
+
+.valourRiftHUD-dialog-item
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  margin: 0 5px;
+  position: relative;
+  text-align: center;
+}
+
+.valourRiftHUD-dialogContainer .itemImage
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 80px;
+  height: 80px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.valourRiftHUD-dialog-item.disabled .itemImage
+{
+  -webkit-box-shadow: 0 0 50px #333 inset;
+  -moz-box-shadow: 0 0 50px #333 inset;
+  box-shadow: 0 0 50px #333 inset;
+}
+
+.valourRiftHUD-dialogContainer .valourRiftHUD-dialog-state.basicBaits .valourRiftHUD-dialog-item
+{
+  width: 20%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+}
+
+.valourRiftHUD-dialog-item-name
+{
+  font-size: 10px;
+  margin: 7px 0;
+}
+
+.valourRiftHUD-dialogContainer .mousehuntActionButton
+{
+  margin: 0 5px;
+}
+
+.valourRiftHUD-retreatEmpty
+{
+  margin-bottom: 10px;
+}
+
+.valourRiftHUD-tabHeaderContainer
+{
+  background-color: #1e196f;
+  padding-right: 30px;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.valourRiftHUD-tabHeader
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: bottom;
+  width: 33.3%;
+  position: relative;
+}
+
+.valourRiftHUD-tabHeader-name
+{
+  display: block;
+  margin: 5px 5px 0;
+  padding: 5px 10px;
+  text-align: center;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  background-color: #a5a5a5;
+  color: #000;
+}
+
+.valourRiftHUD-tabHeader.active .valourRiftHUD-tabHeader-name
+{
+  margin-top: 3px;
+  padding-bottom: 8px;
+  background-color: #fff;
+}
+
+.valourRiftHUD-tabHeader.canUpgrade:after
+{
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: -4px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/upgrade_arrow.png) 0 0 no-repeat;
+  width: 29px;
+  height: 33px;
+}
+
+.valourRiftHUD-tabContent
+{
+  display: none;
+  padding: 10px;
+}
+
+.valourRiftHUD-tabContent.active
+{
+  display: block;
+}
+
+.valourRiftHUD-towerUpgrade-header
+{
+  text-align: left;
+}
+
+.valourRiftHUD-towerUpgrade-content
+{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.valourRiftHUD-towerUpgrade-header-title
+{
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.valourRiftHUD-towerUpgrade-description
+{
+  font-style: italic;
+}
+
+.valourRiftHUD-towerUpgradeLevel
+{
+  flex: .75;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.valourRiftHUD-towerUpgradeLevel-costRow
+{
+  margin-bottom: 5px;
+  background-color: #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.valourRiftHUD-towerUpgradeLevel-costRow:last-child
+{
+  margin-bottom: 0;
+}
+
+.valourRiftHUD-towerUpgradeLevel-costIcon
+{
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  position: relative;
+}
+
+.valourRiftHUD-towerUpgradeLevel-costIcon.rift_gaunt_upgrade_a_stat_item
+{
+  background-image: url(https://www.mousehuntgame.com/images/items/stats/7a7a027f2440400adb4e48d97e7b415a.gif?cv=1);
+}
+
+.valourRiftHUD-towerUpgradeLevel-costIcon.rift_gaunt_upgrade_b_stat_item
+{
+  background-image: url(https://www.mousehuntgame.com/images/items/stats/8911019d5b6ce097b81667624c4b5d13.gif?cv=1);
+}
+
+.valourRiftHUD-towerUpgradeLevel-costIcon.shade_eclipse_resource_stat_item
+{
+  background-image: url(https://www.mousehuntgame.com/images/items/stats/986689ecb50119eb61c90eb1988cc31c.gif?cv=1);
+}
+
+.valourRiftHUD-towerUpgradeLevel-costIcon.total_eclipse_resource_stat_item
+{
+  background-image: url(https://www.mousehuntgame.com/images/items/stats/114dbdfd365c9c1cc67e8193475e05f2.gif?cv=1);
+}
+
+.valourRiftHUD-towerUpgradeLevel-costIcon .mousehuntTooltip
+{
+  bottom: 100%;
+  left: -30px;
+  right: -30px;
+  text-align: center;
+}
+
+.valourRiftHUD-towerUpgradeLevel-costProgressBar
+{
+  flex: .8;
+  flex-grow: 1;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 1px;
+  border: 2px solid #999;
+  background-color: #1f2438;
+}
+
+.valourRiftHUD-towerUpgradeLevel-costProgressBar span
+{
+  display: block;
+  background: -webkit-linear-gradient(#fff,#b0cbff 1%,#4a79ff 64%);
+  background: -moz-linear-gradient(#fff,#b0cbff 1%,#4a79ff 64%);
+  background: -ms-linear-gradient(#fff,#b0cbff 1%,#4a79ff 64%);
+  background: -o-linear-gradient(#fff,#b0cbff 1%,#4a79ff 64%);
+  background: linear-gradient(#fff,#b0cbff 1%,#4a79ff 64%);
+  height: 26px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.valourRiftHUD-towerUpgradeLevel-costRow.active .valourRiftHUD-towerUpgradeLevel-costProgressBar
+{
+  border-color: #ffed18;
+}
+
+.valourRiftHUD-towerUpgradeLevel-costRow.active .valourRiftHUD-towerUpgradeLevel-costProgressBar span
+{
+  background: -webkit-linear-gradient(#fff,#80ff95 1%,#4fd623 64%);
+  background: -moz-linear-gradient(#fff,#80ff95 1%,#4fd623 64%);
+  background: -ms-linear-gradient(#fff,#80ff95 1%,#4fd623 64%);
+  background: -o-linear-gradient(#fff,#80ff95 1%,#4fd623 64%);
+  background: linear-gradient(#fff,#80ff95 1%,#4fd623 64%);
+}
+
+.valourRiftHUD-towerUpgradeLevel-costTotal
+{
+  text-align: left;
+  flex: .25;
+}
+
+.valourRiftHUD-towerUpgrade-currentValueContainer
+{
+  line-height: 20px;
+}
+
+.valourRiftHUD-towerUpgrade-currentValue
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  padding: 0 3px;
+  background-color: #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.valourRiftHUD-towerUpgrade .valourRiftHUD-dialog-actions
+{
+  flex: .25;
+}
+
+.valourRiftHUD-towerUpgrade .valourRiftHUD-dialog-actions .mousehuntActionButton
+{
+  display: block!important;
+}
+
+.valourRiftHUD-towerUpgrade .valourRiftHUD-dialog-actions .mousehuntActionButton.upgrade
+{
+  margin: 0 0 5px!important;
+  padding: 15px 0!important;
+  line-height: normal!important;
+}
+
+.valourRiftHUD-towerUpgrade-allLevelsContainer
+{
+  background-color: #9a9595;
+  margin: 0 -10px -10px;
+  padding: 10px 10px 7px;
+}
+
+.valourRiftHUD-towerUpgrade-allLevels
+{
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #333;
+}
+
+.valourRiftHUD-towerUpgrade-level
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.valourRiftHUD-towerUpgrade-level:first-child span
+{
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.valourRiftHUD-towerUpgrade-level:last-child span
+{
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.valourRiftHUD-towerUpgrade-level span
+{
+  line-height: 20px;
+  text-align: center;
+  color: #ccc;
+  display: block;
+}
+
+.valourRiftHUD-towerUpgrade-level:hover span
+{
+  color: #fff;
+}
+
+.valourRiftHUD-towerUpgrade-level.current span
+{
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.valourRiftHUD-towerUpgrade-level.next span
+{
+  color: #f5e731;
+}
+
+.valourRiftHUD-towerUpgrade-level.next span:after
+{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 85%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 11px solid #f5e731;
+  pointer-events: none;
+}
+
+.valourRiftHUD-towerUpgrade-level.active span
+{
+  background: -webkit-linear-gradient(#fff,#2cde4a 1%,#37b318 64%);
+  background: -moz-linear-gradient(#fff,#2cde4a 1%,#37b318 64%);
+  background: -ms-linear-gradient(#fff,#2cde4a 1%,#37b318 64%);
+  background: -o-linear-gradient(#fff,#2cde4a 1%,#37b318 64%);
+  background: linear-gradient(#fff,#2cde4a 1%,#37b318 64%);
+  color: #000;
+}
+
+.valourRiftHUD-towerUpgrade-level .mousehuntTooltip
+{
+  bottom: 115%;
+  left: -15px;
+  right: -15px;
+  text-align: center;
+}
+
+.valourRiftHUD-towerUpgrade-level-cost
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 40px;
+  margin-top: 5px;
+}
+
+.valourRiftHUD-towerUpgrade-level-cost .valourRiftHUD-towerUpgradeLevel-costIcon
+{
+  display: block;
+}
+
+.valourRiftHUD-towerUpgrade-level:nth-last-child(5),.valourRiftHUD-towerUpgrade-level:nth-last-child(5)~.valourRiftHUD-towerUpgrade-level
+{
+  width: 20%;
+}
+
+.valourRiftHUD-towerUpgrade-level:nth-last-child(6),.valourRiftHUD-towerUpgrade-level:nth-last-child(6)~.valourRiftHUD-towerUpgrade-level
+{
+  width: 15.6%;
+}
+
+.valourRiftHUD-towerUpgrade-level:nth-last-child(7),.valourRiftHUD-towerUpgrade-level:nth-last-child(7)~.valourRiftHUD-towerUpgrade-level
+{
+  width: 14.28%;
+}
+
+.valourRiftHUD-towerUpgrade-level:nth-last-child(8),.valourRiftHUD-towerUpgrade-level:nth-last-child(8)~.valourRiftHUD-towerUpgrade-level
+{
+  width: 12.5%;
+}
+
+.valourRiftHUD-towerUpgrade-level:nth-last-child(9),.valourRiftHUD-towerUpgrade-level:nth-last-child(9)~.valourRiftHUD-towerUpgrade-level
+{
+  width: 11.1%;
+}
+
+.valourRiftHUD-towerUpgrade-level:nth-last-child(10),.valourRiftHUD-towerUpgrade-level:nth-last-child(10)~.valourRiftHUD-towerUpgrade-level
+{
+  width: 10%;
+}
+
+.valourRiftHUD-dialog-inventoryContainer
+{
+  background: -webkit-linear-gradient(#1e196f,#3f36c5);
+  background: -moz-linear-gradient(#1e196f,#3f36c5);
+  background: -ms-linear-gradient(#1e196f,#3f36c5);
+  background: -o-linear-gradient(#1e196f,#3f36c5);
+  background: linear-gradient(#1e196f,#3f36c5);
+  text-align: left;
+  padding: 5px;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.valourRiftHUD-dialog-inventory-item
+{
+  display: block;
+}
+
+.valourRiftHUD-dialog-inventory-item:nth-last-child(2),.valourRiftHUD-dialog-inventory-item:nth-last-child(2)~.valourRiftHUD-dialog-inventory-item
+{
+  width: 50%;
+}
+
+.valourRiftHUD-dialog-inventory-item:nth-last-child(3),.valourRiftHUD-dialog-inventory-item:nth-last-child(3)~.valourRiftHUD-dialog-inventory-item
+{
+  width: 33.3%;
+}
+
+.valourRiftHUD-dialog-inventory-item:nth-last-child(4),.valourRiftHUD-dialog-inventory-item:nth-last-child(4)~.valourRiftHUD-dialog-inventory-item
+{
+  width: 25%;
+}
+
+.valourRiftHUD-dialog-inventory-item:nth-last-child(5),.valourRiftHUD-dialog-inventory-item:nth-last-child(5)~.valourRiftHUD-dialog-inventory-item
+{
+  width: 20%;
+}
+
+.valourRiftHUD-dialog-inventory-item:nth-last-child(6),.valourRiftHUD-dialog-inventory-item:nth-last-child(6)~.valourRiftHUD-dialog-inventory-item
+{
+  width: 16.6%;
+}
+
+.valourRiftHUD-dialog-inventory-item-padding
+{
+  background-color: #c5cbec;
+  margin: 5px 5px 5px 10px;
+  padding-left: 29px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  min-height: 26px;
+  font-size: 10px;
+  position: relative;
+  padding-right: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.valourRiftHUD-dialog-inventory-item-image
+{
+  position: absolute;
+  left: -10px;
+  top: -5px;
+  height: 33px;
+  width: 33px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  -webkit-background-size: 110%;
+  -moz-background-size: 110%;
+  background-size: 110%;
+  background-position: 50% 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 5px;
+}
+
+.valourRiftHUD-dialog-inventory-item-name
+{
+  display: block;
+  flex-grow: .8;
+}
+
+.valourRiftHUD-dialog-inventory-item-quantity
+{
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  min-width: 20px;
+  text-align: right;
+  background-color: #7c7aad;
+  padding: 0 3px;
+  line-height: 18px;
+  -webkit-box-shadow: 0 0 5px #000 inset;
+  -moz-box-shadow: 0 0 5px #000 inset;
+  box-shadow: 0 0 5px #000 inset;
+  text-shadow: 1px 1px 1px #333;
+  box-shadow: 0 6px 5px #000 inset;
+}
+
+.valourRiftHUD-dialog-inventory-item-action
+{
+  margin: 0!important;
+  padding-left: 5px;
+}
+
+.valourRiftHUD-dialog-state.gauntletBait .upsellItemActionView
+{
+  padding: 10px;
+}
+
+.valourRiftHUD-activeAugmentations
+{
+  position: absolute;
+  left: 193px;
+  bottom: 10px;
+  z-index: 5;
+  height: 40px;
+}
+
+.valourRiftHUD-activeAugmentation
+{
+  display: none;
+  vertical-align: top;
+  position: relative;
+  width: 30px;
+  margin-left: -14px;
+}
+
+.valourRiftHUD-activeAugmentation.active
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.valourRiftHUD-activeAugmentation .mousehuntTooltip
+{
+  bottom: 200%;
+  left: -70px;
+  right: -70px;
+  font-size: 9px;
+  text-align: center;
+}
+
+.valourRiftHUD-activeAugmentation .valourRiftHUD-augmentation-icon
+{
+  display: none;
+  pointer-events: none;
+  -webkit-transition: transform .2s ease-out;
+  -moz-transition: transform .2s ease-out;
+  -ms-transition: transform .2s ease-out;
+  -o-transition: transform .2s ease-out;
+  transition: transform .2s ease-out;
+}
+
+.valourRiftHUD-activeAugmentation.active .valourRiftHUD-augmentation-icon
+{
+  display: block;
+}
+
+.valourRiftHUD-activeAugmentation:hover .valourRiftHUD-augmentation-icon
+{
+  z-index: 1;
+  -webkit-transform: scale(1.5) translateY(-5px);
+  -moz-transform: scale(1.5) translateY(-5px);
+  -ms-transform: scale(1.5) translateY(-5px);
+  -o-transform: scale(1.5) translateY(-5px);
+  transform: scale(1.5) translateY(-5px);
+}
+
+.valourRiftHUD-augmentation-icon
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  position: relative;
+}
+
+.valourRiftHUD-augmentation-icon.tu
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/tower_ultimatum.png);
+}
+
+.valourRiftHUD-augmentation-icon.sste
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/string_stepping.png);
+}
+
+.valourRiftHUD-augmentation-icon.sp1
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/secret_passage.png);
+}
+
+.valourRiftHUD-augmentation-icon.ss
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/secret_passage.png);
+}
+
+.valourRiftHUD-augmentation-icon.cp
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/champion_pillage.png);
+}
+
+.valourRiftHUD-augmentation-icon.sr
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/champion_pillage.png);
+}
+
+.valourRiftHUD-augmentation-icon.hr
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/highway_robbery.png);
+}
+
+.valourRiftHUD-augmentation-icon.er
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/elixir_rain.png);
+}
+
+.valourRiftHUD-dialog-gauntletBaitOption
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 50%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.valourRiftHUD-dialog-gauntletBaitOption-result
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 120px;
+  text-align: center;
+}
+
+.valourRiftHUD-dialog-gauntletBaitOption-result-image
+{
+  width: 80px;
+  height: 80px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+
+.valourRiftHUD-dialog-gauntletBaitOption-cost-image
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 40px!important;
+  height: 40px!important;
+  margin: 0 10px!important;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+
+#overlayPopup.valourRiftPopup
+{
+  top: 10px!important;
+}
+
+#overlayPopup.valourRiftPopup .jsDialogContainer .prefix
+{
+  display: none;
+}
+
+#overlayPopup.valourRiftPopup .jsDialogContainer .content
+{
+  padding: 0;
+}
+
+#overlayPopup.valourRiftPopup #jsDialogClose
+{
+  z-index: 1;
+}
+
+.valourRiftPopup-title
+{
+  font-weight: 700;
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 5px;
+  text-align: center;
+  text-shadow: 0 0 1px #333;
+}
+
+.valourRiftPopup-towerStat
+{
+  width: 33.3%;
+}
+
+.valourRiftPopup-towerStat.wide
+{
+  width: 50%;
+}
+
+.valourRiftPopup-towerStat
+{
+  padding: 5px 0;
+}
+
+.valourRiftPopup-towerStat .valourRiftPopup-label
+{
+  font-size: 12px;
+}
+
+.valourRiftPopup-towerStat .valourRiftPopup-value
+{
+  font-weight: 700;
+  color: #f2bc7d;
+  font-size: 16px;
+  line-height: 31px;
+}
+
+.valourRiftPopupClaim-cacheLootContainer
+{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.valourRiftPopupClaim-cacheLoot
+{
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.valourRiftPopupClaim-cacheLoot:nth-last-child(1),.valourRiftPopupClaim-cacheLoot:nth-last-child(1)~.valourRiftPopupClaim-cacheLoot
+{
+  display: block;
+  width: 100%;
+}
+
+.valourRiftPopupClaim-cacheLoot:nth-last-child(2),.valourRiftPopupClaim-cacheLoot:nth-last-child(2)~.valourRiftPopupClaim-cacheLoot
+{
+  width: 50%;
+}
+
+.valourRiftPopupClaim-cacheLoot:nth-last-child(3),.valourRiftPopupClaim-cacheLoot:nth-last-child(3)~.valourRiftPopupClaim-cacheLoot
+{
+  width: 33.3%;
+}
+
+.valourRiftPopupClaim-cacheLoot:nth-last-child(4),.valourRiftPopupClaim-cacheLoot:nth-last-child(4)~.valourRiftPopupClaim-cacheLoot
+{
+  width: 25%;
+}
+
+.valourRiftPopupClaim-cacheLoot:nth-last-child(5),.valourRiftPopupClaim-cacheLoot:nth-last-child(5)~.valourRiftPopupClaim-cacheLoot
+{
+  width: 20%;
+}
+
+.valourRiftPopupClaim-cacheLoot:nth-last-child(6),.valourRiftPopupClaim-cacheLoot:nth-last-child(6)~.valourRiftPopupClaim-cacheLoot
+{
+  width: 16.6%;
+}
+
+.valourRiftPopupClaim-cacheLoot.robbery_slot_a .valourRiftPopupClaim-cacheLoot-image
+{
+  -webkit-box-shadow: 0 0 5px 5px #fe8f21;
+  -moz-box-shadow: 0 0 5px 5px #fe8f21;
+  box-shadow: 0 0 5px 5px #fe8f21;
+}
+
+.valourRiftPopupClaim-cacheLoot.robbery_slot_a .valourRiftPopupClaim-cacheLoot-image:before
+{
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  pointer-events: none;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/highway_robbery.png);
+  width: 40px;
+  height: 40px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+
+.valourRiftPopupClaim-cacheLoot.robbery_slot_a .mousehuntTooltip:after
+{
+  content: 'Sigil Hunter';
+  font-style: italic;
+  display: block;
+  color: #fe8f21;
+}
+
+.valourRiftPopupClaim-cacheLoot.research_slot_b .valourRiftPopupClaim-cacheLoot-image
+{
+  -webkit-box-shadow: 0 0 5px 5px #28a938;
+  -moz-box-shadow: 0 0 5px 5px #28a938;
+  box-shadow: 0 0 5px 5px #28a938;
+}
+
+.valourRiftPopupClaim-cacheLoot.research_slot_b .valourRiftPopupClaim-cacheLoot-image:before
+{
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  pointer-events: none;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/champion_pillage.png);
+  width: 40px;
+  height: 40px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+
+.valourRiftPopupClaim-cacheLoot.research_slot_b .mousehuntTooltip:after
+{
+  content: 'Secret Research';
+  font-style: italic;
+  display: block;
+  color: #28a938;
+}
+
+.valourRiftPopupClaim-cacheLoot .mousehuntTooltip
+{
+  bottom: 110%;
+  left: -20px;
+  right: -20px;
+  line-height: normal;
+  font-size: 10px;
+  text-shadow: none;
+  text-align: center;
+}
+
+.valourRiftPopupClaim-cacheLoot-image
+{
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 3px;
+  -webkit-box-shadow: 0 0 1px #000 inset;
+  -moz-box-shadow: 0 0 1px #000 inset;
+  box-shadow: 0 0 1px #000 inset;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  position: relative;
+}
+
+.valourRiftPopupClaim-chest
+{
+  display: block;
+  *display: inline;
+  *zoom: 1;
+  /* vertical-align: top; */
+  width: 432px;
+  position: relative;
+}
+
+.valourRiftPopupClaim-chest-header
+{
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_chest_top.png) 0 0 no-repeat;
+  height: 206px;
+}
+
+.valourRiftPopupClaim-chest-content
+{
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_chest_middle.png) 0 0 repeat-y;
+  padding-left: 42px;
+  padding-right: 46px;
+}
+
+.valourRiftPopupClaim-chest-footer
+{
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_chest_bottom.png) 0 0 no-repeat;
+  height: 62px;
+}
+
+.valourRiftPopupClaim-chest-floor
+{
+  position: absolute;
+  left: 52px;
+  top: 133px;
+  width: 330px;
+  line-height: 40px;
+  font-weight: 700;
+  font-size: 27px;
+  text-align: center;
+  color: #462605;
+  text-shadow: 0 0 6px #ffd11a;
+}
+
+.valourRiftPopupClaim-lootLogContainer
+{
+  width: 287px;
+  position: relative;
+  z-index: 1;
+}
+
+.valourRiftPopupClaim-lootLog
+{
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.valourRiftPopupClaim-lootLog-background:before
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -140px;
+  height: 140px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_loot_top.png) no-repeat;
+}
+
+.valourRiftPopupClaim-lootLog-background
+{
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_loot_middle.png) repeat-y;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 140px;
+  bottom: 162px;
+}
+
+.valourRiftPopupClaim-lootLog-background:after
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -162px;
+  height: 162px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_loot_bottom.png) no-repeat;
+}
+
+.valourRiftPopupClaim-lootLog-content
+{
+  display: block;
+  padding-left: 46px;
+  padding-right: 36px;
+  padding-top: 29px;
+  padding-bottom: 50px;
+  position: relative;
+  min-height: 400px;
+}
+
+.valourRiftPopupClaim-lootLogTitle
+{
+  line-height: 40px;
+  font-weight: 700;
+  font-size: 27px;
+  text-align: center;
+  color: #311210;
+  text-shadow: 0 0 6px #cfb281;
+}
+
+.valourRiftPopupClaim-lootLog
+{
+  position: relative;
+}
+
+.valourRiftPopupClaim-lootLog:before
+{
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  padding: 3px;
+  font-size: 10px;
+  background: #333;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.valourRiftPopupClaim-lootLog:after
+{
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  right: 3px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  pointer-events: none;
+}
+
+.valourRiftPopupClaim-lootLog.f
+{
+  background: #6b63a7;
+}
+
+.valourRiftPopupClaim-lootLog.f:after
+{
+  content: '';
+  top: 2px;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/fuel.png);
+  background-position-y: 100%;
+}
+
+.valourRiftPopupClaim-lootLog.f:hover:before
+{
+  content: "Found with Champion's Fire";
+}
+
+.valourRiftPopupClaim-lootLog.e
+{
+  background: #9a4a76;
+}
+
+.valourRiftPopupClaim-lootLog.e:after
+{
+  content: '';
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/elixir_rain.png);
+}
+
+.valourRiftPopupClaim-lootLog.e:hover:before
+{
+  content: "Found with Elixir Rain";
+}
+
+.valourRiftPopupClaim-lootLog.m:hover:before
+{
+  content: "Looted from mice";
+}
+
+.valourRiftPopupClaim-lootLog .itemImage
+{
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  -webkit-box-shadow: 0 0 1px #000 inset;
+  -moz-box-shadow: 0 0 1px #000 inset;
+  box-shadow: 0 0 1px #000 inset;
+  overflow: visible;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.valourRiftPopupClaim-lootLog-name
+{
+  font-size: 10px;
+  text-align: left;
+  color: #fff6e9;
+  margin-right: 32px;
+  flex-grow: .8;
+}
+
+.valourRiftPopupIllustrated .valourRiftHUD-powerUpIcon
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-right: 3px;
+}
+
+.valourRiftPopupClaim-statsContainer
+{
+  display: block;
+  *display: inline;
+  *zoom: 1;
+  /* vertical-align: top; */
+  width: 394px;
+  position: relative;
+  z-index: 1;
+  left: 5px;
+}
+
+.valourRiftPopupClaim-stats-background:before
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -37px;
+  height: 37px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_stats_top.png) no-repeat;
+}
+
+.valourRiftPopupClaim-stats-background
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 37px;
+  bottom: 42px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_stats_middle.png) repeat-y;
+}
+
+.valourRiftPopupClaim-stats-background:after
+{
+  content: '';
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -42px;
+  height: 42px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_stats_bottom.png) no-repeat;
+}
+
+.valourRiftPopupClaim-stats-content
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #c19d73;
+  text-shadow: 1px 1px 1px #000;
+  text-align: center;
+  padding: 20px 20px 20px 25px;
+  position: relative;
+}
+
+.valourRiftPopup-augmentationsContainer
+{
+  position: absolute;
+  left: 65px;
+  /* top: 58px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.valourRiftPopup-augmentation
+{
+  width: 16.6%;
+  position: relative;
+}
+
+.valourRiftPopup-augmentation .mousehuntTooltip
+{
+  bottom: 110%;
+  left: -20px;
+  right: -20px;
+  text-align: center;
+}
+
+.valourRiftPopup-augmentation .valourRiftHUD-augmentation-icon
+{
+  width: 50px;
+  height: 50px;
+}
+
+.valourRiftPopup-augmentation.inactive .valourRiftHUD-augmentation-icon
+{
+  filter: grayscale(1);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  /* -webkit-box-shadow: 0 0 20px #000 inset; */
+  /* -moz-box-shadow: 0 0 20px #000 inset; */
+  /* box-shadow: 0 0 20px #000 inset; */
+}
+
+.valourRiftPopupClaim-newFloorRecord
+{
+  width: 100%;
+  color: #ffc6fa;
+  line-height: 40px;
+  font-weight: 700;
+  font-size: 19px;
+  text-align: center;
+  text-shadow: 0 0 6px #cfb281;
+}
+
+.valourRiftPopup-previewTowerContainer
+{
+  height: 700px;
+  position: relative;
+  background: -webkit-linear-gradient(#20216f,#703271,#20216f);
+  background: -moz-linear-gradient(#20216f,#703271,#20216f);
+  background: -ms-linear-gradient(#20216f,#703271,#20216f);
+  background: -o-linear-gradient(#20216f,#703271,#20216f);
+  background: linear-gradient(#20216f,#703271,#20216f);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.valourRiftPopup .valourRiftHUD-towerContainer
+{
+  left: 150px;
+  top: 0;
+  width: 380px;
+  height: 700px;
+  border-left: 2px solid gold;
+  border-right: 2px solid gold;
+}
+
+.valourRiftPopup-previewTowerContainer .valourRiftHUD-tower
+{
+  height: 700px;
+}
+
+.valourRiftPopup-previewTowerContainer .valourRiftHUD-tower-sprite.step
+{
+  opacity: .5;
+}
+
+.valourRiftHUD-previewTower
+{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 559px;
+  top: 61px;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/zoom.png);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  opacity: .8;
+  display: none;
+}
+
+.valourRiftHUD-previewTower:hover
+{
+  opacity: 1;
+}
+
+.valourRiftHUD.tower .valourRiftHUD-previewTower
+{
+  display: block;
+}
+
+#overlayPopup.valourRiftPopupIllustrated
+{
+  top: 30px!important;
+}
+
+#overlayPopup.valourRiftPopupIllustrated .jsDialog.top,#overlayPopup.valourRiftPopupIllustrated .jsDialog.bottom,#overlayPopup.valourRiftPopupIllustrated .jsDialogContainer .prefix,#overlayPopup.valourRiftPopupIllustrated .jsDialogContainer .suffix
+{
+  display: none;
+}
+
+#overlayPopup.valourRiftPopupIllustrated .jsDialog.background
+{
+  background: 0 0;
+  padding: 0;
+  margin: 0;
+}
+
+#overlayPopup.valourRiftPopupIllustrated .jsDialogContainer .content
+{
+  padding: 0;
+}
+
+.valourRiftPopupIllustrated-header
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_top.png?);
+  height: 110px;
+  position: relative;
+}
+
+.valourRiftPopupIllustrated-content
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_middle.png);
+  padding: 0 55px;
+}
+
+.valourRiftPopupIllustrated-footer
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_bottom_enter_tower.png);
+  height: 140px;
+  position: relative;
+}
+
+.valourRiftPopupIllustrated-closeButton
+{
+  position: absolute;
+  left: 690px;
+  top: 9px;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_close.png);
+  background-position: 0 100px;
+}
+
+.valourRiftPopupIllustrated-closeButton:hover
+{
+  background-position: 0 0;
+}
+
+.valourRiftPopupIllustrated-inventoryCostContainer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50px;
+  top: 54px;
+  width: 412px;
+  height: 62px;
+}
+
+.valourRiftPopupIllustrated-inventoryCost-empty
+{
+  text-align: center;
+  color: #fff;
+  flex: 1;
+}
+
+.valourRiftPopupIllustrated .valourRiftHUD-dialog-inventoryContainer
+{
+  margin: -11px 29px 0 26px;
+  padding-top: 10px;
+  border: 3px solid #0d0e2d;
+}
+
+.valourRiftPopupClaim-header
+{
+  height: 80px;
+  /* background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_claim_top.png?) 0 100% no-repeat; */
+  position: relative;
+}
+
+.valourRiftPopupClaim-content
+{
+  /* background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_claim_middle.png?) repeat-y; */
+  padding: 0 20px;
+  margin-top: -30px;
+}
+
+.valourRiftPopupClaim-footer
+{
+  /* background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_claim_bottom.png?) repeat-y; */
+  height: 130px;
+  position: relative;
+}
+
+.valourRiftPopupClaim-content-left
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 58%;
+  margin-left: 3%;
+  text-align: right;
+  margin-bottom: -45px;
+}
+
+.valourRiftPopupClaim-content-right
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 39%;
+  margin-left: -3%;
+}
+
+.valourRiftPopupClaim-closeButton
+{
+  position: absolute;
+  left: 690px;
+  top: 12px;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_close.png);
+  background-position: 0 100px;
+}
+
+.valourRiftPopupClaim-footer-closeButton
+{
+  position: absolute;
+  left: 517px;
+  top: 51px;
+  width: 167px;
+  height: 51px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/cache_close_button.png);
+  background-position: 0 100px;
+}
+
+.valourRiftPopupClaim-closeButton:hover,.valourRiftPopupClaim-footer-closeButton:hover
+{
+  background-position: 0 0;
+}
+
+.valourRiftHUD-augmentationContainer
+{
+  padding-left: 1px;
+}
+
+.valourRiftHUD-augmentation
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 318px;
+  margin: 3px 3px 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  color: #fff;
+}
+
+.valourRiftHUD-augmentation:after
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  height: 12px;
+  pointer-events: none;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augmentatation_bottom.png) 0 100% no-repeat;
+}
+
+.valourRiftHUD-augmentation:hover
+{
+  text-decoration: none;
+}
+
+.valourRiftHUD-augmentation:hover:after,.valourRiftHUD-augmentation:hover .valourRiftHUD-augmentation-name,.valourRiftHUD-augmentation:hover .valourRiftHUD-augmentation-details
+{
+  background-position-y: 100%;
+}
+
+.valourRiftHUD-augmentation.selected:after,.valourRiftHUD-augmentation.selected .valourRiftHUD-augmentation-name,.valourRiftHUD-augmentation.selected .valourRiftHUD-augmentation-details
+{
+  background-position-x: 50%;
+}
+
+.valourRiftHUD-augmentation.error:after,.valourRiftHUD-augmentation.locked:after,.valourRiftHUD-augmentation.error .valourRiftHUD-augmentation-name,.valourRiftHUD-augmentation.locked .valourRiftHUD-augmentation-name,.valourRiftHUD-augmentation.error .valourRiftHUD-augmentation-details,.valourRiftHUD-augmentation.locked .valourRiftHUD-augmentation-details
+{
+  background-position-x: 100%;
+  background-position-y: 0;
+  color: #ccc;
+  cursor: default;
+}
+
+.valourRiftHUD-augmentation-name
+{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 29px;
+  height: 35px;
+  text-shadow: -1px 1px 1px #000;
+  padding-left: 65px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augmentatation_top.png) 0 0 no-repeat;
+}
+
+.valourRiftHUD-augmentation .valourRiftHUD-augmentation-icon
+{
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+}
+
+.valourRiftHUD-augmentation.locked:hover
+{
+  color: #fff;
+}
+
+.valourRiftHUD-augmentation.error .valourRiftHUD-augmentation-icon,.valourRiftHUD-augmentation.locked .valourRiftHUD-augmentation-icon
+{
+  filter: grayscale(1);
+}
+
+.valourRiftHUD-augmentation-description,.valourRiftHUD-augmentation-lockMessage
+{
+  font-style: italic;
+  line-height: 10px;
+}
+
+.valourRiftHUD-augmentation-lockMessage
+{
+  display: none;
+}
+
+.valourRiftHUD-augmentation.locked .valourRiftHUD-augmentation-lockMessage
+{
+  display: block;
+}
+
+.valourRiftHUD-augmentation.locked .valourRiftHUD-augmentation-costContainer,.valourRiftHUD-augmentation.locked .valourRiftHUD-augmentation-description
+{
+  display: none;
+}
+
+.valourRiftHUD-augmentation .mousehuntTooltip
+{
+  bottom: 110%;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.valourRiftHUD-augmentation-details
+{
+  padding-left: 65px;
+  padding-right: 75px;
+  font-size: 10px;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augmentatation_middle.png?) 0 0 repeat-y;
+  position: relative;
+  z-index: 1;
+}
+
+.valourRiftHUD-augmentation-costContainer
+{
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  text-align: right;
+}
+
+.valourRiftHUD-augmentation-cost
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  text-align: right;
+  margin-right: 5px;
+  padding-left: 4px;
+  padding-top: 4px;
+  height: 30px;
+  margin-top: -5px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/resource_icon.png) 0 0 no-repeat;
+}
+
+.valourRiftHUD-augmentation-cost.hidden
+{
+  display: none;
+}
+
+.valourRiftHUD-augmentation-cost-image
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 28px;
+  height: 28px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-position: 0 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.valourRiftHUD-augmentation-cost-quantity
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  background-color: #461c60;
+  color: #fff;
+  padding: 3px 6px 3px 18px;
+  margin-left: -13px;
+  margin-top: 6px;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+  -webkit-box-shadow: 1px -1px 2px 2px #310f3c inset,-1px 1px 2px 2px #b06fd3 inset;
+  -moz-box-shadow: 1px -1px 2px 2px #310f3c inset,-1px 1px 2px 2px #b06fd3 inset;
+  box-shadow: 1px -1px 2px 2px #310f3c inset,-1px 1px 2px 2px #b06fd3 inset;
+}
+
+.valourRiftHUD-augmentation-cost.error .valourRiftHUD-augmentation-cost-image
+{
+  -webkit-box-shadow: 0 0 2px 2px red;
+  -moz-box-shadow: 0 0 2px 2px red;
+  box-shadow: 0 0 2px 2px red;
+}
+
+.valourRiftHUD-augmentation-cost.error .valourRiftHUD-augmentation-cost-quantity
+{
+  background-color: red;
+  -webkit-box-shadow: 1px -1px 2px 2px #310f3c inset,-1px 1px 2px 2px #d36f6f inset;
+  -moz-box-shadow: 1px -1px 2px 2px #310f3c inset,-1px 1px 2px 2px #d36f6f inset;
+  box-shadow: 1px -1px 2px 2px #310f3c inset,-1px 1px 2px 2px #d36f6f inset;
+}
+
+.valourRiftHUD-highestFloorReachedContainer
+{
+  position: absolute;
+  right: 80px;
+  top: 75px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 11px;
+  color: #eee;
+  text-shadow: -1px 1px 1px #000;
+}
+
+.valourRiftHUD-highestFloorReached
+{
+  font-weight: 700;
+  color: #fff;
+  font-size: 14px;
+}
+
+.valourRiftHUD-highestFloor
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+.valourRiftHUD-highestFloor:last-child
+{
+  margin-right: 0;
+}
+
+.valourRiftPopupIllustrated-enterTowerButton
+{
+  position: absolute;
+  left: 475px;
+  top: 11px;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/enter_tower_button.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 300px;
+  width: 244px;
+  height: 113px;
+}
+
+.valourRiftPopupIllustrated-enterTowerButton:hover
+{
+  background-position: 0 0;
+}
+
+.valourRiftPopupIllustrated-enterTowerButton.busy:after
+{
+  content: '';
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px #a54505 inset;
+  -moz-box-shadow: 0 0 10px #a54505 inset;
+  box-shadow: 0 0 10px #a54505 inset;
+  background: #feae19 url(https://www.mousehuntgame.com/images/ui/loaders/small_orange_bar.gif) no-repeat center;
+  -webkit-background-size: 15%;
+  -moz-background-size: 15%;
+  background-size: 15%;
+}
+
+.valourRiftHUD-towerContainer
+{
+  position: absolute;
+  left: 190px;
+  top: 77px;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.valourRiftHUD.farming .valourRiftHUD-towerContainer
+{
+  opacity: 0;
+}
+
+.valourRiftHUD-towerContainer-frame
+{
+  content: '';
+  position: absolute;
+  left: 174px;
+  top: 66px;
+  width: 409px;
+  height: 176px;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/tower_frame.png);
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.valourRiftHUD.tower.eclipse .valourRiftHUD-towerContainer-frame
+{
+  background-position: 0 -179px;
+}
+
+.valourRiftHUD-tower
+{
+  position: absolute;
+  overflow: hidden;
+  width: 380px;
+  height: 150px;
+}
+
+.valourRiftHUD-tower-sprite
+{
+  position: absolute;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.valourRiftHUD-tower-sprite-image
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.valourRiftHUD-tower-sprite.easeIn
+{
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -ms-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.valourRiftHUD-tower-sprite.easeOut
+{
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.valourRiftHUD-tower-sprite.popIn
+{
+  -webkit-transition: none!important;
+  -moz-transition: none!important;
+  -ms-transition: none!important;
+  -o-transition: none!important;
+  transition: none!important;
+}
+
+.valourRiftHUD-tower-layer.background .valourRiftHUD-tower-sprite
+{
+  z-index: 1;
+}
+
+.valourRiftHUD-tower-layer.background .valourRiftHUD-tower-sprite.active_floor
+{
+  z-index: 2;
+}
+
+.valourRiftHUD-tower-layer.floors .valourRiftHUD-tower-sprite
+{
+  z-index: 2;
+}
+
+.valourRiftHUD-tower-layer.step .valourRiftHUD-tower-sprite
+{
+  z-index: 3;
+  pointer-events: none;
+}
+
+.valourRiftHUD-tower-layer.scores .valourRiftHUD-tower-sprite
+{
+  z-index: 6;
+}
+
+.valourRiftHUD-tower-layer.friends .valourRiftHUD-tower-sprite
+{
+  z-index: 7;
+}
+
+.valourRiftHUD-tower-layer.player .valourRiftHUD-tower-sprite
+{
+  z-index: 8;
+}
+
+.valourRiftHUD-tower-layer.test .valourRiftHUD-tower-sprite
+{
+  z-index: 100;
+}
+
+.valourRiftHUD-tower-sprite-name
+{
+  position: absolute;
+  bottom: 31px;
+  left: -30px;
+  right: -30px;
+  font-size: 9px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  text-align: center;
+  display: none;
+}
+
+.valourRiftHUD-tower-sprite:hover .valourRiftHUD-tower-sprite-name
+{
+  display: block;
+}
+
+.valourRiftHUD-tower-sprite.player .valourRiftHUD-tower-sprite-image,.valourRiftHUD-tower-sprite.friend .valourRiftHUD-tower-sprite-image
+{
+  top: -18px;
+  left: -10px;
+  right: -10px;
+  bottom: auto;
+  height: 26px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px #fff,0 0 2px 2px #00c4ff inset;
+  -moz-box-shadow: 0 0 5px #fff,0 0 2px 2px #00c4ff inset;
+  box-shadow: 0 0 5px #fff,0 0 2px 2px #00c4ff inset;
+}
+
+.valourRiftHUD-tower-sprite.friend .valourRiftHUD-tower-sprite-image
+{
+  -webkit-box-shadow: 0 0 5px #fff,0 0 2px 2px #b19e74 inset;
+  -moz-box-shadow: 0 0 5px #fff,0 0 2px 2px #b19e74 inset;
+  box-shadow: 0 0 5px #fff,0 0 2px 2px #b19e74 inset;
+}
+
+.valourRiftHUD-tower-sprite.player.fueled:before
+{
+  content: '';
+  position: absolute;
+  left: -31px;
+  top: -23px;
+  width: 50px;
+  height: 36px;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/player_fueled.png);
+}
+
+.valourRiftHUD-tower-sprite.player.flipped .valourRiftHUD-tower-sprite-image
+{
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.valourRiftHUD-tower-sprite.player.fueled.flipped:before
+{
+  left: -13px;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.valourRiftHUD-tower-sprite.player.leaveTower_1.fueled:before,.valourRiftHUD-tower-sprite.player.leaveTower_2.fueled:before,.valourRiftHUD-tower-sprite.player.leaveTower_3.fueled:before
+{
+  display: none;
+}
+
+.valourRiftHUD-tower-sprite.player.tumble .valourRiftHUD-tower-sprite-image
+{
+  -webkit-animation: valourRiftTumble 1s;
+  -moz-animation: valourRiftTumble 1s;
+  -ms-animation: valourRiftTumble 1s;
+  animation: valourRiftTumble 1s;
+}
+
+.valourRiftHUD-tower-sprite.player.flipped.tumble .valourRiftHUD-tower-sprite-image
+{
+  -webkit-animation: valourRiftTumbleFlipped 1s;
+  -moz-animation: valourRiftTumbleFlipped 1s;
+  -ms-animation: valourRiftTumbleFlipped 1s;
+  animation: valourRiftTumbleFlipped 1s;
+}
+
+.valourRiftHUD-tower-sprite.garbage .valourRiftHUD-tower-sprite-image
+{
+  -webkit-box-shadow: 0 0 100px red inset;
+  -moz-box-shadow: 0 0 100px red inset;
+  box-shadow: 0 0 100px red inset;
+}
+
+.valourRiftHUD-tower-sprite.leaveTower_1 .valourRiftHUD-tower-sprite-image
+{
+  -webkit-animation: valourRiftSpriteLeaveTowerOne .5s;
+  -moz-animation: valourRiftSpriteLeaveTowerOne .5s;
+  -ms-animation: valourRiftSpriteLeaveTowerOne .5s;
+  animation: valourRiftSpriteLeaveTowerOne .5s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.valourRiftHUD-tower-sprite.leaveTower_2 .valourRiftHUD-tower-sprite-image
+{
+  -webkit-animation: valourRiftSpriteLeaveTowerTwo 1s;
+  -moz-animation: valourRiftSpriteLeaveTowerTwo 1s;
+  -ms-animation: valourRiftSpriteLeaveTowerTwo 1s;
+  animation: valourRiftSpriteLeaveTowerTwo 1s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.valourRiftHUD-tower-sprite.leaveTower_3 .valourRiftHUD-tower-sprite-image
+{
+  -webkit-animation: valourRiftSpriteLeaveTowerThree 1.5s;
+  -moz-animation: valourRiftSpriteLeaveTowerThree 1.5s;
+  -ms-animation: valourRiftSpriteLeaveTowerThree 1.5s;
+  animation: valourRiftSpriteLeaveTowerThree 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.valourRiftHUD-tower-sprite.bestDistance .valourRiftHUD-tower-sprite-image
+{
+  left: -6px;
+  top: -16px;
+  height: 16px;
+  width: 16px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #9ad0ff;
+  opacity: .5;
+}
+
+.valourRiftHUD-tower-sprite.bestDistance:hover .valourRiftHUD-tower-sprite-image
+{
+  opacity: 1;
+}
+
+.valourRiftHUD-tower-sprite.bestDistance .valourRiftHUD-tower-sprite-image:after
+{
+  content: '';
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  bottom: -5px;
+  top: auto;
+  background-color: #9ad0ff;
+  height: 5px;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}
+
+.valourRiftHUD-tower-sprite.bestDistance .valourRiftHUD-tower-sprite-name
+{
+  bottom: 25px;
+}
+
+.valourRiftHUD-tower-sprite.floor .valourRiftHUD-tower-sprite-image
+{
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position-y: 100%;
+}
+
+.valourRiftHUD-tower-sprite.floor.previous_floor .valourRiftHUD-tower-sprite-image
+{
+  -webkit-box-shadow: 0 10px 50px #000 inset;
+  -moz-box-shadow: 0 10px 50px #000 inset;
+  box-shadow: 0 10px 50px #000 inset;
+}
+
+.valourRiftHUD-tower-sprite.floor .valourRiftHUD-tower-sprite-image:before
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -21px;
+  height: 29px;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_break.png) no-repeat 0 100%;
+}
+
+.valourRiftHUD-tower-sprite .valourRiftHUD-tower-sprite-image:after
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 456px;
+  content: '';
+  background-repeat: repeat-y;
+  background-position-y: 100%;
+  pointer-events: none;
+}
+
+.valourRiftHUD-tower-sprite.floor .valourRiftHUD-tower-sprite-name
+{
+  bottom: 5px;
+  right: 8px;
+  left: auto;
+  font-size: 10px;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #000;
+  color: #8ea5ff;
+  display: block;
+}
+
+.valourRiftHUD-tower-sprite.floor:hover .valourRiftHUD-tower-sprite-name
+{
+  color: #fff;
+}
+
+.valourRiftHUD-tower-sprite.floor_base .valourRiftHUD-tower-sprite-image
+{
+  -webkit-box-shadow: 0 10px 100px #000 inset;
+  -moz-box-shadow: 0 10px 100px #000 inset;
+  box-shadow: 0 10px 100px #000 inset;
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_break.png) 0 0,url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_break.png) -10px -10px,url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_break.png) -20px -20px;
+}
+
+.valourRiftHUD-tower-sprite.floor_1 .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_one_base.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_1 .valourRiftHUD-tower-sprite-image:after
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_one_tile.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_2 .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_two_base.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_2 .valourRiftHUD-tower-sprite-image:after
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_two_tile.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_3 .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_three_base.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_3 .valourRiftHUD-tower-sprite-image:after
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_three_tile.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_4 .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_four_base.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_4 .valourRiftHUD-tower-sprite-image:after
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_four_tile.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_5 .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_five_base.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_5 .valourRiftHUD-tower-sprite-image:after
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_five_tile.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_6 .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_six_base.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_6 .valourRiftHUD-tower-sprite-image:after
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_six_tile.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_7 .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_seven_base.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_7 .valourRiftHUD-tower-sprite-image:after
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_seven_tile.png);
+}
+
+.valourRiftHUD-tower-sprite.floor_8 .valourRiftHUD-tower-sprite-image
+{
+  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/floors/floor_eight.png) repeat-y 0 100%;
+}
+
+.valourRiftHUD-tower-sprite.test .valourRiftHUD-tower-sprite-image
+{
+  background: pink;
+  -webkit-box-shadow: 0 0 2px 2px red inset;
+  -moz-box-shadow: 0 0 2px 2px red inset;
+  box-shadow: 0 0 2px 2px red inset;
+}
+
+.valourRiftHUD-tower-sprite.step .valourRiftHUD-tower-sprite-image
+{
+  top: 3px;
+  height: 12px;
+  bottom: auto;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/step.png?);
+  background-position-y: 0;
+  -webkit-transition: background-image 300ms ease-in;
+  -moz-transition: background-image 300ms ease-in;
+  -ms-transition: background-image 300ms ease-in;
+  -o-transition: background-image 300ms ease-in;
+  transition: background-image 300ms ease-in;
+}
+
+.valourRiftHUD-tower-sprite.step.active .valourRiftHUD-tower-sprite-image,.valourRiftHUD-tower-sprite.step.current .valourRiftHUD-tower-sprite-image
+{
+  background-position-y: -10px;
+}
+
+.valourRiftHUD-tower-sprite.step.past .valourRiftHUD-tower-sprite-image
+{
+  background-position-y: -20px;
+}
+
+.valourRiftHUD-tower-sprite.step.crumbling .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/step_crumbling.png);
+}
+
+.valourRiftHUD-tower-sprite.step.collapsing .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/step_collapsing.png);
+}
+
+.valourRiftHUD-tower-sprite.step.gone .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/step_gone.png);
+}
+
+.valourRiftHUD-tower-layer.step .valourRiftHUD-tower-sprite
+{
+  pointer-events: auto!important;
+}
+
+.valourRiftHUD-tower-sprite.step .valourRiftHUD-tower-sprite-name
+{
+  display: block;
+  bottom: 3px;
+  color: #999;
+  left: 0;
+  right: 0;
+}
+
+.valourRiftHUD-tower-sprite.step:hover .valourRiftHUD-tower-sprite-name
+{
+  color: #fff;
+}
+
+.valourRiftHUD-tower-sprite.background .valourRiftHUD-tower-sprite-image
+{
+  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/parallax.png);
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+
+.valourRiftHUD-tower-sprite.background_1 .valourRiftHUD-tower-sprite-image
+{
+  background-position-y: 10%;
+}
+
+.valourRiftHUD-tower-sprite.background_2 .valourRiftHUD-tower-sprite-image
+{
+  background-position-y: 40%;
+}
+
+.valourRiftHUD-tower-sprite.background_3 .valourRiftHUD-tower-sprite-image
+{
+  background-position-y: 50%;
+}
+
+.valourRiftHUD-tower-sprite.background_4 .valourRiftHUD-tower-sprite-image
+{
+  background-position-y: 60%;
+}
+
+.valourRiftHUD-tower-sprite.background_5 .valourRiftHUD-tower-sprite-image
+{
+  background-position-y: 70%;
+}
+
+.valourRiftHUD-tower-sprite.background_6 .valourRiftHUD-tower-sprite-image
+{
+  background-position-y: 80%;
+}
+
+.valourRiftHUD-tower-sprite.background_7 .valourRiftHUD-tower-sprite-image
+{
+  background-position-y: 90%;
+}
+
+.valourRiftHUD-tower-sprite.background_8 .valourRiftHUD-tower-sprite-image
+{
+  background-position-y: 100%;
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Valour Rift Calculator</title>
+    <meta property="og:site_name" content="MH Tools by tsitu" />
+    <meta property="og:type" content="article" />
+    <!-- <meta property="og:url" content="https://tsitu.github.io/MH-Tools/analyzer.html"> -->
+    <meta property="og:title" content="Valour Rift Calculator" />
+    <meta
+      property="og:description"
+      content="Steps to reach a floor, cache rewards, and more!"
+    />
+    <!-- <meta property="og:image" content="https://cdn.jsdelivr.net/gh/tsitu/MH-Tools@30fb31004ae976aaf29652c435629dcca926d169/lib/img/cheese.jpg"> -->
+    <!-- <meta property="og:image:secure_url" content="https://cdn.jsdelivr.net/gh/tsitu/MH-Tools@30fb31004ae976aaf29652c435629dcca926d169/lib/img/cheese.jpg"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+
+    <!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="lib/js/js-cookie.js"></script> -->
+    <!-- <script type="text/javascript" src="lib/js/jquery.tablesorter.combined.min.js"></script> -->
+    <!-- <script type="text/javascript" src="lib/js/widget-pager.min.js"></script> -->
+    <!-- <script type="text/javascript" src="src/utils/bookmarklets.js"></script> -->
+    <script type="text/javascript" src="vrift.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="vrift.css"
+      type="text/css"
+      media="print, projection, screen"
+    />
+    <!-- <link rel="icon" type="image/x-icon" href="lib/img/favicon.ico"> -->
+
+    <style type="text/css">
+      * {
+        font-family: "lucida grande", "tahoma", "verdana", "arial", "sans-serif";
+      }
+
+      #floor-number-input {
+        width: 3em;
+      }
+
+      #mainDiv {
+        margin: auto;
+      }
+    </style>
+
+    <!-- Google Analytics -->
+    <!-- <script>
+      (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-61581935-1', 'auto');
+      ga('send', 'pageview');
+    </script> -->
+  </head>
+
+  <body>
+    <!-- Main Content -->
+    <!-- <div class="valourRiftPopupClaim-content"> -->
+    <!-- <div class="valourRiftPopupClaim-content-left"> -->
+    <div id="mainDiv">
+      <!-- Chest -->
+      <div class="valourRiftPopupClaim-chest">
+        <div class="valourRiftPopupClaim-chest-header"></div>
+        <div class="valourRiftPopupClaim-chest-floor">
+          FLOOR
+          <input
+            id="floor-number-input"
+            type="number"
+            min="1"
+            max="500"
+            step="1"
+          />
+          CACHE
+        </div>
+        <div class="valourRiftPopupClaim-chest-content">
+          <div class="valourRiftPopupClaim-cacheLootContainer">
+            <div
+              class="valourRiftPopupClaim-cacheLoot gold gold_stat_item mousehuntTooltipParent"
+            >
+              <div
+                class="valourRiftPopupClaim-cacheLoot-image"
+                style="background-image: url(https://www.mousehuntgame.com/images/items/stats/d8f90a569d52e7ea228ad0f1cc51516d.gif?cv=243);"
+              ></div>
+              0
+              <div class="mousehuntTooltip tight top" id="gold-value">
+                0 Gold
+                <div class="mousehuntTooltip-arrow"></div>
+              </div>
+            </div>
+            <div
+              class="valourRiftPopupClaim-cacheLoot sigils rift_gaunt_upgrade_a_stat_item mousehuntTooltipParent"
+            >
+              <div
+                class="valourRiftPopupClaim-cacheLoot-image"
+                style="background-image: url(https://www.mousehuntgame.com/images/items/stats/7a7a027f2440400adb4e48d97e7b415a.gif?cv=243);"
+              ></div>
+              0
+              <div class="mousehuntTooltip tight top" id="sigil-value">
+                0 Tower Sigils
+                <div class="mousehuntTooltip-arrow"></div>
+              </div>
+            </div>
+            <div
+              class="valourRiftPopupClaim-cacheLoot secrets rift_gaunt_upgrade_b_stat_item mousehuntTooltipParent"
+            >
+              <div
+                class="valourRiftPopupClaim-cacheLoot-image"
+                style="background-image: url(https://www.mousehuntgame.com/images/items/stats/8911019d5b6ce097b81667624c4b5d13.gif?cv=243);"
+              ></div>
+              0
+              <div class="mousehuntTooltip tight top" id="secret-value">
+                0 Tower Secrets
+                <div class="mousehuntTooltip-arrow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="valourRiftPopupClaim-chest-footer"></div>
+      </div>
+      <!--  -->
+
+      <!-- Stats -->
+      <div class="valourRiftPopupClaim-statsContainer">
+        <div class="valourRiftPopupClaim-statsContainer">
+          <div class="valourRiftPopupClaim-stats-background"></div>
+          <div class="valourRiftPopupClaim-stats-content">
+            <div class="valourRiftPopup-towerStat wide">
+              <!-- <div class="valourRiftPopup-label">Shades Defeated</div> -->
+              <div class="valourRiftPopup-label">Eclipses Defeated</div>
+              <div class="valourRiftPopup-value">
+                <span id="eclipses-value">N/A</span>
+              </div>
+            </div>
+            <div class="valourRiftPopup-towerStat wide">
+              <!-- <div class="valourRiftPopup-label">Step Reached</div> -->
+              <div class="valourRiftPopup-label">Steps Needed</div>
+              <div class="valourRiftPopup-value">
+                <span id="steps-needed-value">N/A</span>
+              </div>
+            </div>
+            <!-- <div class="valourRiftPopup-towerStat">
+                      <div class="valourRiftPopup-label">Hunts Taken</div>
+                      <div class="valourRiftPopup-value">42</div>
+                    </div> -->
+            <div class="valourRiftPopup-towerStat">
+              <div class="valourRiftPopup-label">Speed</div>
+              <div class="valourRiftPopup-value">X</div>
+            </div>
+            <div class="valourRiftPopup-towerStat">
+              <div class="valourRiftPopup-label">Sync</div>
+              <div class="valourRiftPopup-value">X</div>
+            </div>
+            <div class="valourRiftPopup-towerStat">
+              <div class="valourRiftPopup-label">Siphon</div>
+              <div class="valourRiftPopup-value">X</div>
+            </div>
+            <!-- <div class="valourRiftPopup-towerStat wide">
+                      <div class="valourRiftPopup-label">Highest Floor</div>
+                      <div class="valourRiftPopup-value">9</div>
+                    </div>
+                    <div class="valourRiftPopup-towerStat wide">
+                      <div class="valourRiftPopup-label">Highest Umbra Floor</div>
+                      <div class="valourRiftPopup-value">0</div>
+                    </div> -->
+          </div>
+        </div>
+      </div>
+      <!--  -->
+
+      <!-- Augmentations -->
+      <div class="valourRiftPopup-augmentationsContainer">
+        <div
+          class="valourRiftPopup-augmentation mousehuntTooltipParent hr inactive"
+        >
+          <div class="valourRiftHUD-augmentation-icon hr"></div>
+          <div class="mousehuntTooltip tight top">
+            Sigil Hunter
+            <div class="mousehuntTooltip-arrow"></div>
+          </div>
+        </div>
+        <div
+          class="valourRiftPopup-augmentation mousehuntTooltipParent sr inactive"
+        >
+          <div class="valourRiftHUD-augmentation-icon sr"></div>
+          <div class="mousehuntTooltip tight top">
+            Secret Research
+            <div class="mousehuntTooltip-arrow"></div>
+          </div>
+        </div>
+        <div
+          class="valourRiftPopup-augmentation mousehuntTooltipParent ss inactive"
+        >
+          <div class="valourRiftHUD-augmentation-icon ss"></div>
+          <div class="mousehuntTooltip tight top">
+            Super Siphon
+            <div class="mousehuntTooltip-arrow"></div>
+          </div>
+        </div>
+        <div
+          class="valourRiftPopup-augmentation mousehuntTooltipParent tu inactive"
+        >
+          <div class="valourRiftHUD-augmentation-icon tu"></div>
+          <div class="mousehuntTooltip tight top">
+            Ultimate Umbra
+            <div class="mousehuntTooltip-arrow"></div>
+          </div>
+        </div>
+        <div
+          class="valourRiftPopup-augmentation mousehuntTooltipParent er inactive"
+        >
+          <div class="valourRiftHUD-augmentation-icon er"></div>
+          <div class="mousehuntTooltip tight top">
+            Elixir Rain
+            <div class="mousehuntTooltip-arrow"></div>
+          </div>
+        </div>
+        <div
+          class="valourRiftPopup-augmentation mousehuntTooltipParent sste inactive"
+        >
+          <div class="valourRiftHUD-augmentation-icon sste"></div>
+          <div class="mousehuntTooltip tight top">
+            String Stepping
+            <div class="mousehuntTooltip-arrow"></div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+
+    <!-- Loot Log -->
+    <!-- <div class="valourRiftPopupClaim-content-right">
+        <div class="valourRiftPopupClaim-lootLogContainer">
+          <div class="valourRiftPopupClaim-lootLog-background"></div>
+          <div class="valourRiftPopupClaim-lootLog-content">
+            <div class="valourRiftPopupClaim-lootLogTitle">Loot Log</div>
+            <div class="valourRiftPopupClaim-lootLog f">
+              <img
+                src="https://www.mousehuntgame.com/images/items/stats/986689ecb50119eb61c90eb1988cc31c.gif?cv=243"
+                class="valourRiftPopupClaim-lootLog-image itemImage"
+              />
+              <div class="valourRiftPopupClaim-lootLog-name">
+                1 Fragment of the Eclipse
+              </div>
+            </div>
+            <div class="valourRiftPopupClaim-lootLog f">
+              <img
+                src="https://www.mousehuntgame.com/images/items/stats/7a7a027f2440400adb4e48d97e7b415a.gif?cv=243"
+                class="valourRiftPopupClaim-lootLog-image itemImage"
+              />
+              <div class="valourRiftPopupClaim-lootLog-name">
+                1 Tower Sigil
+              </div>
+            </div>
+            <div class="valourRiftPopupClaim-lootLog f">
+              <img
+                src="https://www.mousehuntgame.com/images/items/stats/8911019d5b6ce097b81667624c4b5d13.gif?cv=243"
+                class="valourRiftPopupClaim-lootLog-image itemImage"
+              />
+              <div class="valourRiftPopupClaim-lootLog-name">
+                1 Tower Secrets
+              </div>
+            </div>
+            <div class="valourRiftPopupClaim-lootLog m">
+              <img
+                src="https://www.mousehuntgame.com/images/items/stats/7a7a027f2440400adb4e48d97e7b415a.gif?cv=243"
+                class="valourRiftPopupClaim-lootLog-image itemImage"
+              />
+              <div class="valourRiftPopupClaim-lootLog-name">
+                25 Tower Sigil
+              </div>
+            </div>
+            <div class="valourRiftPopupClaim-lootLog m">
+              <img
+                src="https://www.mousehuntgame.com/images/items/stats/d8f90a569d52e7ea228ad0f1cc51516d.gif?cv=243"
+                class="valourRiftPopupClaim-lootLog-image itemImage"
+              />
+              <div class="valourRiftPopupClaim-lootLog-name">125.9k Gold</div>
+            </div>
+            <div class="valourRiftPopupClaim-lootLog m">
+              <img
+                src="https://www.mousehuntgame.com/images/items/stats/6dde323134f98f0c1ec6de4dae0b832d.gif?cv=243"
+                class="valourRiftPopupClaim-lootLog-image itemImage"
+              />
+              <div class="valourRiftPopupClaim-lootLog-name">
+                2 Champion's Fire
+              </div>
+            </div>
+            <div class="valourRiftPopupClaim-lootLog m">
+              <img
+                src="https://www.mousehuntgame.com/images/items/stats/31a48d79b0288125f7f208a96d042dfe.gif?cv=243"
+                class="valourRiftPopupClaim-lootLog-image itemImage"
+              />
+              <div class="valourRiftPopupClaim-lootLog-name">
+                1 Tattered Celestial Skin Pattern
+              </div>
+            </div>
+            <div class="valourRiftPopupClaim-lootLog m">
+              <img
+                src="https://www.mousehuntgame.com/images/items/stats/986689ecb50119eb61c90eb1988cc31c.gif?cv=243"
+                class="valourRiftPopupClaim-lootLog-image itemImage"
+              />
+              <div class="valourRiftPopupClaim-lootLog-name">
+                1 Fragment of the Eclipse
+              </div>
+            </div>
+            <div class="valourRiftPopupClaim-lootLog m">
+              <img
+                src="https://www.mousehuntgame.com/images/items/stats/8911019d5b6ce097b81667624c4b5d13.gif?cv=243"
+                class="valourRiftPopupClaim-lootLog-image itemImage"
+              />
+              <div class="valourRiftPopupClaim-lootLog-name">
+                1 Tower Secrets
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <!--  -->
+    
+    <!-- </div> -->
+  </body>
+</html>

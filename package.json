@@ -8,7 +8,8 @@
     "timestamp": "node build/processTimestamp.js",
     "population": "node build/processPopulation.js",
     "puppeteer": "npm i -S puppeteer",
-    "sample": "node build/processSampleSize.js"
+    "sample": "node build/processSampleSize.js",
+    "serve": "http-server -p 8000"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "combined-stream": "^1.0.6",
     "csvtojson": "^1.1.7",
     "delayed-stream": "^1.0.0",
+    "http-server": "^0.11.1",
     "mkdirp": "^0.5.1",
     "request": "^2.83.0"
   }
