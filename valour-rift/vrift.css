@@ -2222,42 +2222,50 @@
 
 .valourRiftHUD-augmentation-icon.tu
 {
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/tower_ultimatum.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/tower_ultimatum.png); */
+  background-image: url(img-tower_ultimatum.png);
 }
 
 .valourRiftHUD-augmentation-icon.sste
 {
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/string_stepping.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/string_stepping.png); */
+  background-image: url(img-string_stepping.png);
 }
 
 .valourRiftHUD-augmentation-icon.sp1
 {
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/secret_passage.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/secret_passage.png); */
+  background-image: url(img-secret_passage.png);
 }
 
 .valourRiftHUD-augmentation-icon.ss
 {
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/secret_passage.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/secret_passage.png); */
+  background-image: url(img-secret_passage.png);
 }
 
 .valourRiftHUD-augmentation-icon.cp
 {
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/champion_pillage.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/champion_pillage.png); */
+  background-image: url(img-champion_pillage.png);
 }
 
 .valourRiftHUD-augmentation-icon.sr
 {
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/champion_pillage.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/champion_pillage.png); */
+  background-image: url(img-champion_pillage.png);
 }
 
 .valourRiftHUD-augmentation-icon.hr
 {
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/highway_robbery.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/highway_robbery.png); */
+  background-image: url(img-highway_robbery.png);
 }
 
 .valourRiftHUD-augmentation-icon.er
 {
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/elixir_rain.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/elixir_rain.png); */
+  background-image: url(img-elixir_rain.png);
 }
 
 .valourRiftHUD-dialog-gauntletBaitOption
@@ -2427,7 +2435,8 @@
   right: -12px;
   top: -12px;
   pointer-events: none;
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/highway_robbery.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/highway_robbery.png); */
+  background-image: url(img-highway_robbery.png);
   width: 40px;
   height: 40px;
   -webkit-background-size: contain;
@@ -2457,7 +2466,8 @@
   right: -12px;
   top: -12px;
   pointer-events: none;
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/champion_pillage.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/champion_pillage.png); */
+  background-image: url(img-champion_pillage.png);
   width: 40px;
   height: 40px;
   -webkit-background-size: contain;
@@ -2513,20 +2523,23 @@
 
 .valourRiftPopupClaim-chest-header
 {
-  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_chest_top.png) 0 0 no-repeat;
+  /* background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_chest_top.png) 0 0 no-repeat; */
+  background: url(img-dialog_chest_top.png) 0 0 no-repeat;
   height: 206px;
 }
 
 .valourRiftPopupClaim-chest-content
 {
-  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_chest_middle.png) 0 0 repeat-y;
+  /* background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_chest_middle.png) 0 0 repeat-y; */
+  background: url(img-dialog_chest_middle.png) 0 0 repeat-y;
   padding-left: 42px;
   padding-right: 46px;
 }
 
 .valourRiftPopupClaim-chest-footer
 {
-  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_chest_bottom.png) 0 0 no-repeat;
+  /* background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_chest_bottom.png) 0 0 no-repeat; */
+  background: url(img-dialog_chest_bottom.png) 0 0 no-repeat;
   height: 62px;
 }
 
@@ -2678,7 +2691,8 @@
 .valourRiftPopupClaim-lootLog.e:after
 {
   content: '';
-  background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/elixir_rain.png);
+  /* background-image: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/augments/elixir_rain.png); */
+  background-image: url(img-elixir_rain.png);
 }
 
 .valourRiftPopupClaim-lootLog.e:hover:before
@@ -2742,7 +2756,7 @@
   width: 394px;
   position: relative;
   z-index: 1;
-  left: 5px;
+  left: 6px;
 }
 
 .valourRiftPopupClaim-stats-background:before
@@ -2753,7 +2767,8 @@
   right: 0;
   top: -37px;
   height: 37px;
-  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_stats_top.png) no-repeat;
+  /* background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_stats_top.png) no-repeat; */
+  background: url(img-dialog_stats_top.png) no-repeat;
 }
 
 .valourRiftPopupClaim-stats-background
@@ -2763,7 +2778,8 @@
   right: 0;
   top: 37px;
   bottom: 42px;
-  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_stats_middle.png) repeat-y;
+  /* background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_stats_middle.png) repeat-y; */
+  background: url(img-dialog_stats_middle.png) repeat-y;
 }
 
 .valourRiftPopupClaim-stats-background:after
@@ -2775,7 +2791,8 @@
   right: 0;
   bottom: -42px;
   height: 42px;
-  background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_stats_bottom.png) no-repeat;
+  /* background: url(https://www.mousehuntgame.com/images/ui/hud/rift_valour/dialog_stats_bottom.png) no-repeat; */
+  background: url(img-dialog_stats_bottom.png) no-repeat;
 }
 
 .valourRiftPopupClaim-stats-content
