@@ -32,7 +32,7 @@
     console.log("Context created. Calling newPage...");
 
     // Initial throwaway page: "Failed to load latest commit information"
-    const initPage = await context.newPage();
+    const initPage = await context.newPage().catch(error => console.log(error));
     console.log("prePage1 object instantiated...");
     await initPage.goto(htmlUrl);
     console.log("prePage1 navigated to GH URL...");
