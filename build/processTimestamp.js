@@ -13,17 +13,26 @@
     console.log("Initializing Puppeteer browser...");
 
     const browser = await puppeteer.launch({
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
-      // executablePath: "google-chrome-beta"
+      headless: true,
+      devtools: true,
+      args: [
+        "--ignore-certificate-errors",
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-accelerated-2d-canvas",
+        "--disable-gpu"
+      ],
       executablePath: "google-chrome-stable"
       // executablePath:
       //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
     });
 
-    console.log("Initialization complete. Loading pages...");
+    console.log("Initialization complete. Creating incognito context...");
+    const context = await browser.createIncognitoBrowserContext();
+    console.log("Context created. Calling newPage...");
 
     // Initial throwaway page: "Failed to load latest commit information"
-    const initPage = await browser.newPage();
+    const initPage = await context.newPage();
     console.log("prePage1 object instantiated...");
     await initPage.goto(htmlUrl);
     console.log("prePage1 navigated to GH URL...");
@@ -32,7 +41,7 @@
     await initPage.close();
     console.log("prePage1 closed...");
 
-    const page = await browser.newPage();
+    const page = await context.newPage();
     console.log("Final page object instantiated...");
     await page.goto(htmlUrl);
     console.log("Final page navigated to GH URL...");
