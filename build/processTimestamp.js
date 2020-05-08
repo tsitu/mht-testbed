@@ -15,6 +15,7 @@
     const browser = await puppeteer.launch({
       headless: true,
       devtools: true,
+      dumpio: true,
       args: [
         "--ignore-certificate-errors",
         "--no-sandbox",
