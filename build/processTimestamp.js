@@ -13,16 +13,7 @@
     console.log("Initializing Puppeteer browser...");
 
     const browser = await puppeteer.launch({
-      headless: true,
-      devtools: true,
-      dumpio: true,
-      args: [
-        "--ignore-certificate-errors",
-        "--no-sandbox",
-        "--disable-setuid-sandbox",
-        "--disable-accelerated-2d-canvas",
-        "--disable-gpu"
-      ]
+      args: ["--no-sandbox", "--disable-setuid-sandbox"]
       // executablePath: "google-chrome-stable"
       // executablePath:
       //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"

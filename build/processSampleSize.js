@@ -165,7 +165,7 @@ const overallObj = {};
  * Parse the full population JSON file
  */
 function parseJSON() {
-  fs.readFile("data/populations-cre.json", "utf8", function(err, data) {
+  fs.readFile("data/populations-cre.json", "utf8", function (err, data) {
     if (err) throw err;
     let obj = JSON.parse(data);
 
@@ -278,13 +278,7 @@ function processLocation() {
       for (let el in conciseObj) {
         if (!obj[el]) {
           console.log(
-            `${el} (New Location)\n  Average Score: ${
-              conciseObj[el]["Average Score"]
-            }\n  Location Rating: ${
-              conciseObj[el]["Location Rating"]
-            }\n  Average Sample Size: ${
-              conciseObj[el]["Average Sample Size"]
-            }\n  Average Mice Count: ${conciseObj[el]["Average Mice Count"]}\n`
+            `${el} (New Location)\n  Average Score: ${conciseObj[el]["Average Score"]}\n  Location Rating: ${conciseObj[el]["Location Rating"]}\n  Average Sample Size: ${conciseObj[el]["Average Sample Size"]}\n  Average Mice Count: ${conciseObj[el]["Average Mice Count"]}\n`
           );
         } else if (
           conciseObj[el]["Average Score"] != obj[el]["Average Score"] ||
@@ -294,15 +288,7 @@ function processLocation() {
           conciseObj[el]["Average Mice Count"] != obj[el]["Average Mice Count"]
         ) {
           console.log(
-            `${el}\n  Average Score: ${obj[el]["Average Score"]} -> ${
-              conciseObj[el]["Average Score"]
-            }\n  Location Rating: ${obj[el]["Location Rating"]} -> ${
-              conciseObj[el]["Location Rating"]
-            }\n  Average Sample Size: ${obj[el]["Average Sample Size"]} -> ${
-              conciseObj[el]["Average Sample Size"]
-            }\n  Average Mice Count: ${obj[el]["Average Mice Count"]} -> ${
-              conciseObj[el]["Average Mice Count"]
-            }\n`
+            `${el}\n  Average Score: ${obj[el]["Average Score"]} -> ${conciseObj[el]["Average Score"]}\n  Location Rating: ${obj[el]["Location Rating"]} -> ${conciseObj[el]["Location Rating"]}\n  Average Sample Size: ${obj[el]["Average Sample Size"]} -> ${conciseObj[el]["Average Sample Size"]}\n  Average Mice Count: ${obj[el]["Average Mice Count"]} -> ${conciseObj[el]["Average Mice Count"]}\n`
           );
         }
       }
@@ -326,11 +312,7 @@ function processDetailed() {
           console.log(`${loc} (New Location)`);
           for (let sub in detailedObj[loc]) {
             console.log(
-              `${sub}\n  Score: ${
-                detailedObj[loc][sub]["score"]
-              }\n  Sample Size: ${
-                detailedObj[loc][sub]["sample"]
-              }\n  Mouse Count: ${detailedObj[loc][sub]["count"]}`
+              `${sub}\n  Score: ${detailedObj[loc][sub]["score"]}\n  Sample Size: ${detailedObj[loc][sub]["sample"]}\n  Mouse Count: ${detailedObj[loc][sub]["count"]}`
             );
           }
           console.log("");
@@ -339,11 +321,7 @@ function processDetailed() {
             if (!obj[loc][sub]) {
               // Log location every time?
               console.log(
-                `${loc}, ${sub} (New PCC)\n  Score: ${
-                  detailedObj[loc][sub]["score"]
-                }\n  Sample Size: ${
-                  detailedObj[loc][sub]["sample"]
-                }\n  Mouse Count: ${detailedObj[loc][sub]["count"]}\n`
+                `${loc}, ${sub} (New PCC)\n  Score: ${detailedObj[loc][sub]["score"]}\n  Sample Size: ${detailedObj[loc][sub]["sample"]}\n  Mouse Count: ${detailedObj[loc][sub]["count"]}\n`
               );
             } else if (
               detailedObj[loc][sub]["score"] != obj[loc][sub]["score"] ||
@@ -351,13 +329,7 @@ function processDetailed() {
               detailedObj[loc][sub]["count"] != obj[loc][sub]["count"]
             ) {
               console.log(
-                `${loc}, ${sub}\n  Score: ${obj[loc][sub]["score"]} -> ${
-                  detailedObj[loc][sub]["score"]
-                }\n  Sample Size: ${obj[loc][sub]["sample"]} -> ${
-                  detailedObj[loc][sub]["sample"]
-                }\n  Mouse Count: ${obj[loc][sub]["count"]} -> ${
-                  detailedObj[loc][sub]["count"]
-                }\n`
+                `${loc}, ${sub}\n  Score: ${obj[loc][sub]["score"]} -> ${detailedObj[loc][sub]["score"]}\n  Sample Size: ${obj[loc][sub]["sample"]} -> ${detailedObj[loc][sub]["sample"]}\n  Mouse Count: ${obj[loc][sub]["count"]} -> ${detailedObj[loc][sub]["count"]}\n`
               );
             }
           }
@@ -377,9 +349,9 @@ function processDetailed() {
 async function calculateDiffs() {
   // Force update raw JSON files on GitHub using Puppeteer
   const browser = await puppeteer.launch({
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    args: ["--no-sandbox", "--disable-setuid-sandbox"]
     // executablePath: "google-chrome-beta"
-    executablePath: "google-chrome-stable"
+    // executablePath: "google-chrome-stable"
     // executablePath:
     //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
   });
