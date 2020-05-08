@@ -3,11 +3,11 @@ os:
 
 dist: trusty
 
-env:
-  - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+# env:
+  # - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
-addons:
-  chrome: stable
+# addons:
+  # chrome: stable
 
 language: node_js
 

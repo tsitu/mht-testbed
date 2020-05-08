@@ -22,8 +22,8 @@
         "--disable-setuid-sandbox",
         "--disable-accelerated-2d-canvas",
         "--disable-gpu"
-      ],
-      executablePath: "google-chrome-stable"
+      ]
+      // executablePath: "google-chrome-stable"
       // executablePath:
       //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
     });
