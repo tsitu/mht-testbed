@@ -1,0 +1,374 @@
+{
+    "Acolyte Realm": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "6.67"
+    },
+    "Balack's Cove": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "8.17"
+    },
+    "Bazaar": {
+        "Average Score": "17.46",
+        "Location Rating": "Decent",
+        "Average Sample Size": "7309.56",
+        "Average Mice Count": "10.44"
+    },
+    "Burroughs Rift": {
+        "Average Score": "63.65",
+        "Location Rating": "Great",
+        "Average Sample Size": "70589.60",
+        "Average Mice Count": "5.90"
+    },
+    "Calm Clearing": {
+        "Average Score": "26.21",
+        "Location Rating": "Good",
+        "Average Sample Size": "8412.89",
+        "Average Mice Count": "11.67"
+    },
+    "Cape Clawed": {
+        "Average Score": "30.54",
+        "Location Rating": "Good",
+        "Average Sample Size": "6896.57",
+        "Average Mice Count": "9.43"
+    },
+    "Catacombs": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "10.71"
+    },
+    "Claw Shot City": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "7.00"
+    },
+    "Crystal Library": {
+        "Average Score": "55.86",
+        "Location Rating": "Great",
+        "Average Sample Size": "91022.17",
+        "Average Mice Count": "11.83"
+    },
+    "Cursed City": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "4.50"
+    },
+    "Derr Dunes": {
+        "Average Score": "60.69",
+        "Location Rating": "Great",
+        "Average Sample Size": "117823.20",
+        "Average Mice Count": "7.40"
+    },
+    "Dojo": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "12.00"
+    },
+    "Dracano": {
+        "Average Score": "100.00",
+        "Location Rating": "Excellent",
+        "Average Sample Size": "31770.00",
+        "Average Mice Count": "3.00"
+    },
+    "Elub Shore": {
+        "Average Score": "49.43",
+        "Location Rating": "Good",
+        "Average Sample Size": "67408.20",
+        "Average Mice Count": "7.60"
+    },
+    "Event Mice": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "9.00"
+    },
+    "Fiery Warpath": {
+        "Average Score": "26.56",
+        "Location Rating": "Good",
+        "Average Sample Size": "17720.80",
+        "Average Mice Count": "7.02"
+    },
+    "Fungal Cavern": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "8.43"
+    },
+    "Gnawnia Rift": {
+        "Average Score": "76.70",
+        "Location Rating": "Excellent",
+        "Average Sample Size": "157276.50",
+        "Average Mice Count": "7.50"
+    },
+    "Gnawnian Express Station": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "17.11"
+    },
+    "Great Gnarled Tree": {
+        "Average Score": "28.11",
+        "Location Rating": "Good",
+        "Average Sample Size": "14405.89",
+        "Average Mice Count": "16.33"
+    },
+    "Harbour": {
+        "Average Score": "26.77",
+        "Location Rating": "Good",
+        "Average Sample Size": "8895.14",
+        "Average Mice Count": "13.29"
+    },
+    "Iceberg": {
+        "Average Score": "50.57",
+        "Location Rating": "Great",
+        "Average Sample Size": "30722.84",
+        "Average Mice Count": "6.82"
+    },
+    "Jungle of Dread": {
+        "Average Score": "25.84",
+        "Location Rating": "Good",
+        "Average Sample Size": "8960.78",
+        "Average Mice Count": "1.44"
+    },
+    "King's Arms": {
+        "Average Score": "18.24",
+        "Location Rating": "Decent",
+        "Average Sample Size": "5308.67",
+        "Average Mice Count": "11.44"
+    },
+    "King's Gauntlet": {
+        "Average Score": "70.27",
+        "Location Rating": "Great",
+        "Average Sample Size": "78919.00",
+        "Average Mice Count": "5.00"
+    },
+    "Laboratory": {
+        "Average Score": "39.15",
+        "Location Rating": "Good",
+        "Average Sample Size": "17316.40",
+        "Average Mice Count": "8.60"
+    },
+    "Labyrinth": {
+        "Average Score": "52.17",
+        "Location Rating": "Great",
+        "Average Sample Size": "14889.45",
+        "Average Mice Count": "7.75"
+    },
+    "Lagoon": {
+        "Average Score": "43.15",
+        "Location Rating": "Good",
+        "Average Sample Size": "29520.78",
+        "Average Mice Count": "5.89"
+    },
+    "Living Garden": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "6.11"
+    },
+    "Lost City": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "5.50"
+    },
+    "M400 Hunting": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "1.00"
+    },
+    "Meadow": {
+        "Average Score": "33.06",
+        "Location Rating": "Good",
+        "Average Sample Size": "14509.63",
+        "Average Mice Count": "14.13"
+    },
+    "Meditation Room": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "1.00"
+    },
+    "Mountain": {
+        "Average Score": "27.80",
+        "Location Rating": "Good",
+        "Average Sample Size": "11085.36",
+        "Average Mice Count": "10.86"
+    },
+    "Mousoleum": {
+        "Average Score": "53.23",
+        "Location Rating": "Great",
+        "Average Sample Size": "37094.57",
+        "Average Mice Count": "10.57"
+    },
+    "Muridae Market": {
+        "Average Score": "92.42",
+        "Location Rating": "Excellent",
+        "Average Sample Size": "106005.17",
+        "Average Mice Count": "9.33"
+    },
+    "Nerg Plains": {
+        "Average Score": "60.15",
+        "Location Rating": "Great",
+        "Average Sample Size": "68482.60",
+        "Average Mice Count": "7.60"
+    },
+    "Pinnacle Chamber": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "1.00"
+    },
+    "S.S. Huntington III": {
+        "Average Score": "58.40",
+        "Location Rating": "Great",
+        "Average Sample Size": "56840.80",
+        "Average Mice Count": "16.20"
+    },
+    "Sand Crypts": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "2.00"
+    },
+    "Sand Dunes": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "5.33"
+    },
+    "Seasonal Garden": {
+        "Average Score": "100.00",
+        "Location Rating": "Excellent",
+        "Average Sample Size": "75729.42",
+        "Average Mice Count": "5.67"
+    },
+    "Slushy Shoreline": {
+        "Average Score": "55.67",
+        "Location Rating": "Great",
+        "Average Sample Size": "67636.92",
+        "Average Mice Count": "7.67"
+    },
+    "Sunken City": {
+        "Average Score": "82.44",
+        "Location Rating": "Excellent",
+        "Average Sample Size": "74003.66",
+        "Average Mice Count": "5.25"
+    },
+    "Tournament Hall": {
+        "Average Score": "16.68",
+        "Location Rating": "Decent",
+        "Average Sample Size": "4491.71",
+        "Average Mice Count": "7.71"
+    },
+    "Town of Digby": {
+        "Average Score": "32.37",
+        "Location Rating": "Good",
+        "Average Sample Size": "17428.40",
+        "Average Mice Count": "9.60"
+    },
+    "Town of Gnawnia": {
+        "Average Score": "26.21",
+        "Location Rating": "Good",
+        "Average Sample Size": "11135.67",
+        "Average Mice Count": "13.89"
+    },
+    "Toxic Spill": {
+        "Average Score": "84.83",
+        "Location Rating": "Excellent",
+        "Average Sample Size": "103465.00",
+        "Average Mice Count": "12.50"
+    },
+    "Training Grounds": {
+        "Average Score": "53.06",
+        "Location Rating": "Great",
+        "Average Sample Size": "27419.50",
+        "Average Mice Count": "10.25"
+    },
+    "Twisted Garden": {
+        "Average Score": "0.00",
+        "Location Rating": "N/A",
+        "Average Sample Size": "0.00",
+        "Average Mice Count": "4.17"
+    },
+    "Whisker Woods Rift": {
+        "Average Score": "30.01",
+        "Location Rating": "Good",
+        "Average Sample Size": "12552.47",
+        "Average Mice Count": "9.72"
+    },
+    "Windmill": {
+        "Average Score": "37.38",
+        "Location Rating": "Good",
+        "Average Sample Size": "16754.00",
+        "Average Mice Count": "11.33"
+    },
+    "Zokor": {
+        "Average Score": "49.36",
+        "Location Rating": "Good",
+        "Average Sample Size": "19704.17",
+        "Average Mice Count": "6.60"
+    },
+    "Zugzwang's Tower": {
+        "Average Score": "74.46",
+        "Location Rating": "Great",
+        "Average Sample Size": "21133.16",
+        "Average Mice Count": "5.23"
+    },
+    "Bristle Woods Rift": {
+        "Average Score": "19.58",
+        "Location Rating": "Decent",
+        "Average Sample Size": "5575.78",
+        "Average Mice Count": "6.76"
+    },
+    "Forbidden Grove": {
+        "Average Score": "25.26",
+        "Location Rating": "Good",
+        "Average Sample Size": "930.80",
+        "Average Mice Count": "7.00"
+    },
+    "Fort Rox": {
+        "Average Score": "21.06",
+        "Location Rating": "Decent",
+        "Average Sample Size": "2926.89",
+        "Average Mice Count": "8.05"
+    },
+    "Furoma Rift": {
+        "Average Score": "54.36",
+        "Location Rating": "Great",
+        "Average Sample Size": "4439.67",
+        "Average Mice Count": "5.80"
+    },
+    "Moussu Picchu": {
+        "Average Score": "14.85",
+        "Location Rating": "Not Good",
+        "Average Sample Size": "4756.13",
+        "Average Mice Count": "2.88"
+    },
+    "Queso River": {
+        "Average Score": "49.03",
+        "Location Rating": "Good",
+        "Average Sample Size": "3068.00",
+        "Average Mice Count": "3.50"
+    },
+    "Prickly Plains": {
+        "Average Score": "52.04",
+        "Location Rating": "Great",
+        "Average Sample Size": "1683.80",
+        "Average Mice Count": "1.80"
+    },
+    "Cantera Quarry": {
+        "Average Score": "49.62",
+        "Location Rating": "Good",
+        "Average Sample Size": "1450.60",
+        "Average Mice Count": "1.80"
+    }
+}

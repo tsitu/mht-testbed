@@ -1,0 +1,240 @@
+cURL vs Chrome @ RubioChat/tree/master/js (not logged in)
+
+15,20c15,20
+<   <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-521cbf980c80.css" media="all" rel="stylesheet" />
+<   <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-b40ec6f8e234.css" media="all" rel="stylesheet" />
+< 
+< 
+<   <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-e1e1bc98a53e.css" media="all" rel="stylesheet" />
+< 
+---
+>   <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-521cbf980c80.css" integrity="sha512-Uhy/mAyAx1HfsenmjQ85ASpOk5bjt2Ay03pNeixXIvkHlEm5S+N4u0HWfDGhvsGYx4bGyviXWGGPZeIffqYcNA==" media="all" rel="stylesheet" />
+>   <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-b40ec6f8e234.css" integrity="sha512-tA7G+OI0iVAEQ7nn5rYEtp012ccK1fX+C0r8EkNNlLdWc79zQHZKILRYE9xR3eTHtI+P1Bij58LZTVd867/MHA==" media="all" rel="stylesheet" />
+>   
+>   
+>   <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-e1e1bc98a53e.css" integrity="sha512-4eG8mKU+R9QAnMQwfSIgbo24hS+nUXxSuUs5G5LMQw+5wjC1TSKfgxJb2j61PXya94+wMwN1OT7r7MF5rbdUvw==" media="all" rel="stylesheet" />
+>   
+23,24c23,24
+< 
+<   <title>RubioChat/js at master ┬╖ tsitu/RubioChat ┬╖ GitHub</title>
+---
+>   
+>   <title>RubioChat/js at master · tsitu/RubioChat · GitHub</title>
+29c29
+< 
+---
+>     
+33c33
+< 
+---
+>   
+35,37c35,37
+< 
+<   <meta name="request-id" content="F06C:7629:B66B7B:F070CE:5A840417" data-pjax-transient>
+< 
+---
+>   
+>   <meta name="request-id" content="F625:7628:A0C6FC:CA1E5A:5A8407A3" data-pjax-transient>
+>   
+46c46
+< <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="F06C:7629:B66B7B:F070CE:5A840417" name="octolytics-dimension-request_id" /><meta content="sea" name="octolytics-dimension-region_edge" /><meta content="iad" name="octolytics-dimension-region_render" />
+---
+> <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="F625:7628:A0C6FC:CA1E5A:5A8407A3" name="octolytics-dimension-request_id" /><meta content="sea" name="octolytics-dimension-region_edge" /><meta content="iad" name="octolytics-dimension-region_render" />
+56c56
+< 
+---
+>   
+62c62
+<     <meta name="js-proxy-site-detection-payload" content="NTgyOWU4ZWIwOGViZjM2YzNjNzI1NzNmNWIwNTkwOWExMTQ3MGRkMDY4MzM1YTk1MGI5NmJlOWJlMWYyMzgyZHx7InJlbW90ZV9hZGRyZXNzIjoiMjQuNy4xMC42IiwicmVxdWVzdF9pZCI6IkYwNkM6NzYyOTpCNjZCN0I6RjA3MENFOjVBODQwNDE3IiwidGltZXN0YW1wIjoxNTE4NjAxMjM5LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+---
+>     <meta name="js-proxy-site-detection-payload" content="OTc4ODQ1MGQ0NTgzOGMxZmNmZjdhMDYzOTBkNzk0MmMzZWFkZjg3YTFhZjQ3YTg5OTc0MTAzNTk5ZjVkN2QxMHx7InJlbW90ZV9hZGRyZXNzIjoiMjQuNy4xMC42IiwicmVxdWVzdF9pZCI6IkY2MjU6NzYyODpBMEM2RkM6Q0ExRTVBOjVBODQwN0EzIiwidGltZXN0YW1wIjoxNTE4NjAyMTQ3LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+66c66
+<   <meta name="html-safe-nonce" content="4c3ecd965b24edcb8dde6478fcca9b22233547aa">
+---
+>   <meta name="html-safe-nonce" content="adc79721bd23343e3536397c780a5a158f6e2f6f">
+69c69
+< 
+---
+>   
+76,77c76
+<   <meta content="6689581" name="octolytics-dimension-user_id" /><meta content="tsitu" name="octolytics-dimension-user_login" /><meta content="51368144" name="octolytics-dimension-repository_id" /><meta content="tsitu/RubioChat" name="octolytics-dimension-repository_nwo" /><meta content="true"
+< name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="51368144" name="octolytics-dimension-repository_network_root_id" /><meta content="tsitu/RubioChat" name="octolytics-dimension-repository_network_root_nwo" /><meta content="false" name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" />
+---
+>   <meta content="6689581" name="octolytics-dimension-user_id" /><meta content="tsitu" name="octolytics-dimension-user_login" /><meta content="51368144" name="octolytics-dimension-repository_id" /><meta content="tsitu/RubioChat" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="51368144" name="octolytics-dimension-repository_network_root_id" /><meta content="tsitu/RubioChat" name="octolytics-dimension-repository_network_root_nwo" /><meta content="false" name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" />
+92a92
+>   <meta name="u2f-support" content="true">
+99c99
+< 
+---
+>     
+105,107c105,107
+< 
+< 
+< 
+---
+>     
+>     
+>     
+194c194
+< 
+---
+>       
+222,223c222
+<     <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14
+< 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+---
+>     <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+238,239c237
+<         <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993
+< 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+---
+>         <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+259c257
+< 
+---
+>     
+283,284c281
+<       <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0
+< 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+---
+>       <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+310c307
+< 
+---
+>     
+312c309
+< 
+---
+>     
+315c312
+< 
+---
+>     
+339c336
+<               <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tagΓÇª" class="js-select-menu-tab" role="tab">Tags</a>
+---
+>               <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+389c386
+< 
+---
+>       
+399,400c396
+<       <a href="/tsitu/RubioChat/commits/master/js" class="btn btn-sm BtnGroup-item empty-icon tooltipped tooltipped-nw" aria-label="Browse commits
+< for this branch">
+---
+>       <a href="/tsitu/RubioChat/commits/master/js" class="btn btn-sm BtnGroup-item empty-icon tooltipped tooltipped-nw" aria-label="Browse commits for this branch">
+406a403,413
+>   
+> 
+> 
+>   <div class="commit-tease js-details-container Details">
+>     <span class="float-right">
+>       Latest commit
+>       <a class="commit-tease-sha" href="/tsitu/RubioChat/commit/8ae331c7ea57e9b81db2d08080f6c34717dc6185" data-pjax>
+>         8ae331c
+>       </a>
+>       <span itemprop="dateModified"><relative-time datetime="2016-02-09T13:38:46Z">Feb 9, 2016</relative-time></span>
+>     </span>
+409,412c416,424
+< <include-fragment class="commit-tease commit-loader" src="/tsitu/RubioChat/tree-commit/739cbcef1f9920b0f44ed2cc44c481eb68c415fa/js">
+<   <div class="blank">
+<     <img alt="" class="loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" />
+<     Fetching latest commitΓÇª
+---
+>     <div class="d-flex no-wrap">
+>       
+> <div class="AvatarStack flex-self-start ">
+>   <div class="AvatarStack-body tooltipped tooltipped-se tooltipped-align-left-1"
+>        aria-label="tsitu">
+> 
+>         <a href="/tsitu" data-skip-pjax="true" class="avatar">
+>           <img src="https://avatars3.githubusercontent.com/u/6689581?s=40&amp;v=4" width="20" height="20" alt="@tsitu">
+>         </a>
+414,415c426,441
+<   <div class="loader-error">
+<     Cannot retrieve the latest commit at this time.
+---
+> </div>
+> 
+>       <div class="flex-auto f6">
+>         
+>       <a href="/tsitu/RubioChat/commits?author=tsitu"
+>      class="commit-author tooltipped tooltipped-s user-mention"
+>      aria-label="View all commits by tsitu">tsitu</a>
+> 
+> 
+>   
+> 
+> 
+>           <a href="/tsitu/RubioChat/commit/8ae331c7ea57e9b81db2d08080f6c34717dc6185" class="message" data-pjax="true" title="Initial commit">Initial commit</a>
+> 
+>       </div>
+>     </div>
+417d442
+< </include-fragment>
+420c445,446
+< <include-fragment class="file-wrap" src="/tsitu/RubioChat/file-list/master/js">
+---
+> 
+> <div class="file-wrap">
+448a475
+>                   <a href="/tsitu/RubioChat/commit/8ae331c7ea57e9b81db2d08080f6c34717dc6185" class="message" data-pjax="true" title="Initial commit">Initial commit</a>
+452c479
+<             <span class="css-truncate css-truncate-target"></span>
+---
+>             <span class="css-truncate css-truncate-target"><time-ago datetime="2016-02-09T13:38:46Z">Feb 9, 2016</time-ago></span>
+464a492
+>                   <a href="/tsitu/RubioChat/commit/8ae331c7ea57e9b81db2d08080f6c34717dc6185" class="message" data-pjax="true" title="Initial commit">Initial commit</a>
+468c496
+<             <span class="css-truncate css-truncate-target"></span>
+---
+>             <span class="css-truncate css-truncate-target"><time-ago datetime="2016-02-09T13:38:46Z">Feb 9, 2016</time-ago></span>
+480a509
+>                   <a href="/tsitu/RubioChat/commit/8ae331c7ea57e9b81db2d08080f6c34717dc6185" class="message" data-pjax="true" title="Initial commit">Initial commit</a>
+484c513
+<             <span class="css-truncate css-truncate-target"></span>
+---
+>             <span class="css-truncate css-truncate-target"><time-ago datetime="2016-02-09T13:38:46Z">Feb 9, 2016</time-ago></span>
+496a526
+>                   <a href="/tsitu/RubioChat/commit/8ae331c7ea57e9b81db2d08080f6c34717dc6185" class="message" data-pjax="true" title="Initial commit">Initial commit</a>
+500c530
+<             <span class="css-truncate css-truncate-target"></span>
+---
+>             <span class="css-truncate css-truncate-target"><time-ago datetime="2016-02-09T13:38:46Z">Feb 9, 2016</time-ago></span>
+506,507c536
+< </include-fragment>
+< 
+---
+> </div>
+510a540
+>   
+522c552
+< 
+---
+>       
+526c556
+<       <li class="mr-3">&copy; 2018 <span title="0.11015s from unicorn-3284702329-plzlr">GitHub</span>, Inc.</li>
+---
+>       <li class="mr-3">&copy; 2018 <span title="0.10136s from unicorn-2458293368-2bg05">GitHub</span>, Inc.</li>
+560,567c590,597
+<     <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/compat-bea37eecc124.js" type="application/javascript"></script>
+<     <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-30ed99b48119.js" type="application/javascript"></script>
+< 
+<     <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-179183740a14.js" type="application/javascript"></script>
+< 
+< 
+< 
+< 
+---
+>     
+>     <script crossorigin="anonymous" integrity="sha512-MO2ZtIEZrtDlHQRpl/db39VEpjw/+MfQjkgZhl52kxNrXqYwEKwe0oEa/IRuvPRN5v9UUrznRAoA2AgP8s/OIw==" src="https://assets-cdn.github.com/assets/frameworks-30ed99b48119.js" type="application/javascript"></script>
+>     
+>     <script async="async" crossorigin="anonymous" integrity="sha512-F5GDdAoUMxhnzpr3JKfeT8oW2X72uRjk0hbA5/j+TMoMKLxdqtRHchTNL9LVd7wIH0rDY1WSY4UWbcIOXx406Q==" src="https://assets-cdn.github.com/assets/github-179183740a14.js" type="application/javascript"></script>
+>     
+>     
+>     
+>     
+583c613
+< 
+---
+>   
