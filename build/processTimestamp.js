@@ -1,4 +1,4 @@
-(function() {
+(function () {
   const cheerio = require("cheerio");
   const puppeteer = require("puppeteer");
 
@@ -10,6 +10,8 @@
    * @param {string} htmlUrl
    */
   async function fetchTimestamps(htmlUrl) {
+    console.log("Initializing Puppeteer browser...");
+
     const browser = await puppeteer.launch({
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
       // executablePath: "google-chrome-beta"
@@ -18,17 +20,28 @@
       //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
     });
 
+    console.log("Initialization complete. Loading pages...");
+
     // Initial throwaway page: "Failed to load latest commit information"
     const initPage = await browser.newPage();
+    console.log("prePage1 object instantiated...");
     await initPage.goto(htmlUrl);
+    console.log("prePage1 navigated to GH URL...");
     const initBody = await initPage.content();
+    console.log("prePage1 content loaded...");
     await initPage.close();
+    console.log("prePage1 closed...");
 
     const page = await browser.newPage();
+    console.log("Final page object instantiated...");
     await page.goto(htmlUrl);
+    console.log("Final page navigated to GH URL...");
     const body = await page.content();
+    console.log("Final page body acquired...");
     await page.close();
+    console.log("Final page closed");
     await browser.close();
+    console.log("Browser closed");
 
     const $ = cheerio.load(body);
     const result = $("time-ago")
@@ -43,6 +56,7 @@
     // "https://github.com/tsitu/MH-Tools/tree/master/src/bookmarklet"
     "https://github.com/tsitu/mht-testbed/tree/master/build"
   ).then(res => {
+    console.log(res);
     const format = res.map(el => {
       const spl = el.split(", ");
       return `${spl[0]}, ${spl[1]}`;
